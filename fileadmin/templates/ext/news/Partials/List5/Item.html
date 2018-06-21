@@ -1,0 +1,116 @@
+{namespace n=Tx_News_ViewHelpers}<!--
+	=====================
+		Partials/List/Item.html
+-->
+
+<div class="col articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
+	<div class="post">
+	<n:excludeDisplayedNews newsItem="{newsItem}" />
+	
+	<f:if condition="{newsItem.falMedia}">
+		<!-- fal media preview element -->
+		<f:then>
+			
+				<f:if condition="{newsItem.falMediaPreviews}">
+					<f:then>
+						<n:link newsItem="{newsItem}" settings="{settings}">
+							<f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+								<f:if condition="{mediaElement.originalResource.type} == 2">
+									
+									<f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+								
+								</f:if>
+							</f:alias>
+						</n:link>
+					</f:then>
+					<f:else>
+						<n:link newsItem="{newsItem}" settings="{settings}">
+							<f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+								<f:if condition="{mediaElement.originalResource.type} == 2">
+									
+									<f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+									
+								</f:if>
+							</f:alias>
+						</n:link>
+					</f:else>
+				</f:if>
+
+			
+		</f:then>
+		<f:else>
+
+			<f:if condition="{newsItem.media}">
+				<!-- media preview element -->
+				<f:then>
+					<div class="img-holder">
+						<f:if condition="{newsItem.mediaPreviews}">
+							<f:then>
+								<n:link newsItem="{newsItem}" settings="{settings}">
+									<f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+										<f:if condition="{mediaElement.type} == 0">
+											<f:image src="uploads/tx_news/{mediaElement.image}" title="{mediaElement.title}" alt="{mediaElement.alt}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+										</f:if>
+										<f:if condition="{mediaElement.type} == 1">
+											<f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}" />
+										</f:if>
+										<f:if condition="{mediaElement.type} == 2">
+											<f:render partial="Detail/MediaHtml" arguments="{mediaElement: mediaElement}" />
+										</f:if>
+									</f:alias>
+								</n:link>
+							</f:then>
+							<f:else>
+								<f:if condition="{settings.displayDummyIfNoMedia}">
+							<div class="img-holder">
+								<n:link newsItem="{newsItem}" settings="{settings}">
+									<f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+								</n:link>
+							</div>
+								</f:if>
+							</f:else>
+						</f:if>
+
+					</div>
+				</f:then>
+				<f:else>
+					<f:if condition="{settings.displayDummyIfNoMedia}">
+						<f:then>
+						
+								<n:link newsItem="{newsItem}" settings="{settings}">
+							<span class="no-media-element">
+								<f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+							</span>
+								</n:link>
+							
+						</f:then>
+					</f:if>
+				</f:else>
+			</f:if>
+
+		</f:else>
+	</f:if>
+
+	
+	<div class="content">
+
+			
+		<h2>
+			<n:link newsItem="{newsItem}" settings="{settings}">
+				{newsItem.title}
+			</n:link>
+		</h2>
+		
+		<p>
+			<time datetime="<n:format.date>{newsItem.dateTime}</n:format.date>"><n:format.date format="%d.%m.%Y">{newsItem.datetime}</n:format.date></time>
+			<f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.teaser}</f:format.crop><n:link newsItem="{newsItem}" settings="{settings}" class="more"><f:translate key="LLL:fileadmin/templates/ext/news/locallang.xml:more" /></n:link>
+		</p>
+		
+		
+		
+		
+		
+	</div>
+
+	</div>	
+</div>

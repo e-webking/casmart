@@ -1,0 +1,23 @@
+page.includeCSS {
+    fileboot1 = typo3conf/ext/armtemplate/Resources/Public/css/bootstrap.min.css
+    fileboot2 = typo3conf/ext/armtemplate/Resources/Public/css/bootstrap-theme.min.css
+    fileslick = typo3conf/ext/armtemplate/Resources/Public/css/slick/slick.css
+    fileslicktheme = typo3conf/ext/armtemplate/Resources/Public/css/slick/slick-theme.css
+    filecss = typo3conf/ext/armtemplate/Resources/Public/css/main.css
+}
+
+page.includeJSFooter {
+    fileboot1 = typo3conf/ext/armtemplate/Resources/Public/js/bootstrap.min.js
+    fileslick = typo3conf/ext/armtemplate/Resources/Public/css/slick/slick.min.js
+    fileslick2 = typo3conf/ext/armtemplate/Resources/Public/js/arm.js
+}
+
+page.10.file.stdWrap.cObject = CASE
+page.10.file.stdWrap.cObject {
+
+    key.data = levelfield:-1, backend_layout_next_level, slide
+    key.override.field = backend_layout
+
+    17 = TEXT
+    17.value =typo3conf/ext/armtemplate/Resources/Private/Templates/fullwidth.html
+}

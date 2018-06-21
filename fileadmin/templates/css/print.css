@@ -1,0 +1,92 @@
+
+@charset "UTF-8";
+/* CSS Document */
+* {
+  background-color: #FFF;
+  font-family: Cambria, Constantia, "Times New Roman",Times, serif;
+  text-align: justify;
+}
+body {
+  font-size: 12pt;
+}
+*[title]:after {
+  color: #eee;
+  font-style: italic;
+  font-size: 0.85em;
+}
+img[alt]:after {
+   content: "\A ("attr(alt)")";
+}   
+#footer {
+  margin-top: 20px;
+  color: #666;
+  font-size: 0.85em;
+}
+#logo {
+  margin-bottom: 20px;
+}
+#zusatz {
+  margin-top: 14px;
+  border-top: 1px dotted #666;
+  padding-top: 14px;
+}
+table td {
+  border: thin solid #666;
+}
+.side-box .title, .side-box .date, .side-box a {display:block;}
+table.contenttable {
+  width: 99%;
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+table p {
+  padding: 4px;
+  margin: 0px !important;
+  line-height: 25px;
+}
+#sidebar .links {display:none;}
+.team {
+  float: left;
+  width: 100%;
+}
+.person {
+  float: left;
+  width: 125px;
+  margin: 0 5px 5px 0;
+  padding: 12px 10px;
+  font-size: 11px;
+  color: #333;
+  height: 220px;
+}
+.downloads-list{
+  margin:15px 0 !important;
+  border-top:1px dotted #d7d7d7;
+  padding: 0;
+}
+.downloads-list li{
+  overflow:hidden;
+  margin:0 0 2px;
+  padding:6px 0 7px !important;
+  background:none;
+  border-bottom:1px dotted #d7d7d7;
+  vertical-align:top;
+}
+.downloads-list a{cursor:pointer;}
+.downloads-list li {
+background-repeat: no-repeat !important;
+padding-left: 28px !important;
+background-position: 0 50% !important;
+}
+.downloads-list li.pdf {
+  background:url(../images/pdf.png) no-repeat -3px 50% !important;
+}
+.downloads-list li.xls,
+.downloads-list li.xlsx {
+  background:url(../images/excel.png) no-repeat -3px 50% !important;
+}
+.downloads-list li.doc {
+  background:url(../images/word.png) no-repeat -3px 50% !important;
+}
+.downloads-list li.docx {
+  background:url(../images/word.png) no-repeat -3px 50% !important;
+}

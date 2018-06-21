@@ -1,0 +1,28 @@
+
+
+
+    <!-- Page-->
+    <div class="page text-center">
+      <!-- Page Head-->
+      <header class="page-head slider-menu-position">
+        <f:cObject typoscriptObjectPath="lib.header2" />
+      </header>
+      <!-- Page Contents-->
+      <main class="page-content">
+        <section>
+          <!-- Swiper-->
+          <f:format.html parseFuncTSPath="">{slideshow}</f:format.html>
+        </section>
+         <!--TYPO3SEARCH_begin-->
+             <f:format.html parseFuncTSPath="">{content}</f:format.html>  
+         <!--TYPO3SEARCH_end-->
+      </main>
+      <!-- Default footer-->
+      <footer class="section-50 section-sm-30 page-footer bg-gray-base context-dark">
+         <f:cObject typoscriptObjectPath="lib.footer2" />
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div id="form-output-global" class="snackbars"></div>
+
+ 

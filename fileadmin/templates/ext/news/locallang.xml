@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>module</type>
+        <description>Language labels for BE plugin</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+             <label index="more">more</label>
+            <label index="back">back to overview</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <label index="more">mehr</label>
+            <label index="back">Zurück zur Übersicht</label>
+        </languageKey>
+        <languageKey index="fr" type="array">
+            <label index="more">plus</label>
+            <label index="back">Retour au sommaire</label>
+        </languageKey>
+        <languageKey index="it" type="array">
+            <label index="more">più</label>
+            <label index="back">Ritorna alla panoramica</label>
+        </languageKey>
+    </data>
+</T3locallang>

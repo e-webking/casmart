@@ -1,0 +1,63 @@
+
+{namespace yag=Tx_Yag_ViewHelpers}
+{namespace extlist=Tx_PtExtlist_ViewHelpers}
+{namespace rbac=Tx_Rbac_ViewHelpers}
+
+<extlist:comment>
+<!--  
+Template for rendering a thumbnail image
+
+Here is a list of objects / variables that can be accessed in this template:
+
+Tx_Yag_Domain_Model_Item item               Item object to be rendered
+
+@package YAG
+@author Michael Knoll <mimi@kaktusteam.de>
+@author Daniel Lienert <daniel@lienert.cc>
+-->
+
+</extlist:comment>
+<li class="tx-yag-thumb-outerframe yag-item-thumb-outerframe" id="yag_{image.uid}">
+  <div class="tx-yag-thumb-innerframe yag-item-thumb-innerframe">
+    <f:if condition="{0:config.itemListConfig.linkMode} == {0:'show'}">
+      <f:then>
+        <a href="{yag:resource.image(item: image, resolutionName: 'medium')}"
+          class="yag-lightbox-link"
+          rel="{config.contextIdentifier}"
+          title="{image.title} <br />&lt;a target='_self' onClick=&quot;window.location.href=&#x27;/index.php?id=133&amp;produkt=<f:format.urlencode>{image.title}</f:format.urlencode>#x27;&quot; href='/index.php?id=133&amp;produkt=<f:format.urlencode>{image.title}</f:format.urlencode>'&gt;Info und Angebot zu diesem Produkt: Kontakt&lt;/a&gt;">
+          
+            <yag:image item="{image}" resolutionName="thumb" alt="{image.title}" />
+      
+
+        </a>
+
+                <f:if condition="{config.settings.item.showTitle}"><div class="titleBox">{image.title}</div></f:if>
+
+        
+      </f:then>
+      <f:else>
+        <f:if condition="{0:config.itemListConfig.linkTargetPluginMode} == {0:'gallery'}">
+          <yag:link.gallery gallery="{image.album.gallery}" pageUid="{config.itemListConfig.linkTargetPageUid}">
+            <yag:image item="{image}" resolutionName="thumb"/>
+          </yag:link.gallery>
+        </f:if>
+
+        <f:if condition="{0:config.itemListConfig.linkTargetPluginMode} == {0:'album'}">
+          <yag:link.album album="{image.album}" pageUid="{config.itemListConfig.linkTargetPageUid}">
+            <yag:image item="{image}" resolutionName="thumb"/>
+          </yag:link.album>
+        </f:if>
+
+        <f:if condition="{0:config.itemListConfig.linkTargetPluginMode} == {0:'image'}">
+          <yag:Link.image item="{image}">
+            <yag:image item="{image}" resolutionName="thumb"/>
+          </yag:Link.image>
+        </f:if>
+      </f:else>
+    </f:if>
+    <f:if condition="{config.settings.itemList.showTitle}">
+        <div class="tx-yag-thumb-caption">{image.title}</div>
+    </f:if>
+  </div>
+</li>
+

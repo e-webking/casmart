@@ -1,0 +1,152 @@
+{namespace n=Tx_News_ViewHelpers}
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<!--
+<f:if condition="{settings.hidePagination}">
+					<f:then>
+						<f:for each="{news}" as="newsItem" iteration="iterator">
+							<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+						</f:for>
+					</f:then>
+					<f:else>
+						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+								<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+							</f:for>
+						</n:widget.paginate>
+					</f:else>
+				</f:if>
+-->
+
+<f:section name="content">
+	<f:if condition="{news}">
+		<f:then>
+			<f:if condition="{settings.templateLayout} == 1">
+				<div class="news-container">
+					
+						<f:if condition="{settings.hidePagination}">
+						<f:then>
+						<ul>
+						<f:for each="{news}" as="newsItem" iteration="iterator">
+							<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+						</f:for>
+						</ul>
+						</f:then>
+						<f:else>
+						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+							<ul>
+							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+								<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+							</f:for>
+							</ul>
+						</n:widget.paginate>
+						</f:else>
+						</f:if>
+				
+					
+				</div>
+			</f:if>
+			<f:if condition="{settings.templateLayout} == 2">
+				<div class="box">
+					<div class="heading">
+						<h2>News</h2>
+					</div>
+					<div class="content">
+						<ul class="news-list">
+							
+								
+									<f:for each="{news}" as="newsItem" iteration="iterator">
+										<f:render partial="List2/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+									</f:for>
+								
+						
+						</ul>
+						<f:cObject typoscriptObjectPath="lib.newsarchiv" />
+					</div>
+				</div>
+			</f:if>
+			<f:if condition="{settings.templateLayout} == 3">
+				<div class="newsbox cf">
+				<f:if condition="{settings.hidePagination}">
+					<f:then>
+						<f:for each="{news}" as="newsItem" iteration="iterator">
+							<f:render partial="List3/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+						</f:for>
+					</f:then>
+					<f:else>
+						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+								<f:render partial="List3/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+							</f:for>
+						</n:widget.paginate>
+					</f:else>
+				</f:if>
+				</div>
+			</f:if>
+			<f:if condition="{settings.templateLayout} == 4">
+				<div class="content-box news">
+				<h2>News</h2>
+				<f:if condition="{settings.hidePagination}">
+					<f:then>
+						<f:for each="{news}" as="newsItem" iteration="iterator">
+							<f:render partial="List3/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+						</f:for>
+					</f:then>
+					<f:else>
+						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+								<f:render partial="List3/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+							</f:for>
+						</n:widget.paginate>
+					</f:else>
+				</f:if>
+				</div>
+			</f:if>
+			<f:if condition="{settings.templateLayout} == 5">
+				<div class="newsbox cf">
+				<f:if condition="{settings.hidePagination}">
+					<f:then>
+						<f:for each="{news}" as="newsItem" iteration="iterator">
+							<f:render partial="List5/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+						</f:for>
+					</f:then>
+					<f:else>
+						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+								<f:render partial="List5/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+							</f:for>
+						</n:widget.paginate>
+					</f:else>
+				</f:if>
+				</div>
+			</f:if>
+			<f:if condition="{settings.templateLayout} == 6">
+				<div class="newsbox cf">
+				<f:if condition="{settings.hidePagination}">
+					<f:then>
+						<f:for each="{news}" as="newsItem" iteration="iterator">
+							<f:render partial="List6/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+						</f:for>
+					</f:then>
+					<f:else>
+						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
+							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+								<f:render partial="List6/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+							</f:for>
+						</n:widget.paginate>
+					</f:else>
+				</f:if>
+				</div>
+			</f:if>
+		</f:then>
+		<f:else>
+			<div class="no-news-found">
+				<f:translate key="list_nonewsfound" />
+			</div>
+		</f:else>
+	</f:if>
+</f:section>

@@ -1,0 +1,146 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 8, 2018, 6:48:01 PM
+    Author     : anisur
+*/
+body {
+    font: 16px/1.44 "Open Sans",Arial,Helvetica,sans-serif;
+}
+.armfullwidth #content {width: 100% !important; font-family: "Open Sans"}
+.armfullwidth #content h1{text-transform: inherit!important}
+.armfullwidth .container-fluid {margin-right: -15px; margin-left: -15px;}
+.col-sm-12 .row {margin-left: 15px; margin-right: 15px;}
+.csc-left-float {display: inline-block; float:left; margin: 0 10px 20px 10px;}
+/* .armfullwidth .row {margin-left: -30px!important; margin-right: -30px!important;}
+.armfullwidth .csc-default p { padding: 0 20px}
+*/
+.slideshow .img-holder {margin: 0!important}
+.slideshow .text .container {text-align: center;}
+.slideshow .top-left .fluid-container, .slideshow .bottom-left .fluid-container {text-align: left;}
+.slideshow .top-right .fluid-container, .slideshow .bottom-right .fluid-container {text-align: right;}
+.slideshow .text h1, .slideshow .text h2 {background: none; text-align: center; text-transform: inherit!important}
+.slideshow .text.top-left,.slideshow .text.top-center {bottom:inherit; top: 30px;}
+.slideshow .text.top-right {bottom:inherit; top: 30px; left: inherit; right: 0px}
+.slideshow .center-center {height: 50%;left:0;bottom: 0;}
+.slideshow .top-left.text h1, .slideshow .bottom-left.text h1, .slideshow .top-left.text h2, .slideshow .bottom-left.text h2 {text-align: left;margin-left: 30px}
+.slideshow .top-right.text h1, .slideshow .bottom-right.text h1, .slideshow .top-right.text h2, .slideshow .bottom-right.text h2 {text-align: right;margin-right: 30px}
+.slideshow .center-center .fluid-container, .slideshow .center-center h1,.slideshow .center-center h2 {text-align: center; transform: translateY(-50%)}
+.slideshow .text h1.black, .slideshow .text h2.black {color: #000;}
+
+.fullwidth-img {width: 100%; position: relative; max-width: 2560px; margin: 0 auto}
+.heading {max-width: 1400px; padding: 20px;}
+#content h2 {text-transform: inherit!important;}
+.limit1400 {max-width: 1400px; margin: 0 auto;}
+#content .limit1400 blockquote::after, #content .limit1400  blockquote::before {background: none}
+.limit1400 blockquote {width:75%; border-left:0px !important; margin: 24px auto !important}
+#content .limit1400 form input[type="text"] {background: #fafaf8;}
+#content .limit1400 figure {background: #fff; height: 160px; border: 1px solid #9fa1a2}
+.limit1400 .csc-left-float .csc-textpic {height: 190px; overflow-y: hidden;}
+
+#content .limit1400 figure figcaption {font-weight: 600; color: #999;}
+.dummy-table {display: block; width: 100%; margin: 0 !important; padding: 0 !important}
+.dummy-cell {display:block; float: left; vertical-align: middle; padding: 0 !important; height: 100%}
+.dummy-cell h1, .dummy-cell h2, .dummy-cell h3 {padding-left: 20px; padding-right: 20px; text-transform: inherit !important}
+.dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-left-nowrap .csc-textpic-text,.dummy-cell .csc-vcenter .csc-textpic .csc-textpic-intext-right-nowrap .csc-textpic-text {position: relative;}
+.dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-left-nowrap .csc-textpic-text h1, .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-left-nowrap .csc-textpic-text h2 { margin-top: 50% !important; transform: translateY(-100%);}
+.dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-right-nowrap .csc-textpic-text h1, .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-right-nowrap .csc-textpic-text h2 { margin-top: 50% !important; transform: translateY(-100%);}
+.dummy-cell p {padding: 15px !important;}
+.armabove {position: absolute; z-index: 1; width: 100%; transform: translateY(-50%);}
+.armbelow {position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0}
+.insidepos {position: absolute; width: 90%;}
+.insidepos.top-left {margin-top: 5%; margin-left: 5%;}
+.insidepos.top-center {margin-top: 5%; text-align: center}
+.insidepos.top-right {margin-top: 5%; text-align: right; margin-right: 5%;}
+.insidepos.bottom-left {bottom: 0; margin-bottom: 5%; margin-left: 5%}
+.insidepos.bottom-center {bottom: 0; margin-bottom: 5%; text-align: center}
+.insidepos.bottom-right {bottom: 0; margin-bottom: 5%; text-align: right; margin-right: 5%;}
+.insidepos.center-center {height: 50%; width:100%; left: 0; bottom: 0; text-align: center;}
+.insidepos.center-center h2,.insidepos.center-center h3 {transform: translateY(-50%)}
+.padding60 {padding: 20px}
+
+/* form */
+.limit1400 .powermail_fieldwrap fieldset {border: 0px !important; padding-left: 0px!important}
+
+.black {color: #000}
+.white {color:#fff}
+.bgblack{background: #000}
+.bgwhite{background: #fff}
+.bggrey{background: #f4f3f1}
+.bgbeige{background: #c7c0b5}
+.bgorange{background: #fea111}
+
+.white a { color: #fff;}
+.white a:hover { color: #28d4f9;}
+
+.black a { color: #000;}
+.black a:hover { color: #333;}
+
+/* Video */
+.videoWrapper {position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;}
+.videoWrapper iframe {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+
+
+.visible-big {
+    display:none!important;
+}
+.visible-mid {
+    display:none!important;
+}
+.visible-small {
+    display:block!important;
+}
+@media (min-width:768px) {
+    .armfullwidth .container {width: 100%!important}
+    .navigation .container {padding-left: 0px; padding-right: 0px;}
+    .limit1400 .col-sm-6 {text-align: left}
+    .csc-left-float {margin:0 12px 25px 12px}
+    .limit1400 .csc-left-float:first-child {margin-left: 60px}
+    .limit1400 .csc-left-float:nth-child(5n+5) {margin-left: 60px}
+    .heading {padding: 30px 20px;}
+    .padding60 {padding: 20px 40px}
+    .visible-small {
+        display:none !important;
+    }
+    .visible-mid {
+        display:block !important;
+    }
+    .dummy-table {display: table; width: 100%; margin: 0 !important; padding: 0 !important; position: relative}
+    .dummy-cell {display:table-cell; float: none; vertical-align: middle; height: 100%;}
+    .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-left-nowrap .csc-textpic-text {position: absolute; left: 0; top: 0; height: 100%}
+    .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-right-nowrap .csc-textpic-text {position: absolute; right: 0; top: 0; height: 100%; text-align: right}
+}
+@media (min-width:1200px) {
+    .armfullwidth .container {width: 100%!important}
+    .csc-left-float {margin: 0 15px 30px 15px}
+    .limit1400 .csc-left-float:first-child {margin-left: 25px}
+    .limit1400 .csc-left-float:nth-child(5n+5) {margin-left: 15px}
+    .limit1400 .csc-left-float:nth-child(6n+6) {margin-left: 25px}
+    .limit1400 blockquote {width:65%;}
+    .heading {padding: 40px 20px;}
+    .csc-default h1.heading { padding: 40px 20px 20px;}
+    .csc-default h2.heading { padding: 20px 20px 40px;}
+    .slideshow .text.top-left,.slideshow .text.top-center,.slideshow .text.top-right {top: 50px;}
+    .slideshow .text.bottom-left,.slideshow .text.bottom-center,.slideshow .text.bottom-right {bottom: 50px;}
+    .slideshow .top-left.text h1, .slideshow .bottom-left.text h1,.slideshow .top-left.text h2, .slideshow .bottom-left.text h2 {margin-left: 50px}
+    .slideshow .top-right.text h1, .slideshow .bottom-right.text h1, .slideshow .top-right.text h2, .slideshow .bottom-right.text h2 {margin-right: 50px}
+    .slideshow .text h1 {font-size: 56px; max-width: 95%}
+    .padding60 {padding: 40px 60px}
+}
+@media (min-width:1440px) {
+    .armfullwidth .container { width: 1400px; }
+    .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-left-nowrap .csc-textpic-text h1, .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-left-nowrap .csc-textpic-text h2 { margin-top: 50% !important; transform: none;}
+    .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-right-nowrap .csc-textpic-text h1, .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-right-nowrap .csc-textpic-text h2 { margin-top: 50% !important; transform: none;}
+    .csc-left-float {margin: 0 20px 40px 20px;}
+    .heading {margin: 0 auto!important; padding: 60px 20px;}
+    .col-sm-12 .row {margin-left: auto; margin-right: auto;}
+    .visible-mid {
+        display:none !important;
+    }
+    .visible-big {
+        display:block!important;
+    } 
+}
