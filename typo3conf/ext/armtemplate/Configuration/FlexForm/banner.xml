@@ -16,6 +16,16 @@
           </config>
         </TCEforms>
       </field_heading>
+      <field_subheading type="array">
+        <TCEforms type="array">
+          <label>Sub-Heading</label>
+          <config type="array">
+            <type>input</type>
+            <size>30</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_subheading>
       <field_htype type="array">
         <TCEforms type="array">
           <label>H1 / H2</label>

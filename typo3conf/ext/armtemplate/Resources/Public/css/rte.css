@@ -1,0 +1,18 @@
+.black {color: #000}
+.white {color:#fff}
+.bgblack{background: #000; color: #fff}
+.bgwhite{background: #fff; color: #000}
+.bggrey{background: #f4f3f1; color: #000}
+.bgbeige{background: #c7c0b5; color: #fff}
+.bgorange{background: #fea111; color:#fff}
+
+.white a { color: #c8c1b6;}
+.white a:hover { color: #e7a133;}
+
+.black a { color: #a89e8c;}
+.black a:hover { color: #7a7366;}
+
+.bgblack a, .bgorange a {color: #c8c1b6}
+.bgblack a:hover, .bgorange a:hover {color:#e7a133}
+.bgwhite a, .bggrey a, .bgbeige a {color: #a89e8c}
+.bgwhite a:hover, .bggrey a:hover, .bgbeige a:hover  {color:#7a7366}

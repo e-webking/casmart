@@ -1,6 +1,97 @@
-TCEFORM.tt_content.header_layout {
-    addItems.101 = Überschrift 1 (centered)
-    addItems.102 = Überschrift 2 (centered)
-    addItems.103 = Überschrift 1 (padding)
-    addItems.104 = Überschrift 2 (padding)
+TCEFORM.tt_content{
+    header_layout {
+        addItems.101 = Überschrift 1 (centered)
+        addItems.102 = Überschrift 2 (centered)
+        addItems.103 = Überschrift 1 (padding)
+        addItems.104 = Überschrift 2 (padding)
+    }
+    section_frame {
+        addItems {
+            100 = Black Box
+            101 = White Box
+            102 = Gray Box
+            103 = Beige Box
+            104 = Orange Box
+        }
+    }
+}
+
+
+#-----------------------------------
+# RTE Configuration	
+#-----------------------------------
+RTE.classesAnchor >
+RTE {
+    default {
+        # link to site css stylesheet
+        contentCSS = typo3conf/ext/armtemplate/Resources/Public/css/rte.css
+        
+        showButtons := addToList(formattext)
+ 
+        # clear typical styling
+        classesAnchor =
+        classesLinks = 
+
+        # set classes available to these properties. Paragraph is another name
+        # for block
+        classesCharacter := addToList(white, black, bgblack, bgwhite, bggrey, bgbeige, bgorange)
+        classesParagraph := addToList(white, black, bgblack, bgwhite, bggrey, bgbeige, bgorange)
+        
+        # list all available classes here, otherwise they're removed on RTE save
+        proc.allowTags := addToList(span, pre, code)
+        proc.allowedClasses := addToList(black, white, bgblack, bgwhite, bggrey, bgbeige, bgorange)
+        
+        proc.transformBoldAndItalicTags = 1
+        proc.allowTagsInTypolists = br,font,b,i,u,a,img,span
+        proc.entryHTMLparser_db {
+            keepNonMatchedTags = 1
+        }
+        buttons {
+            formatblock {
+                addItems := addToList(span, pre)
+            }
+            
+            blockstyle {
+                showTagFreeClasses = 1
+                tags {
+                    p {
+                        allowedClasses := addToList (white, black)
+                        
+                    }
+                    div {
+                    	 allowedClasses := addToList (black, white, bgblack, bgwhite, bggrey, bgbeige, bgorange)
+                    }
+                    h1 {
+                        allowedClasses := addToList (black, white)
+                    }
+                    h2 {
+                            allowedClasses := addToList (black, white)
+                    }
+                    h3 {
+                        allowedClasses := addToList (black, white)
+                    }
+                    h4 {
+                        allowedClasses := addToList (black, white)
+                    }
+                    h5 {
+                        allowedClasses := addToList (black, white)
+                    }
+                    h6 {
+                        allowedClasses := addToList (black, white)
+                    }
+                }
+            }
+            formattext {
+            	addItems := addToList(span, pre)
+            }
+            textstyle { 
+            	showTagFreeClasses = 1
+            	tags {
+            		span {
+            			allowedClasses := addToList(black, white)
+            		}
+            	}
+            }
+        }
+    }
 }

@@ -23,6 +23,8 @@ body {
 .slideshow .top-left .fluid-container, .slideshow .bottom-left .fluid-container {text-align: left;}
 .slideshow .top-right .fluid-container, .slideshow .bottom-right .fluid-container {text-align: right;}
 .slideshow .text h1, .slideshow .text h2 {background: none; text-align: center; text-transform: inherit!important}
+.slide .text .fluid-container p {margin: 0; max-width: 80%}
+.slide .text .fluid-container p span { color: #fff; background: #2c3334; background: rgba(44,51,52,.9);}
 .slideshow .text.top-left,.slideshow .text.top-center {bottom:inherit; top: 30px;}
 .slideshow .text.top-right {bottom:inherit; top: 30px; left: inherit; right: 0px}
 .slideshow .center-center {height: 50%;left:0;bottom: 0;}
@@ -43,13 +45,15 @@ body {
 
 #content .limit1400 figure figcaption {font-weight: 600; color: #999;}
 .dummy-table {display: block; width: 100%; margin: 0 !important; padding: 0 !important}
+.dummy-table-row {height: 100%; display: table-row; margin: 0; padding: 0;}
 .dummy-cell {display:block; float: left; vertical-align: middle; padding: 0 !important; height: 100%}
 .dummy-cell h1, .dummy-cell h2, .dummy-cell h3 {padding-left: 20px; padding-right: 20px; text-transform: inherit !important}
 .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-left-nowrap .csc-textpic-text,.dummy-cell .csc-vcenter .csc-textpic .csc-textpic-intext-right-nowrap .csc-textpic-text {position: relative;}
 .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-left-nowrap .csc-textpic-text h1, .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-left-nowrap .csc-textpic-text h2 { margin-top: 50% !important; transform: translateY(-100%);}
 .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-right-nowrap .csc-textpic-text h1, .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-right-nowrap .csc-textpic-text h2 { margin-top: 50% !important; transform: translateY(-100%);}
 .dummy-cell p {padding: 15px !important;}
-.armabove {position: absolute; z-index: 1; width: 100%; transform: translateY(-50%);}
+.dummy-cell > div {height: 100%}
+.armabove {position: absolute; z-index: 1; width: 100%;}
 .armbelow {position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0}
 .insidepos {position: absolute; width: 90%;}
 .insidepos.top-left {margin-top: 5%; margin-left: 5%;}
@@ -67,17 +71,22 @@ body {
 
 .black {color: #000}
 .white {color:#fff}
-.bgblack{background: #000}
-.bgwhite{background: #fff}
-.bggrey{background: #f4f3f1}
-.bgbeige{background: #c7c0b5}
-.bgorange{background: #fea111}
+.bgblack{background: #000; color: #fff}
+.bgwhite{background: #fff; color: #000}
+.bggrey{background: #f4f3f1; color: #000}
+.bgbeige{background: #c7c0b5; color: #fff}
+.bgorange{background: #fea111; color:#fff}
 
-.white a { color: #fff;}
-.white a:hover { color: #28d4f9;}
+.white a { color: #c8c1b6;}
+.white a:hover { color: #e7a133;}
 
-.black a { color: #000;}
-.black a:hover { color: #333;}
+.black a { color: #a89e8c;}
+.black a:hover { color: #7a7366;}
+
+.bgblack a, .bgorange a {color: #c8c1b6}
+.bgblack a:hover, .bgorange a:hover {color:#e7a133}
+.bgwhite a, .bggrey a, .bgbeige a {color: #a89e8c}
+.bgwhite a:hover, .bggrey a:hover, .bgbeige a:hover  {color:#7a7366}
 
 /* Video */
 .videoWrapper {position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;}
