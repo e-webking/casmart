@@ -1,0 +1,11 @@
+plugin.tx_armgallery {
+	view {
+		templateRootPath = {$plugin.tx_armgallery.view.templateRootPath}
+		partialRootPath = {$plugin.tx_armgallery.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_armgallery.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_armgallery.persistence.storagePid}
+	}
+	
+}

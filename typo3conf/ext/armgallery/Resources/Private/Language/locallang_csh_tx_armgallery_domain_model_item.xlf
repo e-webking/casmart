@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-07-10T23:46:34Z" product-name="armgallery">
+		<header/>
+		<body>
+
+			<trans-unit id="title.description">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="album.description">
+				<source>Album</source>
+			</trans-unit>
+                        <trans-unit id="image.description">
+				<source>Image</source>
+			</trans-unit>
+                        <trans-unit id="flink.description">
+				<source>Link</source>
+			</trans-unit>
+                        <trans-unit id="linktext.description">
+				<source>Link label</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

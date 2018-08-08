@@ -1,9 +1,9 @@
 <?php
 
 /***************************************************************
- * Extension Manager/Repository config file for ext "armtemplate".
+ * Extension Manager/Repository config file for ext "armgallery".
  *
- * Auto generated 06-06-2018 06:18
+ * Auto generated 11-07-2018 06:18
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -11,9 +11,9 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array (
-	'title' => 'TYPO3 bootstrap template',
-	'description' => 'Bootstrap Template extension for TYPO3 6.x',
-	'category' => 'templates',
+	'title' => 'Modern Gallery',
+	'description' => 'Responsive image gallery',
+	'category' => 'plugin',
 	'author' => 'Anisur R. Mullick',
 	'author_email' => 'anisur@armtechnologies.com',
 	'author_company' => 'ARM Technologies',
