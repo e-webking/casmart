@@ -12,6 +12,9 @@ page.includeJSFooter {
     fileslick2 = typo3conf/ext/armtemplate/Resources/Public/js/arm.js
 }
 
+page.10.variables {
+    searchPid = {$searchPid}
+}
 page.10.file.stdWrap.cObject = CASE
 page.10.file.stdWrap.cObject {
 
@@ -20,4 +23,14 @@ page.10.file.stdWrap.cObject {
 
     17 = TEXT
     17.value =typo3conf/ext/armtemplate/Resources/Private/Templates/fullwidth.html
+
+    18 = TEXT
+    18.value =typo3conf/ext/armtemplate/Resources/Private/Templates/fullwidthgrid.html
+}
+
+page.bodyTagCObject = CASE
+page.bodyTagCObject {
+
+    18 = TEXT
+    18.value = dark-theme
 }

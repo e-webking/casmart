@@ -16,3 +16,4 @@
 .bgblack a:hover, .bgorange a:hover {color:#e7a133}
 .bgwhite a, .bggrey a, .bgbeige a {color: #a89e8c}
 .bgwhite a:hover, .bggrey a:hover, .bgbeige a:hover  {color:#7a7366}
+.text-center {text-align: center}

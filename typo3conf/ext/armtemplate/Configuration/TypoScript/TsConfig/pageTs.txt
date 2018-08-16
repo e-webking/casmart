@@ -12,6 +12,8 @@ TCEFORM.tt_content{
             102 = Gray Box
             103 = Beige Box
             104 = Orange Box
+            105 = Left Padding
+            106 = Right Padding
         }
     }
 }
@@ -34,12 +36,12 @@ RTE {
 
         # set classes available to these properties. Paragraph is another name
         # for block
-        classesCharacter := addToList(white, black, bgblack, bgwhite, bggrey, bgbeige, bgorange)
-        classesParagraph := addToList(white, black, bgblack, bgwhite, bggrey, bgbeige, bgorange)
+        classesCharacter := addToList(white, black, bgblack, bgwhite, bggrey, bgbeige, bgorange, text-center)
+        classesParagraph := addToList(white, black, bgblack, bgwhite, bggrey, bgbeige, bgorange, text-center)
         
         # list all available classes here, otherwise they're removed on RTE save
         proc.allowTags := addToList(span, pre, code)
-        proc.allowedClasses := addToList(black, white, bgblack, bgwhite, bggrey, bgbeige, bgorange)
+        proc.allowedClasses := addToList(black, white, bgblack, bgwhite, bggrey, bgbeige, bgorange, text-center)
         
         proc.transformBoldAndItalicTags = 1
         proc.allowTagsInTypolists = br,font,b,i,u,a,img,span
@@ -48,36 +50,34 @@ RTE {
         }
         buttons {
             formatblock {
-                addItems := addToList(span, pre)
+                addItems := addToList(div,p,span, pre)
             }
-            
             blockstyle {
                 showTagFreeClasses = 1
                 tags {
                     p {
-                        allowedClasses := addToList (white, black)
-                        
+                        allowedClasses := addToList (white, black, text-center)
                     }
                     div {
-                    	 allowedClasses := addToList (black, white, bgblack, bgwhite, bggrey, bgbeige, bgorange)
+                    	 allowedClasses := addToList (black, white, bgblack, bgwhite, bggrey, bgbeige, bgorange, text-center)
                     }
                     h1 {
-                        allowedClasses := addToList (black, white)
+                        allowedClasses := addToList (black, white, text-center)
                     }
                     h2 {
-                            allowedClasses := addToList (black, white)
+                        allowedClasses := addToList (black, white, text-center)
                     }
                     h3 {
-                        allowedClasses := addToList (black, white)
+                        allowedClasses := addToList (black, white, text-center)
                     }
                     h4 {
-                        allowedClasses := addToList (black, white)
+                        allowedClasses := addToList (black, white, text-center)
                     }
                     h5 {
-                        allowedClasses := addToList (black, white)
+                        allowedClasses := addToList (black, white, text-center)
                     }
                     h6 {
-                        allowedClasses := addToList (black, white)
+                        allowedClasses := addToList (black, white, text-center)
                     }
                 }
             }
@@ -88,7 +88,7 @@ RTE {
             	showTagFreeClasses = 1
             	tags {
             		span {
-            			allowedClasses := addToList(black, white)
+            			allowedClasses := addToList(black, white, text-center)
             		}
             	}
             }

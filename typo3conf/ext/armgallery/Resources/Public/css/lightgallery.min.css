@@ -115,3 +115,31 @@
   .arm-gallery.dark > ul > li a {
     border: 3px solid #04070a;
   }
+ .lg-actions .lg-prev::after, .lg-actions .lg-next::before {
+    content: "" !important;
+ }
+  .lg-actions .lg-prev, .lg-actions .lg-next {
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.0);
+  }
+  .lg-actions .lg-prev {
+      left: 0;
+  }
+  .lg-actions .lg-next {
+      right: 0;
+  }
+  .lg-sub-html, .lg-toolbar {
+    background-color: rgba(0,0,0,.65);
+  }
+  .lg-prev {
+      background: url(../icons/arrow-left.png);
+      background-repeat: no-repeat;
+      background-position: left center;
+  }
+  .lg-next {
+      background: url(../icons/arrow-right.png);
+      background-repeat: no-repeat;
+      background-position: right center;
+  }

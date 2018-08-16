@@ -1,11 +1,15 @@
 <div id="wrapper">
-    <div class="w1 armfullwidth">
+    <div class="w1 armfullwidth" style="padding-top: 49px;">
         <header id="header">
             <f:format.html parseFuncTSPath="">{header}</f:format.html>	
         </header>
         <main role="main">
-            <f:cObject typoscriptObjectPath="lib.armsearch" />
-            <f:cObject typoscriptObjectPath="lib.banner" />
+            <div class="container">
+                <div class="navbar">
+                    <f:cObject typoscriptObjectPath="lib.armsearch" />
+                    <f:cObject typoscriptObjectPath="lib.breadcrumb" />
+                </div>
+            </div>
             <div class="container-fluid">
                 <div class="row">
                     <div id="content" class="col-sm-12">
