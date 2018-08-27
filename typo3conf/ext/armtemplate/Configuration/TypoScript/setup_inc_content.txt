@@ -257,7 +257,11 @@ tt_content.gridelements_pi1.20.10.setup {
                 
                 20 = TEXT
                 20.data = field:flexform_field_align
-                20.noTrimWrap =  |<div class="armabove |">|
+                20.noTrimWrap =  |<div class="armabove | |
+
+                25 = TEXT
+                25.data = field:flexform_field_bgcolor
+                25.noTrimWrap =  | |">|
 
                 30 = TEXT
                 30.data = field:flexform_field_htype
@@ -418,6 +422,7 @@ tt_content.gridelements_pi1.20.10.setup {
                     50 = TEXT
                     50.data = field:flexform_field_heading
                     50.wrap = |
+                    # 50.stdWrap.typolink.parameter.data = field:header_link
 
                     60 = TEXT
                     60.data = field:flexform_field_htype
@@ -478,7 +483,7 @@ tt_content.gridelements_pi1.20.10.setup {
                 }
                 
                 
-
+                stdWrap.typolink.parameter.data = field:header_link
                 wrap = <div class="fullwidth-img">|</div>
             }
         }
