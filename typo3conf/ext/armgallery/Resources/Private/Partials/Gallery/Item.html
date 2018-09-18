@@ -1,5 +1,5 @@
 <li class="col-xs-6 col-sm-4 col-md-3" data-responsive="{f:uri.image(image:'{item.image}', width:'480')} 480, {f:uri.image(image:'{item.image}', width:'800')} 800" data-src="{f:uri.image(image:'{item.image}')}" data-sub-html='<h4>{item.title}</h4><p><f:link.page pageUid="{item.flink}">{item.linktext}</f:link.page></p>'>
     <a href="">
-        <f:image src="{item.image.uid}" width="{width}" height="{height}" treatIdAsReference="1" class="img-responsive" />
+        <f:image src="{item.image.uid}" width="{width}" height="{height}" alt="{item.title}" treatIdAsReference="1" class="img-responsive" />
     </a>
 </li>

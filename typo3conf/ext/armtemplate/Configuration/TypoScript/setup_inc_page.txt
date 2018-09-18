@@ -1,3 +1,6 @@
+page.headerData.3.30 = TEXT
+page.headerData.3.30.value = <meta name="google-site-verification" content="a2Q4a4DqWs89YdlDkhvozrGyNBF5OnRLdwHtWoOLdvc" />
+
 page.includeCSS {
     fileboot1 = typo3conf/ext/armtemplate/Resources/Public/css/bootstrap.min.css
     fileboot2 = typo3conf/ext/armtemplate/Resources/Public/css/bootstrap-theme.min.css

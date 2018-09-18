@@ -35,6 +35,7 @@ body {
 .slide .bottom-center h1, .slide .top-center h1, .slide .top-center h2, .slide .bottom-center h2 {display: block}
 .slide .text.top-center h1, .slide .text.top-center h2, .slide .text.bottom-center h1, .slide .text.bottom-center h2 {margin: 0px auto!important; padding: 8px;}
 .armfullwidth .breadcrumbs {margin: 10px; padding-bottom: 10px; border-bottom: 1px dotted #babcbc; text-transform: uppercase}
+.container ~ .container-fluid > .breadcrumbs {margin-top: 22px}
 .fullwidth-img {width: 100%; position: relative; max-width: 2560px; margin: 0 auto}
 .heading {max-width: 1400px; padding: 20px;}
 #content h2 {text-transform: inherit!important;}
@@ -75,9 +76,10 @@ body {
 .padding60 {padding: 20px}
 .csc-vcenter {position: relative;}
 .csc-vcenter .valign-middle {top: 50%; transform: translateY(-50%);}
-
+.iamhidden {display: block; height: 0px; margin: 0px !important;}
 /* form */
 .limit1400 .powermail_fieldwrap fieldset {border: 0px !important; padding-left: 0px!important}
+#content .indent { margin-left: 20px;}
 
 .black {color: #000}
 .white {color:#fff}
@@ -103,6 +105,8 @@ body {
 
 .lg-outer a {color: #c7c0b5; text-decoration: none}
 .lg-outer a:hover {color:#fff;}
+.morecontent span { display: none;}
+.morelink {display: block;}
 
 /* Video */
 .videoWrapper {position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;}
@@ -118,17 +122,19 @@ body {
     display:block!important;
 }
 .armsearch {
-  position: absolute;
-  top: 49px;
-  right: 10px;
-  z-index: 100;
+  margin-right: 10px;
+  float: right;
+  width: 90px;
   padding: 5px 15px 5px 3px;
   background: #fff;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
+  border: 1px solid silver;
+  border-top: 0px;
 }
+.slideshow ~ .armsearch { border-top: 1px solid silver; border-radius: 6px;}
 
 .not-enough-slides .switcher {display: none;}
 .fullwidth-img a {font-weight: normal !important}
@@ -141,7 +147,7 @@ body {
     .armabove.text-middle-right {position: absolute; top: 50%; transform: translateY(-50%); text-align: right;}
     .armabove.text-bottom-right {position: absolute; bottom: 0px; text-align: right;}
     .insidepos {position: absolute; width: 90%;}
-
+    #content .indent { margin-left: 10%;}
     .armfullwidth .container {width: 100%!important}
     .navigation .container {padding-left: 0px; padding-right: 0px;}
     .limit1400 .col-sm-6 {text-align: left}
@@ -162,15 +168,14 @@ body {
     .dummy-cell {display:table-cell; float: none; vertical-align: middle; height: 100%;}
     .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-left-nowrap .csc-textpic-text {position: absolute; left: 0; top: 0; height: 100%}
     .dummy-cell .csc-vcenter .csc-textpic.csc-textpic-intext-right-nowrap .csc-textpic-text {position: absolute; right: 0; top: 0; height: 100%; text-align: right}
-    .armsearch {top: 98px;}
-}
-@media (min-width:1050px) {
-    .armsearch { top: 49px}
 }
 @media (min-width:1200px) {
+    .container ~ .container-fluid > .breadcrumbs {margin-top: 50px}
+    .slideshow ~ .armsearch { border-top: 0px; border-top-left-radius: 0; border-top-right-radius: 0;}
     .armfullwidth .container {width: 100%!important}
     .armfullwidth .fullwidth-img h2 {font-size: 44px!important;}
     .armfullwidth .fullwidth-img h3 {font-size: 36px!important;}
+
     .csc-left-float {margin: 0 15px 30px 15px}
     .limit1400 .csc-left-float:first-child {margin-left: 25px}
     .limit1400 .csc-left-float:nth-child(5n+5) {margin-left: 15px}
@@ -184,6 +189,7 @@ body {
     .slideshow .top-left.text h1, .slideshow .bottom-left.text h1,.slideshow .top-left.text h2, .slideshow .bottom-left.text h2 {margin-left: 50px}
     .slideshow .top-right.text h1, .slideshow .bottom-right.text h1, .slideshow .top-right.text h2, .slideshow .bottom-right.text h2 {margin-right: 50px}
     .slideshow .text h1 {font-size: 56px; max-width: 95%}
+    #content .indent { margin-left: 27%;}
     /*.col-sm-6 .slideshow, .col-sm-8 .slideshow {margin: 0 0 0 -15px}
     .rhs .slideshow {margin: 0 -15px 0 0}*/
     
@@ -208,9 +214,27 @@ body {
         margin: 0 45px 0 112px;
     }
 }
+@media (max-width: 1024px) {
+    .lg-outer .lg-image {width: 100% !important;}
+}
 @media (max-width: 768px) {
     #footer{height: 100% !important; overflow: visible;}
+    .slideshow .text h1, .slideshow .text h2 {
+        color: #000;
+    }
+    .armabove.text-middle-left {
+        padding: 20px 0;
+    }
+    .lg-outer.lg-pull-caption-up.lg-thumb-open .lg-sub-html {
+        bottom: 75px;
+    }
+    .dummy-cell.rhs {
+        border-bottom: 1px dotted black;
+    }
 }
 @media (max-width: 600px) {
     .dummy-cell {width: 100%;}
+    .arm-gallery>ul>li { margin-right: 0px; width: 180px; }
+    .lg-actions .lg-prev, .lg-actions .lg-next {height: 50%}
+    .lg-outer .lg-img-wrap, .lg-outer .lg-item{height: 70%}
 }

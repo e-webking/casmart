@@ -11,6 +11,6 @@ if (!defined('TYPO3_MODE')) {
 	),
 	// non-cacheable actions
 	array(
-            'Gallery' => 'list',
+ 
 	)
 );
