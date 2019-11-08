@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+  <meta type="array">
+    <langDisable>1</langDisable>
+  </meta>
+  <ROOT type="array">
+    <type>array</type>
+    <el type="array">
+      <field_width type="array">
+        <TCEforms type="array">
+          <label>Width</label>
+          <config type="array">
+                <type>select</type>
+                <items type="array">
+                  <numIndex index="0" type="array">
+                    <numIndex index="0">50%</numIndex>
+                     <numIndex index="1">fiftyp</numIndex>
+                  </numIndex>
+                  <numIndex index="1" type="array">
+                    <numIndex index="0">60%</numIndex>
+                    <numIndex index="1">sixtyp</numIndex>
+                  </numIndex>
+                  <numIndex index="2" type="array">
+                    <numIndex index="0">70%</numIndex>
+                    <numIndex index="1">seventyp</numIndex>
+                  </numIndex>
+                  <numIndex index="3" type="array">
+                    <numIndex index="0">80%</numIndex>
+                    <numIndex index="1">eightyp</numIndex>
+                  </numIndex>
+                </items>
+              </config>
+        </TCEforms>
+      </field_width>
+      <field_align type="array">
+            <TCEforms type="array">
+              <label>Alignment</label>
+              <config type="array">
+                <type>select</type>
+                <items type="array">
+                  <numIndex index="0" type="array">
+                    <numIndex index="0">Left</numIndex>
+                     <numIndex index="1">text-left</numIndex>
+                  </numIndex>
+                  <numIndex index="1" type="array">
+                    <numIndex index="0">Center</numIndex>
+                    <numIndex index="1">text-center</numIndex>
+                  </numIndex>
+                  <numIndex index="2" type="array">
+                    <numIndex index="0">Right</numIndex>
+                    <numIndex index="1">text-right</numIndex>
+                  </numIndex>
+                </items>
+              </config>
+            </TCEforms>
+      </field_align>
+    </el>
+  </ROOT>
+</T3DataStructure>

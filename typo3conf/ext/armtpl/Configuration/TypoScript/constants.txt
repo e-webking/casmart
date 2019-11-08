@@ -1,0 +1,20 @@
+baseUrl = http://casmart9.local/
+rootPID = 1
+searchPid = 
+templatePath = typo3conf/ext/armtpl/
+logoFile = typo3conf/ext/armtpl/Resources/Public/images/logo.jpg
+kontaktPid = 8
+
+footerMenu = 11
+cmsFooterUid = 1
+
+facebook_url = 
+twitter_url =
+
+show_facebook=1
+show_twitter=1
+
+plugin.tx_aimeos.theme.baseurl = EXT:armtpl/Resources/Public/Themes/elegance
+[request.getNormalizedParams().isHttps()]
+baseUrl = https://www.casmart.ch/
+[end]

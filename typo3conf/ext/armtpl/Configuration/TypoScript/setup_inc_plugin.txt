@@ -1,0 +1,42 @@
+
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = EXT:armtpl/Configuration/Yaml/forms.yaml
+        }
+    }
+}
+
+plugin.tx_powermail.settings.setup {
+    prefill {
+        produkte = TEXT
+        produkte.data = GP:tx_shop|product
+        produkte.htmlSpecialChars = 1
+    }
+}
+plugin.tx_indexedsearch{
+
+    view {
+        templateRootPaths {
+            0 = EXT:indexed_search/Resources/Private/Templates/
+            10 = {$plugin.tx_indexedsearch.view.templateRootPath}
+            20 = EXT:armtpl/Resources/Private/Templates/
+        }
+
+        partialRootPaths {
+            0 = EXT:indexed_search/Resources/Private/Partials/
+            10 = {$plugin.tx_indexedsearch.view.partialRootPath}
+            20 = EXT:armtpl/Resources/Private/Partials/Search/
+        }
+    }
+    settings {
+        displayAdvancedSearchLink = 0
+    }
+}
+
+plugin.tx_aimeos.settings.mshop.customer.manager.typo3.pid-default = 32
+# plugin.tx_aimeos.settings.client.html.common.template.baseurl
+
+lib.contentElement {
+	partialRootPaths.1549449507 = EXT:armtpl/Resources/Private/Partials/
+}

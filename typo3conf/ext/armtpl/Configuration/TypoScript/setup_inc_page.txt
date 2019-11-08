@@ -1,0 +1,158 @@
+# page
+page = PAGE
+page.typeNum = 0
+config {
+  doctype = html5
+  doctype(
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+  )
+  baseURL = {$baseUrl}
+  absRefPrefix = 
+  xhtml_cleaning = all
+  xmlprologue = none
+  metaCharset = utf-8
+  renderCharset = utf-8
+  additionalHeaders = Content-Type:text/html;charset=utf-8
+  simulateStaticDocuments = 0
+  tx_realurl_enable = 0
+  linkVars = L
+  uniqueLinkVars = 1
+  
+  language = de
+  locale_all = de_DE.UTF-8
+  htmlTag_langKey = de-DE
+  sys_language_uid = 0
+  sys_language_overlay = 1
+  sys_language_mode = ignore
+  spamProtectEmailAddresses = 1
+  index_enable = 1
+  index_externals = 1
+  jQueryNoConflict = 1
+  useCacheHash = 0
+  disablePrefixComment = 1
+  disableImgBorderAttr = 1
+  noPageTitle = 2
+  
+  #concatenateCss = 1
+  #compressJs = 1
+  #compressCss = 1
+  removeDefaultCss = 1
+  cache_period = 0 
+  sendCacheHeaders = 0
+  moveJsFromHeaderToFooter = 1
+}
+
+## Meta
+page.meta {
+  viewport = width=device-width, initial-scale=1
+  # google-site-verification = 
+  abstract.field = abstract
+  description.field = description
+  keywords.field = keywords
+  og:title.field = title
+  og:description.field = description
+  og:url = https://www.casmart.ch/
+  og:site_name = Casmart
+  og:type = website
+}
+page.headerData.5 = TEXT
+page.headerData.5.field = nav_title // title
+page.headerData.5.noTrimWrap = |<title>|: Casmart</title>|
+
+page.headerData.15 = TEXT
+page.headerData.15.value (
+
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+)
+page.shortcutIcon = favicon.ico
+page.includeCSS {
+    file01 = {$templatePath}Resources/Public/css/vendor/bootstrap.min.css
+    file02 = {$templatePath}Resources/Public/css/vendor/bootstrap-grid.min.css
+    file03 = {$templatePath}Resources/Public/css/vendor/bootstrap-reboot.min.css
+    file04 = {$templatePath}Resources/Public/css/font-awesome.css
+    file05 = {$templatePath}Resources/Public/swiper-slider/css/swiper.min.css
+    file06 = {$templatePath}Resources/Public/css/navbar/jquery.mmenu.all.css
+    file07 = {$templatePath}Resources/Public/css/navbar/mobileMenu.css
+    file08 = {$templatePath}Resources/Public/css/navbar/navbar.css
+    file09 = {$templatePath}Resources/Public/css/globals.css
+    file10 = {$templatePath}Resources/Public/css/casmart.css
+    # file11 = //cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css
+    # file11.external = 1
+}
+
+page.includeJSFooter {
+    file01 = {$templatePath}Resources/Public/js/lib/jquery.min.js
+    file01.forceOnTop = 1
+    file02 = {$templatePath}Resources/Public/js/lib/RAD_lib.js
+    file03 = {$templatePath}Resources/Public/js/bootstrap.min.js
+    file04 = {$templatePath}Resources/Public/js/bootstrap.bundle.min.js
+    file05 = {$templatePath}Resources/Public/js/jquery.mmenu.all.min.js
+    file06 = {$templatePath}Resources/Public/swiper-slider/js/swiper.min.js
+
+    
+    #file11 = //cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js
+    #file11.external = 1
+    file12 = {$templatePath}Resources/Public/js/custom.js
+}
+
+## Add Template
+page.10 = FLUIDTEMPLATE
+page.10 {
+    file = {$templatePath}Resources/Private/Templates/fullwidth.html
+    layoutRootPath = {$templatePath}Resources/Private/Layouts/
+    partialRootPath = {$templatePath}Resources/Private/Partials/
+
+    file.stdWrap.cObject = CASE
+    file.stdWrap.cObject {
+
+        key.field = backend_layout
+        key.ifEmpty.data = levelfield:-1, backend_layout_next_level, slide
+
+        default = TEXT
+        default.value = {$templatePath}Resources/Private/Templates/fullwidth.html
+
+        # Main Template
+        1 = TEXT
+        1.value = {$templatePath}Resources/Private/Templates/fullwidth.html
+
+        # Shop Template
+        2 = TEXT
+        2.value = {$templatePath}Resources/Private/Templates/shop2col.html
+
+    }
+
+    variables {
+
+        facebookUrl = TEXT
+        facebookUrl.value = {$facebookUrl}
+
+        kontaktPid = TEXT
+        kontaktPid.value = {$kontaktPid}
+    }
+}

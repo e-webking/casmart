@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+  <meta type="array">
+    <langDisable>1</langDisable>
+  </meta>
+  <ROOT type="array">
+    <type>array</type>
+    <el type="array">      
+      <field_imagelarge type="array">
+        <TCEforms type="array">
+          <label>Large screen image (2500px)</label>
+          <config type="array">
+            <type>group</type>
+            <internal_type>file</internal_type>
+            <allowed>gif,png,jpg,jpeg</allowed>
+            <max_size>5000</max_size>
+            <uploadfolder>uploads/tx_armtpl</uploadfolder>
+            <show_thumbs>1</show_thumbs>
+            <size>1</size>
+            <maxitems>1</maxitems>
+            <minitems>0</minitems>
+          </config>
+        </TCEforms>
+      </field_imagelarge>
+      <field_imagemid type="array">
+        <TCEforms type="array">
+          <label>Medium Large screen image (1500px)</label>
+          <config type="array">
+            <type>group</type>
+            <internal_type>file</internal_type>
+            <allowed>gif,png,jpg,jpeg</allowed>
+            <max_size>5000</max_size>
+            <uploadfolder>uploads/tx_armtpl</uploadfolder>
+            <show_thumbs>1</show_thumbs>
+            <size>1</size>
+            <maxitems>1</maxitems>
+            <minitems>0</minitems>
+          </config>
+        </TCEforms>
+      </field_imagemid>
+      <field_imagedesk type="array">
+        <TCEforms type="array">
+          <label>Desktop image (1440px)</label>
+          <config type="array">
+            <type>group</type>
+            <internal_type>file</internal_type>
+            <allowed>gif,png,jpg,jpeg</allowed>
+            <max_size>5000</max_size>
+            <uploadfolder>uploads/tx_armtpl</uploadfolder>
+            <show_thumbs>1</show_thumbs>
+            <size>1</size>
+            <maxitems>1</maxitems>
+            <minitems>0</minitems>
+          </config>
+        </TCEforms>
+      </field_imagedesk>
+      <field_imagetab type="array">
+        <TCEforms type="array">
+          <label>Tablet image (1280px)</label>
+          <config type="array">
+            <type>group</type>
+            <internal_type>file</internal_type>
+            <allowed>gif,png,jpg,jpeg</allowed>
+            <max_size>2000</max_size>
+            <uploadfolder>uploads/tx_armtpl</uploadfolder>
+            <show_thumbs>1</show_thumbs>
+            <size>1</size>
+            <maxitems>1</maxitems>
+            <minitems>0</minitems>
+          </config>
+        </TCEforms>
+      </field_imagetab>
+      <field_imagemob type="array">
+        <TCEforms type="array">
+          <label>Mobile image (768px)</label>
+          <config type="array">
+            <type>group</type>
+            <internal_type>file</internal_type>
+            <allowed>gif,png,jpg,jpeg</allowed>
+            <max_size>1000</max_size>
+            <uploadfolder>uploads/tx_armtpl</uploadfolder>
+            <show_thumbs>1</show_thumbs>
+            <size>1</size>
+            <maxitems>1</maxitems>
+            <minitems>0</minitems>
+          </config>
+        </TCEforms>
+      </field_imagemob>
+      <field_imgalt type="array">
+        <TCEforms type="array">
+          <label>Image alt text</label>
+          <config type="array">
+            <type>input</type>
+            <size>30</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_imgalt>
+    </el>
+  </ROOT>
+</T3DataStructure>

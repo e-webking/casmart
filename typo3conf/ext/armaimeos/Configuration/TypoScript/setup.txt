@@ -1,0 +1,3 @@
+page.includeCSS.tx_aimeos = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.css
+page.includeJSFooter.aimeos-custom = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.js
+plugin.tx_aimeos.settings.client.arm = lota

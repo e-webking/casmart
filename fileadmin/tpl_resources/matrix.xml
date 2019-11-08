@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+  <meta type="array">
+    <langDisable>1</langDisable>
+  </meta>
+  <ROOT type="array">
+    <type>array</type>
+    <el type="array">
+      <field_htype type="array">
+        <TCEforms type="array">
+          <label>H2 / H3 / H4</label>
+          <config type="array">
+            <type>select</type>
+            <items type="array">
+              <numIndex index="0" type="array">
+                <numIndex index="0">H2</numIndex>
+                <numIndex index="1">h2</numIndex>
+              </numIndex>
+              <numIndex index="1" type="array">
+                <numIndex index="0">H3</numIndex>
+                <numIndex index="1">h3</numIndex>
+              </numIndex>
+              <numIndex index="2" type="array">
+                <numIndex index="0">H4</numIndex>
+                <numIndex index="1">h4</numIndex>
+              </numIndex>
+            </items>
+          </config>
+        </TCEforms>
+      </field_htype>   
+      <field_imageone type="array">
+        <TCEforms type="array">
+          <label>Image 1 (630 x 580)</label>
+          <config type="array">
+            <type>group</type>
+            <internal_type>file</internal_type>
+            <allowed>gif,png,jpg,jpeg</allowed>
+            <max_size>5000</max_size>
+            <uploadfolder>uploads/tx_armtpl</uploadfolder>
+            <show_thumbs>1</show_thumbs>
+            <size>1</size>
+            <maxitems>1</maxitems>
+            <minitems>0</minitems>
+          </config>
+        </TCEforms>
+      </field_imageone>
+      <field_headingone type="array">
+        <TCEforms type="array">
+          <label>Heading 1</label>
+          <config type="array">
+            <type>input</type>
+            <size>15</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_headingone>
+      <field_invone type="array">
+        <TCEforms type="array">
+          <label>Inverse 1</label>
+          <config type="array">
+            <type>check</type>
+          </config>
+        </TCEforms>
+      </field_invone>
+       <field_ctaone type="array">
+        <TCEforms type="array">
+          <label>CTA Label 1</label>
+          <config type="array">
+            <type>input</type>
+            <size>10</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_ctaone>
+      <field_linkone>
+          <TCEforms type="array">
+          <label>Link 1</label>
+          <config type="array">
+            <type>input</type>
+            <size>30</size>
+            <eval>trim</eval>
+            <wizards type="array">
+                <link type="array">
+                    <type>popup</type>
+                    <title>Link</title>
+                    <icon>link_popup.gif</icon>
+                    <module type="array">
+                        <name>wizard_element_browser</name>
+                        <urlParameters type="array">
+                            <mode>wizard</mode>
+                        </urlParameters>
+                    </module>
+                    <JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+                </link>
+            </wizards>
+            <softref>typolink</softref>
+          </config>
+        </TCEforms>
+      </field_linkone>
+      <field_imagetwo type="array">
+        <TCEforms type="array">
+          <label>Image 2 (1260 x 580)</label>
+          <config type="array">
+            <type>group</type>
+            <internal_type>file</internal_type>
+            <allowed>gif,png,jpg,jpeg</allowed>
+            <max_size>5000</max_size>
+            <uploadfolder>uploads/tx_armtpl</uploadfolder>
+            <show_thumbs>1</show_thumbs>
+            <size>1</size>
+            <maxitems>1</maxitems>
+            <minitems>0</minitems>
+          </config>
+        </TCEforms>
+      </field_imagetwo>
+      <field_headingtwo type="array">
+        <TCEforms type="array">
+          <label>Heading 2</label>
+          <config type="array">
+            <type>input</type>
+            <size>15</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_headingtwo>
+       <field_invtwo type="array">
+        <TCEforms type="array">
+          <label>Inverse 2</label>
+          <config type="array">
+            <type>check</type>
+          </config>
+        </TCEforms>
+      </field_invtwo>
+       <field_ctatwo type="array">
+        <TCEforms type="array">
+          <label>CTA Label 2</label>
+          <config type="array">
+            <type>input</type>
+            <size>10</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_ctatwo>
+      <field_linktwo>
+          <TCEforms type="array">
+          <label>Link 2</label>
+          <config type="array">
+            <type>input</type>
+            <size>30</size>
+            <eval>trim</eval>
+            <wizards type="array">
+                <link type="array">
+                    <type>popup</type>
+                    <title>Link</title>
+                    <icon>link_popup.gif</icon>
+                    <module type="array">
+                        <name>wizard_element_browser</name>
+                        <urlParameters type="array">
+                            <mode>wizard</mode>
+                        </urlParameters>
+                    </module>
+                    <JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+                </link>
+            </wizards>
+            <softref>typolink</softref>
+          </config>
+        </TCEforms>
+      </field_linktwo>
+      <field_imagethree type="array">
+        <TCEforms type="array">
+          <label>Image 3 (630 x 1180)</label>
+          <config type="array">
+            <type>group</type>
+            <internal_type>file</internal_type>
+            <allowed>gif,png,jpg,jpeg</allowed>
+            <max_size>5000</max_size>
+            <uploadfolder>uploads/tx_armtpl</uploadfolder>
+            <show_thumbs>1</show_thumbs>
+            <size>1</size>
+            <maxitems>1</maxitems>
+            <minitems>0</minitems>
+          </config>
+        </TCEforms>
+      </field_imagethree>
+      <field_headingthree type="array">
+        <TCEforms type="array">
+          <label>Heading 3</label>
+          <config type="array">
+            <type>input</type>
+            <size>15</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_headingthree>
+       <field_invthree type="array">
+        <TCEforms type="array">
+          <label>Inverse 3</label>
+          <config type="array">
+            <type>check</type>
+          </config>
+        </TCEforms>
+      </field_invthree>
+       <field_ctathree type="array">
+        <TCEforms type="array">
+          <label>CTA Label 1</label>
+          <config type="array">
+            <type>input</type>
+            <size>10</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_ctathree>
+      <field_linkthree>
+          <TCEforms type="array">
+          <label>Link 3</label>
+          <config type="array">
+            <type>input</type>
+            <size>30</size>
+            <eval>trim</eval>
+            <wizards type="array">
+                <link type="array">
+                    <type>popup</type>
+                    <title>Link</title>
+                    <icon>link_popup.gif</icon>
+                    <module type="array">
+                        <name>wizard_element_browser</name>
+                        <urlParameters type="array">
+                            <mode>wizard</mode>
+                        </urlParameters>
+                    </module>
+                    <JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+                </link>
+            </wizards>
+            <softref>typolink</softref>
+          </config>
+        </TCEforms>
+      </field_linkthree>
+       <field_imagefour type="array">
+        <TCEforms type="array">
+          <label>Image 4 (1260 x 580)</label>
+          <config type="array">
+            <type>group</type>
+            <internal_type>file</internal_type>
+            <allowed>gif,png,jpg,jpeg</allowed>
+            <max_size>5000</max_size>
+            <uploadfolder>uploads/tx_armtpl</uploadfolder>
+            <show_thumbs>1</show_thumbs>
+            <size>1</size>
+            <maxitems>1</maxitems>
+            <minitems>0</minitems>
+          </config>
+        </TCEforms>
+      </field_imagefour>
+      <field_headingfour type="array">
+        <TCEforms type="array">
+          <label>Heading 4</label>
+          <config type="array">
+            <type>input</type>
+            <size>15</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_headingfour>
+       <field_invfour type="array">
+        <TCEforms type="array">
+          <label>Inverse 4</label>
+          <config type="array">
+            <type>check</type>
+          </config>
+        </TCEforms>
+      </field_invfour>
+       <field_ctafour type="array">
+        <TCEforms type="array">
+          <label>CTA Label 4</label>
+          <config type="array">
+            <type>input</type>
+            <size>10</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_ctafour>
+      <field_linkfour>
+          <TCEforms type="array">
+          <label>Link 4</label>
+          <config type="array">
+            <type>input</type>
+            <size>30</size>
+            <eval>trim</eval>
+            <wizards type="array">
+                <link type="array">
+                    <type>popup</type>
+                    <title>Link</title>
+                    <icon>link_popup.gif</icon>
+                    <module type="array">
+                        <name>wizard_element_browser</name>
+                        <urlParameters type="array">
+                            <mode>wizard</mode>
+                        </urlParameters>
+                    </module>
+                    <JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+                </link>
+            </wizards>
+            <softref>typolink</softref>
+          </config>
+        </TCEforms>
+      </field_linkfour>
+       <field_imagefive type="array">
+        <TCEforms type="array">
+          <label>Image 5 (630 x 580)</label>
+          <config type="array">
+            <type>group</type>
+            <internal_type>file</internal_type>
+            <allowed>gif,png,jpg,jpeg</allowed>
+            <max_size>5000</max_size>
+            <uploadfolder>uploads/tx_armtpl</uploadfolder>
+            <show_thumbs>1</show_thumbs>
+            <size>1</size>
+            <maxitems>1</maxitems>
+            <minitems>0</minitems>
+          </config>
+        </TCEforms>
+      </field_imagefive>
+      <field_headingfive type="array">
+        <TCEforms type="array">
+          <label>Heading 5</label>
+          <config type="array">
+            <type>input</type>
+            <size>15</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_headingfive>
+       <field_invfive type="array">
+        <TCEforms type="array">
+          <label>Inverse 5</label>
+          <config type="array">
+            <type>check</type>
+          </config>
+        </TCEforms>
+      </field_invfive>
+       <field_ctafive type="array">
+        <TCEforms type="array">
+          <label>CTA Label 5</label>
+          <config type="array">
+            <type>input</type>
+            <size>10</size>
+            <eval>trim</eval>
+          </config>
+        </TCEforms>
+      </field_ctafive>
+      <field_linkfive>
+          <TCEforms type="array">
+          <label>Link 5</label>
+          <config type="array">
+            <type>input</type>
+            <size>30</size>
+            <eval>trim</eval>
+            <wizards type="array">
+                <link type="array">
+                    <type>popup</type>
+                    <title>Link</title>
+                    <icon>link_popup.gif</icon>
+                    <module type="array">
+                        <name>wizard_element_browser</name>
+                        <urlParameters type="array">
+                            <mode>wizard</mode>
+                        </urlParameters>
+                    </module>
+                    <JSopenParams>height=300,width=500,status=0,menubar=0,scrollbars=1</JSopenParams>
+                </link>
+            </wizards>
+            <softref>typolink</softref>
+          </config>
+        </TCEforms>
+      </field_linkfive>
+    </el>
+  </ROOT>
+</T3DataStructure>

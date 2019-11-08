@@ -1,0 +1,22 @@
+{
+	"projectName": "armaimeos",
+	"licenseText": "proprietary",
+	"pkgs": [{
+		"name": "armaimeos CSS",
+		"file": "armaimeos.css",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "custom.css",
+			"path": "themes/"
+		}]
+	}, {
+		"name": "armaimeos JS",
+		"file": "armaimeos.js",
+		"isDebug": true,
+		"fileIncludes": [{
+			"text": "custom.js",
+			"path": "themes/"
+		}]
+	}],
+	"resources" : []
+}

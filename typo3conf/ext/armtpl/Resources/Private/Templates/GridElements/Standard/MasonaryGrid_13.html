@@ -1,0 +1,67 @@
+<div class="armmasonary">
+    <div class="mason-one">
+        <figure class="image">
+            <f:image src="uploads/tx_armtpl/{data.flexform_field_imageone}" width="630" height="580c" alt="{data.flexform_field_headingone}" />
+        </figure>
+        <div class="mason-text {f:if(condition:data.flexform_field_invone, then: 'inverse', else: '')}">
+            <f:if condition="{data.flexform_field_headingone}">
+                <{data.flexform_field_htype}>{data.flexform_field_headingone}</{data.flexform_field_htype}>
+            </f:if>
+            <f:if condition="{data.flexform_field_linkone}">
+                <f:link.typolink parameter="{data.flexform_field_linkone}" class="cta">{data.flexform_field_ctaone}</f:link.typolink>
+            </f:if>
+        </div>
+    </div>
+    <div class="mason-two">
+        <figure class="image">
+            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagetwo}" width="1260" height="580c" alt="{data.flexform_field_headingtwo}" />
+        </figure>
+        <div class="mason-text {f:if(condition:data.flexform_field_invtwo, then: 'inverse', else: '')}">
+            <f:if condition="{data.flexform_field_headingtwo}">
+                <{data.flexform_field_htype}>{data.flexform_field_headingtwo}</{data.flexform_field_htype}>
+            </f:if>
+            <f:if condition="{data.flexform_field_linktwo}">
+                <f:link.typolink parameter="{data.flexform_field_linktwo}" class="cta">{data.flexform_field_ctatwo}</f:link.typolink>
+            </f:if>
+        </div>
+    </div>
+    <div class="mason-three">
+        <figure class="image">
+            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagethree}" width="630c" height="1180" alt="{data.flexform_field_headingthree}" />
+        </figure>
+        <div class="mason-text {f:if(condition:data.flexform_field_invthree, then: 'inverse', else: '')}">
+            <f:if condition="{data.flexform_field_headingthree}">
+                <{data.flexform_field_htype}>{data.flexform_field_headingthree}</{data.flexform_field_htype}>
+            </f:if>
+            <f:if condition="{data.flexform_field_linkthree}">
+                <f:link.typolink parameter="{data.flexform_field_linkthree}" class="cta">{data.flexform_field_ctathree}</f:link.typolink>
+            </f:if>
+        </div>
+    </div>
+    <div class="mason-four">
+        <figure class="image">
+            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagefour}" width="1260" height="580c" alt="{data.flexform_field_headingfour}" />  
+        </figure>
+        <div class="mason-text {f:if(condition:data.flexform_field_invfour, then: 'inverse', else: '')}">
+            <f:if condition="{data.flexform_field_headingfour}">
+                <{data.flexform_field_htype}>{data.flexform_field_headingfour}</{data.flexform_field_htype}>
+            </f:if>
+            <f:if condition="{data.flexform_field_linkfour}">
+                <f:link.typolink parameter="{data.flexform_field_linkfour}" class="cta">{data.flexform_field_ctafour}</f:link.typolink>
+            </f:if>
+        </div>
+    </div>
+    <div class="mason-five">
+        <figure class="image">
+            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagefive}" width="630" height="580c" alt="{data.flexform_field_headingfive}" />
+        </figure>
+        <div class="mason-text {f:if(condition:data.flexform_field_invfive, then: 'inverse', else: '')}">
+            <f:if condition="{data.flexform_field_headingfive}">
+                <{data.flexform_field_htype}>{data.flexform_field_headingfive}</{data.flexform_field_htype}>
+            </f:if>
+            <f:if condition="{data.flexform_field_linkfive}">
+                <f:link.typolink parameter="{data.flexform_field_linkfive}" class="cta">{data.flexform_field_ctafive}</f:link.typolink>
+            </f:if>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+@import "EXT:armtpl/Configuration/TypoScript/setup_inc_page.txt"
+@import "EXT:armtpl/Configuration/TypoScript/setup_inc_nav.txt"
+@import "EXT:armtpl/Configuration/TypoScript/setup_inc_plugin.txt"
+@import "EXT:armtpl/Configuration/TypoScript/setup_inc_content.txt"
+@import "EXT:armtpl/Configuration/TypoScript/setup_inc_content_gridelement.txt"
+
+tt_content.textpic.dataProcessing.20.maxGalleryWidth = 1920
+tt_content.textpic.dataProcessing.20.maxGalleryWidthInText = 1920
+tt_content.image.dataProcessing.20.maxGalleryWidth = 1920
+tt_content.image.dataProcessing.20.maxGalleryWidthInText = 1920
+tt_content.textmedia.dataProcessing.20.maxGalleryWidth = 1920
+tt_content.textmedia.dataProcessing.20.maxGalleryWidthInText = 1920

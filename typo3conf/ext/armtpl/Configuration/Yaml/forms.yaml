@@ -1,0 +1,27 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          10: EXT:armtpl/Resources/Private/Forms/
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  20: 'EXT:armtpl/Resources/Private/Templates/Form/'
+                partialRootPaths:
+                  20: 'EXT:armtpl/Resources/Private/Partials/Form/'
+                translation:
+                  translationFile:
+                    10: 'EXT:form/Resources/Private/Language/locallang.xlf'
+                    20: 'EXT:armtpl/Resources/Private/Language/locallang.xlf'
+            Text:
+              properties:
+                containerClassAttribute: 'col-sm-9'
+                elementClassAttribute: 'form-control'
+            Textarea:
+              properties:
+                containerClassAttribute: 'col-sm-9'
+                elementClassAttribute: 'form-control'

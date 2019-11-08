@@ -1,0 +1,111 @@
+imports:
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+    - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+    - { resource: "EXT:rte_ckeditor_image/Configuration/RTE/Plugin.yaml" }
+    
+editor:
+   config:
+      contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:armtpl/Resources/Public/Css/rte.css"]
+      
+      allowedContent : true
+      
+      extraAllowedContent: 'span;i;*{*};(*)'
+      
+      format_tags: "div;p;h1;h2;h3;h4;h5;h6;pre"
+      
+      stylesSet:
+        # block level styles
+        - { name: "text-left", element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'div', 'p', 'td', 'th'], attributes: { 'class': 'text-left' }}
+        - { name: "text-center", element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'div', 'p', 'td', 'th'], attributes: { 'class': 'text-center' }}
+        - { name: "text-right", element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'div', 'p', 'td', 'th'], attributes: { 'class': 'text-right' }}
+        - { name: "align-justify", element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'div', 'p', 'td', 'th'], attributes: { 'class': 'align-justify' }}
+        - { name: "row", element: "div", attributes: { 'class': 'row' }}
+        - { name: "col-12", element: "div", attributes: { 'class': 'col-12' }}
+        - { name: "offset-sm-3", element: "div", attributes: { 'class': 'offset-sm-3' }}
+        - { name: "col-sm-6", element: "div", attributes: { 'class': 'col-sm-6' }}
+        - { name: "col-md-4", element: "div", attributes: { 'class': 'col-md-4' }}
+        - { name: "box", element: "div", attributes: { 'class': 'box' }}
+        - { name: "contact", element: "div", attributes: { 'class': 'contact' }}
+        - { name: "info", element: "div", attributes: { 'class': 'info' }}
+        - { name: "table-responsive", element: "div", attributes: { 'class': 'table-responsive' }}
+        - { name: "table", element: "table", attributes: { 'class': 'table' }}
+        - { name: "table-bordered", element: "table", attributes: { 'class': 'table-bordered' }}
+        - { name: "Footer List", element: "ul", attributes: { 'class': 'footerlink' }}
+        - { name: "button", element: "span", attributes: { 'class': 'button' }}
+        - { name: "link", element: "span", attributes: { 'class': 'link' }}
+        - { name: "fa", element: "i", attributes: { 'class': 'fa' }}
+        - { name: "fa-long-arrow-right", element: "i", attributes: { 'class': 'fa-long-arrow-right' }}
+        - { name: "CTA button", element: "a", attributes: { 'class': 'cta' }}
+        - { name: "top-margin", element: "a", attributes: { 'class': 'mt60' }}
+        - { name: "align-left", element: 'p', attributes: { 'class': 'align-left' }}
+        - { name: "align-center", element: 'p', attributes: { 'class': 'align-center' }}
+        - { name: "align-right", element: 'p', attributes: { 'class': 'align-right' }}     
+        
+
+      toolbarGroups:
+      - { name: clipboard, groups: [clipboard, undo] }
+      - { name: editing,   groups: [find, selection, spellchecker] }
+      - { name: insert }
+      - { name: table }
+      - { name: tabletools }
+      - { name: document,  groups: [ mode, document, doctools ] }
+      - "/"
+      - { name: basicstyles, groups: [ basicstyles, align, cleanup ] }
+      - { name: paragraph,   groups: [ list, indent, blocks, align, bidi ] }
+      - { name: links }
+      - "/"
+      - { name: styles }
+      - { name: others }
+      
+      extraPlugins:
+        - justify
+        - specialchar
+        - showblocks
+        - codesnippet
+        
+      externalPlugins:
+        typo3image:
+            allowedExtensions: "jpg,jpeg,png"
+      
+      justifyClasses:
+      - align-left
+      - align-center
+      - align-right
+      - align-justify
+      
+      removeFormatAttributes: "lang,width,height,align,vspace,hspace"
+      
+      removePlugins:
+
+      removeButtons:
+          
+      coreStyles_italic:
+        { element: i, overrides: em }
+
+
+# Allow s and u tag
+processing:
+  allowTags:
+    - s
+    - u
+    - i
+    
+  HTMLparser_db:
+    tags:
+      span:
+        allowedAttribs: class
+        fixAttrib:
+          style:
+            unset : true
+
+      i:
+       allowedAttribs: class
+       fixAttrib:
+          style:
+            unset : true
+      a:
+       allowedAttribs: class
+       fixAttrib:
+          style:
+            unset : true

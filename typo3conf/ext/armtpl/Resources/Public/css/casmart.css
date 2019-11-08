@@ -1,0 +1,168 @@
+.siteHeader {background: #221619; color: #fff}
+.siteHeader  a {color: #fff}
+.logo {width:100%;float:right}
+
+.fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width{width: 60%;}
+@media (min-width: 1100px) {
+    .logo {width:200px;float:left}
+    .desktop-nav {width: calc(100% - 200px);float:left}
+}
+
+@media (min-width: 1440px) {
+    .logo {width:280px;}
+    .desktop-nav {width: calc(100% - 280px);}
+}
+
+.module-content {position: absolute; top: 20px; left: 100px; width: 80%; z-index: 100; height: inherit; padding: 30px 0 0; display: inline-block; text-align: left; color: #fff;}
+@media (min-width: 1440px) {
+    .module-content {width: 60%; left: 150px; top: 80px}
+}
+@media (min-width: 2500px) {
+    .module-content {width: 50%; left: 360px; top: 220px}
+}
+.module-content h1,.module-content h2, .module-content h3 {color: #fff; background-color: rgba(34,29,25,0.8); display: inline-block; padding: 0 20px; margin-bottom: 20px;}
+.module-content p {color: #fff; background-color: rgba(34,29,25,0.8); display: inline-block; padding: 20px; margin-bottom: 20px;}
+
+.swiper-container {width: 100%; height: 100%; margin-left: auto; margin-right: auto;}
+.swiper-slide {
+    text-align: center; font-size: 18px; background: #fff; display: block;
+    /* Center slide text vertically */  
+    -webkit-box-pack: center; -ms-flex-pack: center;
+    -webkit-justify-content: center; justify-content: center;
+    -webkit-box-align: center; -ms-flex-align: center;
+    -webkit-align-items: center; align-items: center;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    width: 80px!important; height: 80px; margin-top: 0px;opacity: 1.0 !important;background-size: 80px 80px;
+    -webkit-transform: translateY(-79%);
+  	-ms-transform: translateY(-79%);
+  	transform: translateY(-79%);
+}
+.swiper-button-next{right: 0px;  background-image: url(../images/arrow-right.png) !important; }
+.swiper-button-prev{left: 0px; background-image: url(../images/arrow-left.png) !important;}
+.slide-image {width: 100%;}
+.slide-image img {max-width: 100%;width: 100%;}
+ul.footerlink { color: #fff; padding: 0; margin-left: 5px; list-style: none;}
+ul.footerlink li a {padding-left: 15px;display: inline-block;vertical-align: top; color: #fff; position: relative;}
+ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0; top: 0px;content: "\f0da"; font-size: 16px;}
+.armpagenumber {width: 50%; float: left; overflow: hidden}
+.armpagination {width: 50%;float: left}
+
+.justified-gallery > a > .caption {font-size: 18px; color: rgba(34, 29, 25, 0.7)!important; display: block!important; background: none!important; padding: 5px 10px; top: 20px; left: 20px;}
+.ce-gridgallery .cta {position: absolute; top: 100px; left: 20px; background: #fcaf4d;}
+
+.videoWrapper { position: relative; height: 0; padding-bottom: 56.25%;}
+.videoWrapper iframe {position: absolute;top: 0;left: 0;width: 100%; height: 100%;}
+
+.roundimg {width: 150px; height: 150px; position: relative; margin: 10px auto;}
+.roundimg img {width: 100%; height: 100%; border-radius: 75px;}
+.testimonial .text {margin-bottom: 20px;}
+.testimonial .title {color: #666; font-weight: 600; padding-bottom: 10px}
+.banner-float { padding-top:25px; padding-left: 40px; width: 80%}
+.banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {color: #fff; background-color: rgba(0,0,0,0.6); margin-bottom: 8px; padding: 5px 10px;}
+.banner-float .btext {font-size: 15px;}
+.banner-float .text-left h1, .banner-float .text-left h2, .banner-float .text-left h3, .banner-float .text-left .btext, .banner-float .text-left .cta {display: block; float: left; clear: both}
+.banner-float .text-center h1, .banner-float .text-center h2, .banner-float .text-center h3 {float: none; width: max-content; margin-left: auto; margin-right: auto}
+.arm-horizontal-grid .banner-float h1, .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3, .arm-horizontal-grid .banner-float .btext {background-color:initial; color:#000;}
+.mason-text.inverse h2, .mason-text.inverse h3, .mason-text.inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
+.banner-float .inverse h1, .banner-float .inverse h2, .banner-float .inverse h3, .banner-float .inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
+@media (min-width: 768px) {
+    .justified-gallery > a > .caption {font-size: 24px;}
+    .banner-float {padding-top:50px; padding-left: 80px;}
+}
+@media (min-width: 992px) {
+    .slide-image img {max-width: 100%; width: inherit;}
+    .banner-float {position: absolute; padding-left: 0px; padding-top: 0px; top:40px; left: 40px; width: 80%}
+}
+@media (min-width: 1280px) {
+    .justified-gallery > a > .caption {font-size: 36px;}
+    .roundimg {margin: 20px auto;}
+    .testimonial .text {margin-bottom: 40px;}
+    .testimonial .title {padding-bottom: 20px;}
+    .banner-float {position: absolute; padding-left: 0px; padding-top: 0px; top:50px; left: 35px; width: calc(100% - 70px)}
+    .arm-horizontal-grid .banner-float {top:10px; left: 10px; width: calc(100% - 20px)}
+    .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {margin-bottom: 15px; padding: 8px 15px;}
+    .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3 {margin-bottom: 5px;}
+    .banner-float .btext {font-size: 14px;}
+    .text-left .btext {width: 70%;}
+    .text-right .limited-width {float: right;}
+    .text-center .limited-width {margin: 0 auto;}
+    .fiftyp .limited-width {width: 50%;}
+    .sixtyp .limited-width {width: 60%;}
+    .seventyp .limited-width {width: 70%;}
+    .eightyp .limited-width {width: 80%;}
+}
+
+@media (min-width: 1440px) {
+    .justified-gallery > a > .caption {font-size: 40px;}
+    .banner-float {top:60px; left: 80px; width: calc(100% - 160px)}
+    .arm-horizontal-grid .banner-float {top:15px; left: 15px; width: calc(100% - 30px)}
+    .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {margin-bottom: 15px; padding: 10px 20px;}
+    .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3 {margin-bottom: 10px;}
+    .banner-float .btext {font-size: 16px;}
+}
+
+@media (min-width: 1560px) {
+    .justified-gallery > a > .caption {font-size: 50px;}
+    .testimonial .text {margin-bottom: 60px;}
+    .banner-float {top: 75px; left: 125px; width: calc(100% - 250px)}
+    .text-left .btext {width: 50%;}
+}
+@media (min-width: 1760px) {
+    .banner-float { left: 175px; width: calc(100% - 350px)}
+    .arm-horizontal-grid .banner-float {top:25px; left: 25px; width: calc(100% - 50px)}
+}
+@media (min-width: 1920px) {
+    .banner-float { left: 115px; width: calc(100% - 230px)}
+    .arm-horizontal-grid .banner-float {top:30px; left: 30px; width: calc(100% - 60px)}
+}
+
+@media (min-width: 2500px) {
+    .banner-float {left: 445px; width: calc(100% - 890px)}
+    .arm-horizontal-grid .banner-float {top:40px; left: 40px; width: calc(100% - 80px)}
+}
+
+.armbullet {width: 100%; display: flex; position: relative; clear: both; margin-bottom: 10px}
+.armbullet .bicon {width: 20%; float: left;}
+.armbullet .bicon img {max-width: 85%;}
+.armbullet .bultext {width: 80%; float: left;}
+.armbullet .bultext h3 {margin-bottom: 10px;}
+@media (min-width: 1280px) {
+    .armbullet {margin-bottom: 20px}
+    .armbullet .bultext h3 {margin-bottom: 20px;}
+}
+@media (min-width: 1440px) {
+    .armbullet .bicon {width: 25%;}
+    .armbullet .bultext {width: 90%;}
+    .armbullet {margin-bottom: 30px}
+    .armbullet .bultext h3 {margin-bottom: 30px;}
+}
+@media (min-width: 1600px) {
+    .armbullet {margin-bottom: 40px}
+    .armbullet .bicon {width: 20%;}
+    .armbullet .bultext {width: 95%;}
+}
+.armimagetext {width: 100%; display: flex; flex-direction: column;}
+.armimagetext .half {width: 100%; flex:0 0 auto; padding: 10px;}
+.armimagetext figure {margin: 0px;}
+
+@media (min-width: 768px) {
+    .armimagetext {flex-direction: row;}
+    .armimagetext .half {width: 50%; padding: 0px; position: relative;}
+    .armimagetext .half .image {width: calc(100% - 150px);}
+    .armimagetext .textblock {margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); right: 50px;}
+}
+
+@media (min-width: 1280px) {
+    .armimagetext .textblock {right: 100px;}
+}
+@media (min-width: 1440px) {
+    .armimagetext .textblock {right: 200px;}
+}
+@media (min-width: 1560px) {
+    .armimagetext .textblock {right: 300px;}
+}
+@media (min-width: 2000px) {
+    .armimagetext .textblock {right: 500px;}
+}

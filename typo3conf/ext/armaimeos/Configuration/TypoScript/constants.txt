@@ -1,0 +1,2 @@
+plugin.tx_aimeos.theme.js.aimeos-custom = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.js
+plugin.tx_aimeos.theme.css.custom = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.css

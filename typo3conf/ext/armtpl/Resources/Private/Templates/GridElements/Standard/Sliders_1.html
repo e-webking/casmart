@@ -1,0 +1,14 @@
+ <section class="banner gbl">
+    <div class="swiper-container swiper-{data.uid}" data-uid="{data.uid}">
+        <div class="swiper-wrapper">
+            <f:format.raw>{data.tx_gridelements_view_column_10}</f:format.raw>
+        </div>
+        <f:if condition="{data.flexform_field_nopage}">
+            <f:else>
+                <div class="swiper-pagination page-{data.uid}"></div>
+                <div class="swiper-button-next btn-next-{data.uid}"></div>
+                <div class="swiper-button-prev btn-prev-{data.uid}"></div>
+            </f:else>
+        </f:if>
+    </div>
+</section>
