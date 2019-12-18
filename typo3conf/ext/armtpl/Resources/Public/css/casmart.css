@@ -1,4 +1,4 @@
-.siteHeader {background: #221619; color: #fff}
+.siteHeader {background: #211d18; color: #fff}
 .siteHeader  a {color: #fff}
 .logo {width:100%;float:right}
 
@@ -81,6 +81,7 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
     .testimonial .text {margin-bottom: 40px;}
     .testimonial .title {padding-bottom: 20px;}
     .banner-float {position: absolute; padding-left: 0px; padding-top: 0px; top:50px; left: 35px; width: calc(100% - 70px)}
+    .banner-float.mbottom {bottom:50px; top: initial}
     .arm-horizontal-grid .banner-float {top:10px; left: 10px; width: calc(100% - 20px)}
     .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {margin-bottom: 15px; padding: 8px 15px;}
     .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3 {margin-bottom: 5px;}
@@ -97,6 +98,7 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
 @media (min-width: 1440px) {
     .justified-gallery > a > .caption {font-size: 40px;}
     .banner-float {top:60px; left: 80px; width: calc(100% - 160px)}
+    .banner-float.mbottom {bottom:60px; top: initial}
     .arm-horizontal-grid .banner-float {top:15px; left: 15px; width: calc(100% - 30px)}
     .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {margin-bottom: 15px; padding: 10px 20px;}
     .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3 {margin-bottom: 10px;}
@@ -107,6 +109,7 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
     .justified-gallery > a > .caption {font-size: 50px;}
     .testimonial .text {margin-bottom: 60px;}
     .banner-float {top: 75px; left: 125px; width: calc(100% - 250px)}
+    .banner-float.mbottom {bottom:75px; top: initial}
     .text-left .btext {width: 50%;}
 }
 @media (min-width: 1760px) {
@@ -151,18 +154,131 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
     .armimagetext {flex-direction: row;}
     .armimagetext .half {width: 50%; padding: 0px; position: relative;}
     .armimagetext .half .image {width: calc(100% - 150px);}
-    .armimagetext .textblock {margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); right: 50px;}
+    .armimagetext .half.ce-right .image {float: right;}
+    .armimagetext .half.ce-center .image {margin: 0 auto;}
+    
+    .armimagetext .half:nth-child(1) .textblock {margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); left: 50px;}
+    .armimagetext .half:nth-child(2) .textblock {margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); right: 50px;}
 }
 
 @media (min-width: 1280px) {
-    .armimagetext .textblock {right: 100px;}
+    .armimagetext .half:nth-child(1) .textblock {left: 100px;}
+    .armimagetext .half:nth-child(2) .textblock {right: 100px;}
 }
 @media (min-width: 1440px) {
-    .armimagetext .textblock {right: 200px;}
+    .armimagetext .half::nth-child(1) .textblock {left: 200px;}
+    .armimagetext .half::nth-child(2) .textblock {right: 200px;}
 }
 @media (min-width: 1560px) {
-    .armimagetext .textblock {right: 300px;}
+    .armimagetext .half::nth-child(1) .textblock {left: 300px;}
+    .armimagetext .half::nth-child(2) .textblock {right: 300px;}
 }
 @media (min-width: 2000px) {
-    .armimagetext .textblock {right: 500px;}
+    .armimagetext .half::nth-child(1) .textblock {left: 500px;}
+    .armimagetext .half::nth-child(2) .textblock {right: 500px;}
+}
+@media (min-width: 768px) {
+    .powermail_fieldwrap_type_input .control-label, 
+    .powermail_fieldwrap_type_textarea .control-label {float: left; text-align: left;}
+    .powermail_fieldwrap_type_radio .control-label {max-width: 100%; text-align: left;}
+    .powermail_fieldwrap_type_radio .radio { text-align: left!important;}
+}
+
+.img-list.three-columns {
+    margin: 0 -9px -3px;
+    padding: 0 0 16px;
+    letter-spacing: -4px;
+    list-style: none;
+}
+
+.img-list.three-columns li {
+    position: relative;
+    display: inline-block;
+    letter-spacing: 0;
+    font-size: 13px;
+    line-height: 19px;
+    width: 50%;
+    padding: 5px 9px 12px;
+}
+.img-list img {
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+}
+.img-list figure {
+    background: none;
+    margin: 0;
+    font-size: 13px;
+    line-height: 17px;
+}
+.img-list figure figcaption {
+    line-height: 17px;
+    font-size: 13px;
+    padding: 4px 9px;
+    font-weight: bold;
+}
+@media (min-width: 768px) {
+    .img-list.three-columns {
+        margin: 0 -15px -12px;
+        text-align: center;
+    }
+    .img-list.three-columns li {
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 19px;
+        width: 33.333%;
+        padding: 5px 15px 25px;
+    }
+    .img-list figure {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .img-list figure figcaption {
+        line-height: 19px;
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .img-list.three-columns {
+        padding: 0 0 19px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .img-list.three-columns li {
+        width: 25%;
+    }
+}
+@media (min-width: 1280px) {
+    .img-list.three-columns li {
+        width: 20%;
+    }
+    .img-list figure figcaption {
+        padding: 6px 12px;
+    }
+}
+@media (min-width: 1440px) {
+    .img-list.three-columns li {
+        width: 13.333%;
+    }
+}
+
+.breadcrumbs {
+    margin: 10px; padding-bottom: 10px; border-bottom: 1px dotted #babcbc; text-transform: uppercase;
+}
+.breadcrumbs li {list-style: none; display: inline-block; margin-right: 10px}
+.breadcrumbs li::before {content: '\00BB'; color: #636566;font-size: 16px; padding-right: 2px}
+.breadcrumbs li:first-child::before {display: none;}
+@media (min-width: 768px) {
+    .breadcrumbs li::before {font-size: 18px}
+}
+@media (min-width: 1024px) {
+    .breadcrumbs li::before {font-size: 20px}
+}
+@media (min-width: 1280px) {
+    .breadcrumbs li::before {font-size: 22px; padding-right: 4px}
+}
+@media (min-width: 1440px) {
+    .breadcrumbs li::before {font-size: 24px; padding-right: 5px}
 }

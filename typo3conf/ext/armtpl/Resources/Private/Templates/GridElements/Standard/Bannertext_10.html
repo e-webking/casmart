@@ -1,4 +1,4 @@
-<div class="banner-float">
+<div class="banner-float {f:if(condition:data.flexform_field_bottom, then: 'mbottom', else: '')}">
     <div class="{data.flexform_field_align} {f:if(condition:data.flexform_field_inv, then: 'inverse', else: '')}">
         <{data.flexform_field_htype}>{data.flexform_field_heading}</{data.flexform_field_htype}>
         <f:if condition="{data.flexform_field_text}">

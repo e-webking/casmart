@@ -15,9 +15,13 @@
                 layout: data.header_layout,
                 positionClass: '{f:if(condition: data.header_position, then: \'text-{data.header_position}\')}',
                 default: settings.header.defaultHeaderType}" />
-            <f:if condition="{data.space_after_class}">
-                <div class="frame-space-after-{data.space_after_class}"></div>
+            <f:if condition="{data.CType}=='header'">
+                <f:if condition="{data.space_after_class}">
+                    <div class="frame-space-after-{data.space_after_class}"></div>
+                </f:if>
             </f:if>
+
     </f:if>
 </f:if>
+    
 </html>

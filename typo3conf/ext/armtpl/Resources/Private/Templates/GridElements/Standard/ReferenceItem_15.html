@@ -1,0 +1,18 @@
+<li>
+    <figure class="icon-mouse-event">
+        <f:if condition="{data.flexform_field_link}">
+            <f:then>
+                <f:link.typolink parameter="{data.flexform_field_link}"><img width="350" height="230" data-title="uploads/tx_armtpl/{data.flexform_field_hover}" src="uploads/tx_armtpl/{data.flexform_field_image}" alt="{data.flexform_field_title}"></f:link.typolink>
+                    <figcaption>
+                        <f:link.typolink parameter="{data.flexform_field_link}">{data.flexform_field_title}</f:link.typolink>
+                    </figcaption>
+            </f:then>
+            <f:else>
+                <img width="350" height="230" data-title="uploads/tx_armtpl/{data.flexform_field_hover}" src="uploads/tx_armtpl/{data.flexform_field_image}" alt="{data.flexform_field_title}">
+                <figcaption>
+                    {data.flexform_field_title}
+                </figcaption>
+            </f:else>
+        </f:if>        
+    </figure>
+</li>

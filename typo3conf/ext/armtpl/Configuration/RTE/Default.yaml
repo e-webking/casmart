@@ -20,6 +20,8 @@ editor:
         - { name: "text-center", element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'div', 'p', 'td', 'th'], attributes: { 'class': 'text-center' }}
         - { name: "text-right", element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'div', 'p', 'td', 'th'], attributes: { 'class': 'text-right' }}
         - { name: "align-justify", element: ['h1', 'h2', 'h3', 'h4','h5', 'h6', 'div', 'p', 'td', 'th'], attributes: { 'class': 'align-justify' }}
+        - { name: "BushelAndPeck Sans", element: ['h1', 'h2', 'h3'], attributes: { 'class': 'bushelsans' }}
+        - { name: "BushelAndPeck", element: ['h1', 'h2', 'h3'], attributes: { 'class': 'bushelscript' }}
         - { name: "row", element: "div", attributes: { 'class': 'row' }}
         - { name: "col-12", element: "div", attributes: { 'class': 'col-12' }}
         - { name: "offset-sm-3", element: "div", attributes: { 'class': 'offset-sm-3' }}

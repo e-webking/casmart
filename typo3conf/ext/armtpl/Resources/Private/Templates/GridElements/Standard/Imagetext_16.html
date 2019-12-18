@@ -1,0 +1,19 @@
+<div class="armimagetext">
+    <div class="half">
+        <div class="textblock">
+            <f:format.raw>{data.flexform_field_text}</f:format.raw>
+        </div>
+    </div>
+    <div class="half {data.flexform_field_align}">
+        <figure class="image">
+            <f:if condition="{data.flexform_field_link}">
+                <f:then>
+                    <f:link.typolink parameter="{data.flexform_field_link}"><img src="uploads/tx_armtpl/{data.flexform_field_img}" alt="{data.flexform_field_imgalt}"></f:link.typolink>
+                </f:then>
+                <f:else>
+                    <img src="uploads/tx_armtpl/{data.flexform_field_img}" alt="{data.flexform_field_imgalt}">
+                </f:else>
+            </f:if>
+        </figure>
+    </div>
+</div>

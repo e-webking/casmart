@@ -12,11 +12,17 @@ TCEFORM {
                 107 = Text center [bottom 80px]
                 108 = Gray BG [class="gray"]
                 109 = Align Center [class="text-center"]
+                110 = Nullify above gbl gap [class="negate-above-gbl"]
             }
         }
         header_layout {
             addItems {
-                
+                101 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.101
+		102 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.102
+                103 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.103
+                104 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.104
+                105 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.105
+                106 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.106
             }
         }
     }
