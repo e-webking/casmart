@@ -160,7 +160,6 @@ $formPid = 8;
 								<meta itemprop="contentUrl" content="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" />
 							</div>
 						</noscript>
-                                                <!--  <a href="<?= $enc->attr( $this->url( ( $productItem->getTarget() ?: $detailTarget ), $detailController, $detailAction, $params, [], $detailConfig ) ); ?>">This is normal link</a> -->
 						<?php foreach( $productItem->getRefItems( 'media', 'default', 'default' ) as $mediaItem ) : ?>
 							<?php
 								$srcset = [];
@@ -186,7 +185,7 @@ $formPid = 8;
 				<div class="stock-list">
                                     <a href="<?= $enc->attr( $this->url( ( $productItem->getTarget() ?: $detailTarget ), $detailController, $detailAction, $params, [], $detailConfig ) ); ?>"><?= $enc->attr( $productItem->getName() ); ?></a>
 				</div>
-
+                                <div class="shop-link"><a href="<?= $enc->attr( $this->url( ( $productItem->getTarget() ?: $detailTarget ), $detailController, $detailAction, $params, [], $detailConfig ) ); ?>">mehr erfahren !</a></div>
 				<div class="price-list">
 					<div class="articleitem price price-actual"
 						data-prodid="<?= $enc->attr( $productItem->getId() ); ?>"
@@ -230,6 +229,7 @@ $formPid = 8;
 
 						<?php endforeach; ?>
 					<?php endif; ?>
+                                    
 				</div>
 
 			</div>

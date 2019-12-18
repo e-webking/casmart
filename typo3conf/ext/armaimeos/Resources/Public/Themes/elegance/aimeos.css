@@ -6,14 +6,14 @@
 .aimeos a:link:not(.btn), .aimeos a:visited:not(.btn) {color: #444; font-size: 14px}
 .aimeos .sort a.active {font-weight: normal;}
 .aimeos a:hover {color: #666 !important; text-decoration: none !important;}
-.catalog-list .product {width: 267px; border-bottom: 0px;}
+.catalog-list .product {width: 267px; border-bottom: 0px; margin: 4em 1%;}
 .catalog-list .offer {max-width: 90%;}
 .catalog-list .media-list {width: 267px; height: 200px;}
 .catalog-list .media-item img {top:initial; left: initial; transform:none}
 .catalog-list .media-item {width: 267px; height: 200px;}
 .aimeos .product .stock-list {display: block; text-transform: uppercase; color: #666;}
 .price-list .value {font-size: 16px;}
-.marketprice {color: #fcaf4d; font-size: 16px; text-decoration-line: line-through;}
+.marketprice {color: #fcaf4d; font-size: 16px; text-decoration-line: line-through; vertical-align: super}
 .aimeos .browser {display: block; width: 80%; margin: 10px auto; border-top: 1px #ddd solid; border-bottom: 1px #ddd solid; text-align: center; padding: 10px;}
 .armoverlay {width: 100%; height: 100%; background: rgba(255,255,255, 0); transition: background 0.5s ease; position: absolute; top: 0px; z-index: 9}
 .media-list .cta {position: absolute; bottom: 15px; z-index: 10; width: 267px; left: 0; opacity: 0; transition: opacity .35s ease;}
@@ -23,33 +23,45 @@
 .aimeos .btn-primary, .aimeos .btn-primary:active { background-color: #80643d; border: solid 1px #80643d;}
 .arm-cta-form {margin-top: 20px}
 .arm-cta-form .cta {width: 100%; padding: 8px 12px;}
+.product .offer .cta {max-width: 200px; display: block; margin: 0 auto}
 .catalog-detail-basic .short {display: block;}
+.price-list .cta {margin-top: 8px;}
+.shop-link {font-weight: bold;}
+.arminfo {display: inline-block; width: 28px; height: 28px; background-image: url(../../Icons/info-button-black.png); cursor: pointer;}
+.arminfo:hover {background-image: url(../../Icons/info-button-white.png);}
+.arm-aimeos-info {border: 1px solid #ddd; background: #fff; padding: 20px; position: absolute; z-index: 10; width: 400px; display: none; font-size: 11px;}
 
 @media (min-width: 1280px) {
     .catalog-list .product {width: 320px;}
     .price-list .value {font-size: 18px;}
     .marketprice {font-size: 18px}
+    .price-list .cta {margin-top: 10px;}
     .aimeos a:link:not(.btn), .aimeos a:visited:not(.btn) { font-size: 15px}
-    .catalog-list .media-list, .catalog-list .media-item {width: 320px; height: 240px;}
+    .aimeos .product .stock-list {margin-bottom: 15px;}
+    .catalog-list .media-list, .catalog-list .media-item {width: 320px; height: 225px;}
     .aimeos .product .stock-list {font-size: 16px;}
-    .media-list .cta {width: 276px; left: 23px; bottom:28px;}
+    .media-list .cta {width: 276px; left: 23px; bottom:13px;}
     .catalog-detail-basic {margin-top: 40px;}
+    .arm-aimeos-info {font-size: 12px;}
 }
 
 @media (min-width: 1560px) {
     .price-list .value {font-size: 20px;}
     .marketprice {font-size: 20px}
+    .price-list .cta {margin-top: 15px;}
     .aimeos a:link:not(.btn), .aimeos a:visited:not(.btn) { font-size: 16px}
     .aimeos .product .stock-list {font-size: 18px;}
-    .catalog-list .product {width: 400px;}
-    .catalog-list .media-list, .catalog-list .media-item {width: 400px; height: 300px;}
+    .catalog-list .product {width: 400px; margin: 3em 1%;}
+    .catalog-list .media-list, .catalog-list .media-item {width: 400px; height: 285px;}
     .media-list .cta {left: 62px; width: 280px;}
     .catalog-detail-basic {margin-top: 60px;}
+    .arm-aimeos-info {font-size: 14px;}
 }
 
 @media (min-width: 1840px) {
-    .catalog-list .product {width: 480px;}
-    .catalog-list .media-list, .catalog-list .media-item {width: 480px; height: 360px;}
-    .media-list .cta {bottom: 85px; left: 102px;}
+    .catalog-list .product {width: 480px; margin: 2.5em 1%;}
+    .catalog-list .media-list, .catalog-list .media-item {width: 480px; height: 280px;}
+    .media-list .cta {bottom: 20px; left: 102px;}
     .catalog-detail-basic {margin-top: 80px;}
+    .arm-aimeos-info {font-size: 16px;}
 }
