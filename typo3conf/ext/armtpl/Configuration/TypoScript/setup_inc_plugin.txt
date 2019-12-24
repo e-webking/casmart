@@ -14,6 +14,7 @@ plugin.tx_powermail.settings.setup {
         produkte.htmlSpecialChars = 1
     }
 }
+
 plugin.tx_indexedsearch{
 
     view {
@@ -32,7 +33,30 @@ plugin.tx_indexedsearch{
     settings {
         displayAdvancedSearchLink = 0
     }
+    _LOCAL_LANG {
+        default {
+            form.legend = Suche
+            form.searchFor = Suchen nach
+            form.submit = Suche
+            displayResults.previous = < bisherige
+            displayResults.page = Seite
+            displayResults.next = nächste >
+            result.noResult = Keine Ergebnisse gefunden.
+            searchFor = Suchen nach
+            displayResults = Zeige Ergebnis <strong>%1$s bis %2$s</strong> von <strong>%3$s</strong>
+            rules.text (
+Nur Wörter mit mindestens 2 Zeichen werden angenommen<br />
+Maximum 200 Zeichen<br />
+Leerzeichen wird genutzt um Wörter zu trennen<br />
+UND, ODER und NICHT sind Füllwörter, die nicht berücksichtigt werden<br />
++/|/- entsprechen UND, ODER und NICHT<br />
+Alle Suchbegriffe werden in Kleinbuchstaben konvertiert.
+            )
+        }
+    }
 }
+
+
 
 plugin.tx_aimeos.settings.mshop.customer.manager.typo3.pid-default = 32
 # plugin.tx_aimeos.settings.client.html.common.template.baseurl

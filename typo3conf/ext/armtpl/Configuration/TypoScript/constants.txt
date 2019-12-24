@@ -1,6 +1,6 @@
 baseUrl = http://casmart9.local/
 rootPID = 1
-searchPid = 
+searchPid = 34
 templatePath = typo3conf/ext/armtpl/
 logoFile = typo3conf/ext/armtpl/Resources/Public/images/logo.jpg
 kontaktPid = 8

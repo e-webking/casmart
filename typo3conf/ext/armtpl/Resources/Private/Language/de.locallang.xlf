@@ -27,6 +27,10 @@
                             <source>Heading 3 (BushelAndPeck Script)</source>
                             <target>Überschrift 3 (BushelAndPeck Script)</target>
                     </trans-unit>
+                    <trans-unit id="search" resname="search">
+                            <source>Search</source>
+                            <target>SUCHE</target>
+                    </trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -154,5 +154,8 @@ page.10 {
 
         kontaktPid = TEXT
         kontaktPid.value = {$kontaktPid}
+
+        searchPid = TEXT
+        searchPid.value = {$searchPid}
     }
 }

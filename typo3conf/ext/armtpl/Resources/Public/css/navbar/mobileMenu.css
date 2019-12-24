@@ -7,6 +7,7 @@ nav:not(.mm-menu) {display: none;}
 .mm-listitem__btn{padding-right: 44px;}
 .mm-btn_next:after{right: 18px;}
 .mm-listitem:after{left: 0px;}
+.mm-listitem:last-child::after {border-bottom-width: 0px;}
 .mm-btn_prev::before {border-color: #fff;}
 .mm-menu a, .mm-menu a:active, .mm-menu a:hover, .mm-menu a:link, .mm-menu a:visited{color: #000;}
 

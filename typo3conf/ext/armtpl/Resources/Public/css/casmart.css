@@ -1,8 +1,22 @@
-.siteHeader {background: #211d18; color: #fff}
+.siteHeader {background: #211d1b; color: #fff}
 .siteHeader  a {color: #fff}
 .logo {width:100%;float:right}
 
 .fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width{width: 60%;}
+
+.search-wrap {display: none; position: absolute; top: 18px; right: 55px;}
+.top-search {width: 250px; position: relative; float: right; margin: 60px -40px 0 0;}
+.top-search .fa {color: #fff;}
+.top-search.mob-search {display: block; margin: 16px 0 0 16px; }
+.top-search .form-control {font-size: 13px; color: #fff; border: 1px solid #ede9e6; padding: 10px 40px 10px 15px; position: relative;  background:#211d18; border-radius: 0px; z-index: 2; box-shadow: none;}
+.top-search .form-control ~ label{color: #fff; padding-left:15px; position: absolute;left: 0; z-index: 2; top: 7px;-webkit-transition: all .3s; -o-transition: all .3s; transition: all .3s;}
+.top-search .form-control:focus ~ label{font-size: 12px !important; top: -20px !important; color: #666; border: 0px!important;}
+.top-search .form-group {margin-bottom: 0px;}
+.top-search .form-group button{position: absolute; right: 0px; top: 0px; padding: 7px 15px 10px; z-index: 9;border: 0px; outline: none; background-color: transparent; cursor: pointer;}
+ul.tx-indexedsearch-browsebox {padding: 0px; margin: 0px; list-style: none; height: 30px}
+ul.tx-indexedsearch-browsebox li {padding: 5px 10px 5px 0px; float: left;}
+.tx-indexedsearch-res {margin-top: 20px}
+
 @media (min-width: 1100px) {
     .logo {width:200px;float:left}
     .desktop-nav {width: calc(100% - 200px);float:left}
@@ -67,13 +81,23 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
 .arm-horizontal-grid .banner-float h1, .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3, .arm-horizontal-grid .banner-float .btext {background-color:initial; color:#000;}
 .mason-text.inverse h2, .mason-text.inverse h3, .mason-text.inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
 .banner-float .inverse h1, .banner-float .inverse h2, .banner-float .inverse h3, .banner-float .inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
+
+@media (min-width: 600px) {
+    .top-search.mob-search {width: 300px;}
+}
 @media (min-width: 768px) {
     .justified-gallery > a > .caption {font-size: 24px;}
     .banner-float {padding-top:50px; padding-left: 80px;}
 }
 @media (min-width: 992px) {
+    .top-search {width: 215px; margin: 0 -40px 0 0; color: #000; font-size: 12px}
     .slide-image img {max-width: 100%; width: inherit;}
     .banner-float {position: absolute; padding-left: 0px; padding-top: 0px; top:40px; left: 40px; width: 80%}
+    .mob-search{display: none;}
+    .search-wrap {display: block;}
+    .top-search .form-control {padding: 10px 40px 10px 5px;}
+    .top-search .form-control ~ label {padding-left: 5px;}
+    .top-search .form-group button{ padding: 7px 12px 8px;} 
 }
 @media (min-width: 1280px) {
     .justified-gallery > a > .caption {font-size: 36px;}
@@ -93,6 +117,9 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
     .sixtyp .limited-width {width: 60%;}
     .seventyp .limited-width {width: 70%;}
     .eightyp .limited-width {width: 80%;}
+    .top-search {width: 300px; font-size: 14px;}
+    .top-search .form-control:focus ~ label{font-size: 14px !important; color: #fff;}
+    .tx-indexedsearch-res {margin-top: 40px}
 }
 
 @media (min-width: 1440px) {
@@ -103,6 +130,9 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
     .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {margin-bottom: 15px; padding: 10px 20px;}
     .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3 {margin-bottom: 10px;}
     .banner-float .btext {font-size: 16px;}
+    .search-wrap {top: 18px;}
+    .top-search {font-size: 16px;}
+    .top-search .form-control:focus ~ label{font-size: 16px !important;}
 }
 
 @media (min-width: 1560px) {
@@ -111,6 +141,7 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
     .banner-float {top: 75px; left: 125px; width: calc(100% - 250px)}
     .banner-float.mbottom {bottom:75px; top: initial}
     .text-left .btext {width: 50%;}
+    .top-search {width: 310px; font-size: 18px;}
 }
 @media (min-width: 1760px) {
     .banner-float { left: 175px; width: calc(100% - 350px)}
@@ -124,6 +155,7 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
 @media (min-width: 2500px) {
     .banner-float {left: 445px; width: calc(100% - 890px)}
     .arm-horizontal-grid .banner-float {top:40px; left: 40px; width: calc(100% - 80px)}
+    .top-search {width: 320px;}
 }
 
 .armbullet {width: 100%; display: flex; position: relative; clear: both; margin-bottom: 10px}

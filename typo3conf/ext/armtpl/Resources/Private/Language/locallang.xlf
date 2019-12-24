@@ -21,6 +21,9 @@
                         <trans-unit id="header.106">
 				<source>Heading 3 (BushelAndPeck Script)</source>
 			</trans-unit>
+                        <trans-unit id="search" resname="search">
+				<source>Search</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -60,9 +60,17 @@ body {
 
 h1, .h1 {
     font-family:'Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;
-    font-weight: 400; line-height: 1.2; color: #000;text-transform: uppercase; padding:0px; margin: 0px; position: relative;  
+    font-weight: 200; line-height: 1.2; color: #000;text-transform: uppercase; padding:0px; margin: 0px; position: relative;  
 }
-h2, h3, h4, .h2, .h3, .h4 {
+h2, .h2 {
+    font-family:'Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;
+    font-weight: 200; line-height: 1.2; color: #000;padding:0px; margin: 0px; position: relative;  
+}
+h3, .h3 {
+    font-family:'Montserrat Light','Montserrat', helvetica, arial, sans-serif;
+    font-weight: 300; line-height: 1.2; color: #000;padding:0px; margin: 0px; position: relative; 
+}
+h4, .h4 {
     font-family:'Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;
     font-weight: 400; line-height: 1.2; color: #000;padding:0px; margin: 0px; position: relative;  
 }
@@ -159,6 +167,8 @@ p a:hover {color: #fcaf4d;}
         margin-bottom: 15px;
     }
     h3 {
+        font-family:'Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;
+        font-weight: 200;
         font-size: 20px;
     }
     h4 {
@@ -194,6 +204,12 @@ p a:hover {color: #fcaf4d;}
 @media (min-width: 1024px) {
     .container {
         max-width:1000px; 
+    }
+    h1 {
+        font-weight: 300;
+    }
+    h2 {
+        font-weight: 300;
     }
 }
 @media (min-width: 1280px) {
@@ -289,9 +305,9 @@ p a:hover {color: #fcaf4d;}
 .gbl{margin-bottom: 40px;}
 .negate-above-gbl {margin-top: -40px;}
 .video-embed {height: 432px;}
-.cta{background-color: #fcaf4d; border: 0; display: inline-block; min-width: 100px;text-align: center; color: #221d19; padding: 5px 8px; font-size: 12px; font-weight: bold; text-decoration: none}
+.cta{background-color: #fcaf4d; border: 0; display: inline-block; min-width: 100px;text-align: center; color: #211d1b; padding: 5px 8px; font-size: 12px; font-weight: bold; text-decoration: none}
 .cta:hover {color:#fff;}
-.btn-primary {background-color: #fcaf4d; color: #221d19;}
+.btn-primary {background-color: #fcaf4d; color: #211d1b;}
 .btn-primary:hover {color:#fff; background-color: #fcaf4d;}
 .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: 20px;
@@ -466,7 +482,7 @@ p a:hover {color: #fcaf4d;}
   .header .siteHeader .container {overflow-y: hidden;}
 }
 
-footer {background: #221d19;}
+footer {background: #211d1b;}
 
 footer a, footer h4{color: #fff;}
 footer h4 {margin-top: 40px; margin-bottom: 10px; font-weight: 600;}
