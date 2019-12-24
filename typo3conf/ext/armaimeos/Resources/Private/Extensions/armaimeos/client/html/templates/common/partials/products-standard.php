@@ -128,7 +128,7 @@ $detailConfig = $this->config( 'client/html/catalog/detail/url/config', [] );
 $detailFilter = array_flip( $this->config( 'client/html/catalog/detail/url/filter', ['d_prodid'] ) );
 $formPid = 8;
 ?>
-<ul class="list-items"><!--
+<ul class="list-items fff"><!--
 
 	<?php foreach( $this->get( 'products', [] ) as $id => $productItem ) : ?>
 		<?php
@@ -155,23 +155,37 @@ $formPid = 8;
 				<div class="media-list">
 					<?php if( ( $mediaItem = current( $productItem->getRefItems( 'media', 'default', 'default' ) ) ) !== false ) : ?>
 						<noscript>
-							<div class="media-item" itemscope="" itemtype="http://schema.org/ImageObject">
+							<div class="media-item oooo" itemscope="" itemtype="http://schema.org/ImageObject">
 								<img src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
 								<meta itemprop="contentUrl" content="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" />
 							</div>
+							
 						</noscript>
+						<?php $ik=1; ?>
 						<?php foreach( $productItem->getRefItems( 'media', 'default', 'default' ) as $mediaItem ) : ?>
 							<?php
 								$srcset = [];
 								foreach( $mediaItem->getPreviews() as $type => $path ) {
+									//echo $type;
+									 if($type==720){
+										$npath = $path;
+										
+									} 
 									$srcset[] = $this->content( $path ) . ' ' . $type . 'w';
 								}
 							?>
-							<div class="media-item">
-                                                            
-								<img src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" data-src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" data-srcset="<?= $enc->attr( join( ', ', $srcset ) ) ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
-                                                                
-							</div>
+							<!--<div class="media-item yyyy">-->
+							<?php if($ik==1) { ?>
+								<div class="media-item yyyy">
+										<?php /* echo"<pre>";
+	print_r($mediaItem);
+	die; */ ?>									
+									<!--<img src="<?= $enc->attr( $this->content( $npath ) ); ?>" data-src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" data-srcset="<?= $enc->attr( join( ', ', $srcset ) ) ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />-->
+									<img src="<?= $enc->attr( $this->content( $npath ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
+																	
+								</div>
+							<?php } ?>
+							<?php $ik++; ?>
 						<?php endforeach; ?>
 					<?php endif; ?>
                                     <div class="armoverlay"></div>

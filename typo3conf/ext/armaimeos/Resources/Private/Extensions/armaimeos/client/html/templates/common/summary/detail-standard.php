@@ -297,7 +297,7 @@ $errors = $this->get( 'summaryErrorCodes', [] );
 		<?php foreach( $this->summaryBasket->getService( 'delivery' ) as $service ) : ?>
 			<?php if( $service->getPrice()->getValue() > 0 ) : $priceItem = $service->getPrice(); ?>
 				<?php $price = $enc->html( sprintf( $priceFormat, $this->number( $priceItem->getValue(), $priceItem->getPrecision() ), $priceItem->getCurrencyId() ) ); ?>
-				<tr class="delivery">
+				<tr class="delivery vbbv">
 					<td class="details" colspan="2"><?= $enc->html( $service->getName() ); ?></td>
 					<td class="quantity">1</td>
 					<td class="unitprice"><?= $price ?></td>
@@ -341,7 +341,7 @@ $errors = $this->get( 'summaryErrorCodes', [] );
 		<?php endif; ?>
 
 		<?php if( ( $costs = $this->get( 'summaryCostsDelivery', 0 ) ) > 0 ) : ?>
-			<tr class="delivery">
+			<tr class="delivery ddd">
 				<td colspan="4"><?= $enc->html( $this->translate( 'client', 'Shipping' ) ); ?></td>
 				<td class="price"><?= $enc->html( sprintf( $priceFormat, $this->number( $costs, $precision ), $priceCurrency ) ); ?></td>
 				<?php if( $modify ) : ?>
@@ -370,7 +370,7 @@ $errors = $this->get( 'summaryErrorCodes', [] );
 			</tr>
 		<?php endif; ?>
 
-		<?php foreach( $this->get( 'summaryNamedTaxes', [] ) as $taxName => $priceItem ) : ?>
+		<?php /*foreach( $this->get( 'summaryNamedTaxes', [] ) as $taxName => $priceItem ) : ?>
 			<?php if( ( $taxValue = $priceItem->getTaxValue() ) > 0 ) : ?>
 				<tr class="tax">
 					<td colspan="4"><?= $enc->html( sprintf( $priceTaxflag ? $taxFormatIncl : $taxFormatExcl, $this->number( $priceItem->getTaxRate() ), $this->translate( 'client/code', 'tax' . $taxName ) ) ); ?></td>
@@ -380,7 +380,7 @@ $errors = $this->get( 'summaryErrorCodes', [] );
 					<?php endif; ?>
 				</tr>
 			<?php endif; ?>
-		<?php endforeach; ?>
+		<?php endforeach;*/ ?>
 
 		<?php if( $priceTaxflag === false ) : ?>
 			<tr class="total">

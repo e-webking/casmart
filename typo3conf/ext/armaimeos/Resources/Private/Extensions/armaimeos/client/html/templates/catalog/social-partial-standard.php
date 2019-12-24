@@ -40,7 +40,8 @@ $enc = $this->encoder();
  * @see client/html/catalog/social/url/twitter
  * @see client/html/catalog/social/url/pinterest
  */
-$list = $this->config( 'client/html/catalog/social/list', array( 'facebook', 'twitter', 'pinterest' ) );
+//$list = $this->config( 'client/html/catalog/social/list', array( 'facebook', 'twitter', 'pinterest' ) );
+$list = $this->config( 'client/html/catalog/social/list', array( 'facebook','instagram' ) );
 
 $urls = array(
 	/** client/html/catalog/social/url/facebook
@@ -62,7 +63,8 @@ $urls = array(
 	 * @category Developer
 	 * @see client/html/catalog/social/list
 	 */
-	'facebook' => 'https://www.facebook.com/sharer.php?u=%1$s&t=%2$s',
+	//'facebook' => 'https://www.facebook.com/sharer.php?u=%1$s&t=%2$s',
+	'facebook' => 'https://www.facebook.com/casmart.ch/',
 
 	/** client/html/catalog/social/url/twitter
 	 * URL for sharing product links on Twitter
@@ -83,7 +85,7 @@ $urls = array(
 	 * @category Developer
 	 * @see client/html/catalog/social/list
 	 */
-	'twitter' => 'https://twitter.com/share?url=%1$s&text=%2$s',
+	//'twitter' => 'https://twitter.com/share?url=%1$s&text=%2$s',
 
 	/** client/html/catalog/social/url/pinterest
 	 * URL for sharing product links on Pinterest
@@ -104,7 +106,9 @@ $urls = array(
 	 * @category Developer
 	 * @see client/html/catalog/social/list
 	 */
-	'pinterest' => 'https://pinterest.com/pin/create/button/?url=%1$s&description=%2$s&media=%3$s',
+	//'pinterest' => 'https://pinterest.com/pin/create/button/?url=%1$s&description=%2$s&media=%3$s',
+	'instagram' => 'https://www.instagram.com/casmart.ch/',
+	
 );
 
 $detailTarget = $this->config( 'client/html/catalog/detail/url/target' );

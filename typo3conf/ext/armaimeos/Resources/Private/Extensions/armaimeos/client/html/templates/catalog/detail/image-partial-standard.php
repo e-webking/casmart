@@ -36,7 +36,7 @@ $mediaItems = $this->get( 'mediaItems', [] );
 
 
 ?>
-<div class="catalog-detail-image">
+<div class="catalog-detail-image product_detail_img">
 	<div class="image-single" data-pswp="{bgOpacity: 0.75, shareButtons: false}">
 
 		<?php foreach( $mediaItems as $id => $mediaItem ) : ?>
@@ -47,7 +47,7 @@ $mediaItems = $this->get( 'mediaItems', [] );
 					$sources[$type] = $this->content( $path );
 				}
 			?>
-			<div class="media-item">
+			<div id="imageitem-<?php echo $enc->attr( $id ); ?>" class="mediaitem_n media-item">
 				<img id="image-<?= $enc->attr( $id ); ?>" class="item"
 					srcset="<?= $enc->attr( join( ', ', $srcset ) ) ?>"
 					src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ) ?>"
@@ -70,8 +70,8 @@ $mediaItems = $this->get( 'mediaItems', [] );
 				<?php foreach( $mediaItems as $id => $mediaItem ) : ?>
 					<?php $previewUrl = $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>
 
-					--><a class="<?= $class; ?>" style="background-image: url('<?= $previewUrl; ?>')"
-						href="<?= $url . '#image-' . $enc->attr( $id ); ?>"
+					--><a img-id="imageitem-<?php echo $enc->attr( $id ); ?>" class="getcclass <?= $class; ?>" style="background-image: url('<?= $previewUrl; ?>')"
+						href="javascript:void(0);"
 					></a><!--
 
 					<?php $class = 'item'; ?>
@@ -140,3 +140,15 @@ $mediaItems = $this->get( 'mediaItems', [] );
 	</div>
 
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".getcclass").click(function(){
+    var getid = $(this).attr('img-id');
+	console.log(getid);
+	$(".mediaitem_n").hide();
+	$("#"+getid).show();
+  });
+});
+</script>

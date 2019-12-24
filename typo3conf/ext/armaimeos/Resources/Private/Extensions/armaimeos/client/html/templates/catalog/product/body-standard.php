@@ -13,7 +13,7 @@ $optAction = $this->config( 'client/jsonapi/url/action', 'options' );
 $optConfig = $this->config( 'client/jsonapi/url/config', [] );
 
 ?>
-<section class="aimeos catalog-product" data-jsonurl="<?= $enc->attr( $this->url( $optTarget, $optCntl, $optAction, [], [], $optConfig ) ); ?>">
+<section class="aimeos catalog-product ccc" data-jsonurl="<?= $enc->attr( $this->url( $optTarget, $optCntl, $optAction, [], [], $optConfig ) ); ?>">
 
 	<?php if( isset( $this->productErrorList ) ) : ?>
 		<ul class="error-list">

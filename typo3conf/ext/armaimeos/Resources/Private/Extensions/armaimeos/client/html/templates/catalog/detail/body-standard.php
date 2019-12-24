@@ -148,6 +148,11 @@ if( isset( $this->detailProductItem ) )
 			<div class="col-sm-6">
 
 				<div class="catalog-detail-basic">
+				<?php  /* echo "<pre>";
+				print_r($this->detailProductItem); 
+				echo"ssd";
+				print_r($propItems); 
+				echo"ss"; die; */  ?>
 					<h1 class="name" itemprop="name"><?= $enc->html( $this->detailProductItem->getName(), $enc::TRUST ); ?></h1>
 					<p class="code">
 						<span class="name"><?= $enc->html( $this->translate( 'client', 'Article no.' ), $enc::TRUST ); ?>: </span>
@@ -300,7 +305,23 @@ if( isset( $this->detailProductItem ) )
 						</div>
 
 					</form>
-                                    <div class="arm-cta-form"><a href="/index.php?id=8&product=<?= $enc->attr( $this->detailProductItem->getId() ); ?>&pcode=<?= $enc->attr( $this->detailProductItem->getCode() ); ?>" class="cta">UNVERBINDLICHE ANFRAGE</a></div>
+						<span class="sepera_cs"></span><div class="arm-cta-form"><a href="/index.php?id=8&product=<?= $enc->attr( $this->detailProductItem->getId() ); ?>&pcode=<?= $enc->attr( $this->detailProductItem->getCode() ); ?>" class="cta">UNVERBINDLICHE ANFRAGE</a></div>
+						<?= $this->partial(
+							/** client/html/catalog/partials/social
+							 * Relative path to the social partial template file
+							 *
+							 * Partials are templates which are reused in other templates and generate
+							 * reoccuring blocks filled with data from the assigned values. The social
+							 * partial creates an HTML block for links to social platforms in the
+							 * catalog components.
+							 *
+							 * @param string Relative path to the template file
+							 * @since 2017.04
+							 * @category Developer
+							 */
+							$this->config( 'client/html/catalog/partials/social', 'catalog/social-partial-standard' ),
+							array( 'productItem' => $this->detailProductItem )
+						); ?>
 				</div>
 
 
@@ -325,27 +346,12 @@ if( isset( $this->detailProductItem ) )
 				); ?>
 
 
-				<?= $this->partial(
-					/** client/html/catalog/partials/social
-					 * Relative path to the social partial template file
-					 *
-					 * Partials are templates which are reused in other templates and generate
-					 * reoccuring blocks filled with data from the assigned values. The social
-					 * partial creates an HTML block for links to social platforms in the
-					 * catalog components.
-					 *
-					 * @param string Relative path to the template file
-					 * @since 2017.04
-					 * @category Developer
-					 */
-					$this->config( 'client/html/catalog/partials/social', 'catalog/social-partial-standard' ),
-					array( 'productItem' => $this->detailProductItem )
-				); ?>
+				
 
 			</div>
 
-
-			<div class="col-sm-12">
+			<div class="col-sm-6"></div>
+			<div class="col-sm-6">
 
 				<?php if( $this->detailProductItem->getType() === 'bundle'
 					&& ( $posItems = $this->detailProductItem->getRefItems( 'product', null, 'default' ) ) !== []
@@ -364,7 +370,7 @@ if( isset( $this->detailProductItem ) )
 				<div class="catalog-detail-additional">
 
 					<?php if( ( $textItems = $this->detailProductItem->getRefItems( 'text', 'long' ) ) !== [] ) : ?>
-						<div class="additional-box">
+						<div class="additional-box 333">
 							<h2 class="header description"><?= $enc->html( $this->translate( 'client', 'Description' ), $enc::TRUST ); ?></h2>
 							<div class="content description">
 								<?php foreach( $textItems as $textItem ) : ?>
@@ -375,7 +381,7 @@ if( isset( $this->detailProductItem ) )
 					<?php endif; ?>
 
 					<?php if( count( $attrMap ) > 0 || count( $this->detailProductItem->getRefItems( 'attribute', null, 'default' ) ) > 0 ) : ?>
-						<div class="additional-box">
+						<div class="additional-box rrr">
 							<h2 class="header attributes"><?= $enc->html( $this->translate( 'client', 'Characteristics' ), $enc::TRUST ); ?></h2>
 							<div class="content attributes">
 								<table class="attributes">
@@ -447,7 +453,7 @@ if( isset( $this->detailProductItem ) )
 					<?php endif; ?>
 
 					<?php if( count( $propMap ) > 0 ) : ?>
-						<div class="additional-box">
+						<div class="additional-box 111">
 							<h2 class="header properties"><?= $enc->html( $this->translate( 'client', 'Properties' ), $enc::TRUST ); ?></h2>
 							<div class="content properties">
 								<table class="properties">
@@ -473,7 +479,7 @@ if( isset( $this->detailProductItem ) )
 
 					<?php $mediaList = $this->get( 'detailMediaItems', [] ); ?>
 					<?php if( ( $mediaItems = $this->detailProductItem->getRefItems( 'media', 'download' ) ) !== [] ) : ?>
-						<div class="additional-box">
+						<div class="additional-box 222">
 							<h2 class="header downloads"><?= $enc->html( $this->translate( 'client', 'Downloads' ), $enc::TRUST ); ?></h2>
 							<ul class="content downloads">
 								<?php foreach( $mediaItems as $id => $item ) : ?>

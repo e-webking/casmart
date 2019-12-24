@@ -150,3 +150,6 @@ msgstr "Abholort"
 #. Pick-up location
 msgid "supplier.address"
 msgstr "Abholort"
+
+msgid "Properties"
+msgstr "Masse"

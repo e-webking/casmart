@@ -83,8 +83,6 @@ $first = true;
 		<?php if( $priceItem->getValue() > 0 && $rebate > 0 ) : ?>
                 <br>
                 <span class="marketprice">anstatt <?= $enc->html( sprintf( $format['value'], $this->number( $marketPrice, $priceItem->getPrecision() ), $currency ), $enc::TRUST ); ?> </span> &nbsp;&nbsp; <span class="arminfo"></span>
-                <div class="arm-aimeos-info"><i class="fa fa-2x fa-close pull-right"></i>Unsere Preise beziehen sich auf die unverbindlich empfohlenen Verkaufspreise des Herstellers. Diese unterliegen Markt- und Währungsschwankungen. Kontaktieren Sie uns, um das attraktivste Angebot zu bekommen!
-                <br><br>Preise "ab CHF…" bedeuten, dass wir die günstigste Aufführungsvariante, ohne Accessoires oder Dekoelemente berücksichtigen.</div>
 		<?php endif; ?>
 	</div>
 

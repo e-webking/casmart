@@ -48,21 +48,22 @@ $favConfig = $this->config( 'client/html/account/favorite/url/config', [] );
  * @category User
  * @category Developer
  */
-$list = $this->config( 'client/html/catalog/actions/list', array( 'pin', 'watch', 'favorite' ) );
+//$list = $this->config( 'client/html/catalog/actions/list', array( 'pin', 'watch', 'favorite' ) );
+$list = $this->config( 'client/html/catalog/actions/list', array( 'favorite' ) );
 
 $urls = array(
-	'pin' => $this->url( $pinTarget, $pinController, $pinAction, array( 'pin_action' => 'add', 'pin_id' => $prodid, 'd_name' => $this->productItem->getName( 'url' ) ), $pinConfig ),
-	'watch' => $this->url( $watchTarget, $watchController, $watchAction, array( 'wat_action' => 'add', 'wat_id' => $prodid, 'd_name' => $this->productItem->getName( 'url' ) ), $watchConfig ),
+	//'pin' => $this->url( $pinTarget, $pinController, $pinAction, array( 'pin_action' => 'add', 'pin_id' => $prodid, 'd_name' => $this->productItem->getName( 'url' ) ), $pinConfig ),
+	//'watch' => $this->url( $watchTarget, $watchController, $watchAction, array( 'wat_action' => 'add', 'wat_id' => $prodid, 'd_name' => $this->productItem->getName( 'url' ) ), $watchConfig ),
 	'favorite' => $this->url( $favTarget, $favController, $favAction, array( 'fav_action' => 'add', 'fav_id' => $prodid, 'd_name' => $this->productItem->getName( 'url' ) ), $favConfig ),
 );
 
 
 ?>
-<div class="catalog-actions">
+<!--<div class="catalog-actions">
 	<?php foreach( $list as $entry ) : ?>
 		<?php if( isset( $urls[$entry] ) ) : ?>
 			<a class="actions-button actions-button-<?= $enc->attr( $entry ); ?>" href="<?= $enc->attr( $urls[$entry] ); ?>" title="<?= $enc->attr( $this->translate( 'client/code', $entry ) ); ?>"></a>
 
 		<?php endif; ?>
 	<?php endforeach; ?>
-</div>
+</div>-->

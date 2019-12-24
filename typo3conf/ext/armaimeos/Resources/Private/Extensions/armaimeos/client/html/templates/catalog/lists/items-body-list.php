@@ -28,7 +28,7 @@ $basketParams = ( $basketSite ? ['site' => $basketSite] : [] );
 <?php $this->block()->start( 'catalog/lists/items' ); ?>
 <div class="catalog-list-items">
 
-	<ul class="list-items list">
+	<ul class="list-items list yyy">
 
 		<?php foreach( $this->get( 'listProductItems', [] ) as $id => $productItem ) : $firstImage = true; ?>
 			<?php
@@ -42,7 +42,7 @@ $basketParams = ( $basketSite ? ['site' => $basketSite] : [] );
 				itemtype="http://schema.org/Product"
 				itemscope="">
 
-				<a class="media-list" href="<?= $url; ?>">
+				<a class="media-list gfff bbb" href="<?= $url; ?>">
 					<?php if( ( $mediaItem = current( $productItem->getRefItems( 'media', 'default', 'default' ) ) ) !== false ) : ?>
 						<noscript>
 							<div class="media-item" itemscope="" itemtype="http://schema.org/ImageObject">

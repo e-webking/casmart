@@ -1632,8 +1632,28 @@ jQuery(document).ready(function($) {
 	Aimeos.loadImages();
 	$(window).on("resize", Aimeos.loadImages);
 	$(window).on("scroll", Aimeos.loadImages);
+	/* $('.header.properties').text('Masse'); */
+	$(".header.properties").text(function () {
+		return $(this).text().replace("Eigenschaften", "Masse "); 
+	});
+	$(".properties .item.subproduct .name").text(function () {
+		return $(this).text().replace("Pakethöhe", "Höhe in cm"); 
+	});
+	$(".properties .item.subproduct .name").text(function () {
+		return $(this).text().replace("Paketlänge", "Tiefe in cm"); 
+	});
+	$(".properties .item.subproduct .name").text(function () {
+		return $(this).text().replace("Paketbreite", "Breite in cm"); 
+	});
+	$(".catalog-detail-service .service-intro").text(function () {
+		return $(this).text().replace("zzgl. Versandkosten", "Lieferung und Montage durch ein professionelles Team in der ganzen Schweiz inklusive. "); 
+	});
+	$(".common-summary-service.row .item.delivery .header h3").text(function () {
+		return $(this).text().replace("Versand", "Lieferung und Montage inklusive"); 
+	});
+	/*****direct redirect*****/
 
-
+	$(".checkout-standard-process .btn-action").click();
 	Aimeos.init();
 
 	AimeosLocaleSelect.init();
@@ -1656,4 +1676,5 @@ jQuery(document).ready(function($) {
 	AimeosAccountHistory.init();
 	AimeosAccountFavorite.init();
 	AimeosAccountWatch.init();
+	
 });
