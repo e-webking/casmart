@@ -32,7 +32,7 @@
 .shop-link {font-weight: bold;}
 .arminfo {display: inline-block; width: 28px; height: 28px; background-image: url(../../Icons/info-button-black.png); cursor: pointer;}
 .arminfo:hover {background-image: url(../../Icons/info-button-white.png);}
-#arm-aimeos-info {border: 1px solid #ddd; background: #fff; padding: 20px; position: absolute; z-index: 10; width: 400px; display: none; font-size: 11px;}
+.arm-aimeos-info {border: 1px solid #ddd; background: #fff; padding: 20px; position: absolute; z-index: 100; left:0; width: 100%; display: none; font-size: 11px; top: 70px}
 
 @media (min-width: 1280px) {
     .catalog-list .product {width: 320px;}
@@ -45,7 +45,7 @@
     .aimeos .product .stock-list {font-size: 16px;}
     .media-list .cta {width: 276px; left: 23px; bottom:13px;}
     .catalog-detail-basic {margin-top: 40px;}
-    #arm-aimeos-info {font-size: 12px;}
+    .arm-aimeos-info {font-size: 12px; max-width: 400px; top: 100px;}
 	.catalog-detail-basket{
 		width:84%;
 	}
@@ -99,7 +99,7 @@
     .catalog-list .media-list, .catalog-list .media-item {width: 400px; height: 285px;}
     .media-list .cta {left: 62px; width: 280px;}
     .catalog-detail-basic {margin-top: 60px;}
-    #arm-aimeos-info {font-size: 14px;}
+    .arm-aimeos-info {font-size: 14px; top: 160px; max-width: 470px; left: 0px;}
 }
 
 @media (min-width: 1840px) {
@@ -107,7 +107,7 @@
     .catalog-list .media-list, .catalog-list .media-item {width: 480px; height: auto;}
     .media-list .cta {bottom: 20px; left: 102px;}
     .catalog-detail-basic {margin-top: 80px;}
-    #arm-aimeos-info {font-size: 16px;}
+    .arm-aimeos-info {font-size: 16px; left: 5px}
 }
 /*.aimeos.catalog-list .catalog-list-items .product .media-list .media-item img{
 	width:240px;
