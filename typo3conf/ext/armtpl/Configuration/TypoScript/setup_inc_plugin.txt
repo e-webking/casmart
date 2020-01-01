@@ -44,6 +44,7 @@ plugin.tx_indexedsearch{
             result.noResult = Keine Ergebnisse gefunden.
             searchFor = Suchen nach
             displayResults = Zeige Ergebnis <strong>%1$s bis %2$s</strong> von <strong>%3$s</strong>
+            rules.headline = Bitte beachten Sie:
             rules.text (
 Nur Wörter mit mindestens 2 Zeichen werden angenommen<br />
 Maximum 200 Zeichen<br />

@@ -150,6 +150,8 @@ p a:hover {color: #fcaf4d;}
 .armmasonary .mason-text {position: absolute; top: 20px; left: 20px; max-width: 80%; z-index: 1;}
 .align-right {text-align: right;}
 .align-center {text-align: center;}
+.tx-indexedsearch-rules {margin-top: 20px;}
+
 @media (min-width: 610px) {
     .container {
         max-width:600px; 
@@ -244,6 +246,7 @@ p a:hover {color: #fcaf4d;}
     .arm-horizontal-grid .banner-float h2 {font-size: 20px; padding: 0}
     .arm-horizontal-grid .banner-float h3 {font-size: 13px; padding: 0}
     .armmasonary .mason-text h2,.armmasonary .mason-text h3, .armmasonary .mason-text h4 {margin-bottom: 20px;}
+    .tx-indexedsearch-rules {margin-top: 40px;}
 }
 @media (min-width: 1350px) {
     .container {

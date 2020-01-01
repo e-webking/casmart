@@ -1,0 +1,9 @@
+<div class="arm-gallery">
+<f:if condition="{items}">
+    <ul id="galleryarm" class="list-unstyled row">
+        <f:for each="{items}" as="item">
+            <f:render partial="Gallery/Item" arguments="{item:item, width:width, height:height, settings:settings}" />
+        </f:for>
+    </ul>
+</f:if>
+</div>

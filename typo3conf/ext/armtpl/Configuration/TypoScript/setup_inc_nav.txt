@@ -1,8 +1,8 @@
 lib.logo = IMAGE
 lib.logo {
     file = {$logoFile}
-    file.width = 170
-    file.height = 100
+    file.width = 656
+    file.height = 505
     stdWrap {
         typolink.parameter = {$rootPID}
         wrap = |

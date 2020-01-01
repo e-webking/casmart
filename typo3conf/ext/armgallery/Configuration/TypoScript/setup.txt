@@ -1,0 +1,23 @@
+# CSS and JS inclusion
+page.includeCSS {
+    tx_armgallery_css1 = EXT:armgallery/Resources/Public/css/lightgallery.min.css
+}
+
+page.includeJSFooter {
+    tx_armgallery_file1 = EXT:armgallery/Resources/Public/js/picturefill.min.js
+    tx_armgallery_file2 = EXT:armgallery/Resources/Public/js/lightgallery-all.min.js
+    tx_armgallery_file3 = EXT:armgallery/Resources/Public/js/jquery.mousewheel.min.js
+    tx_armgallery_file4 = EXT:armgallery/Resources/Public/js/armgallery.js
+}
+
+plugin.tx_armgallery {
+    view {
+        templateRootPath = {$plugin.tx_armgallery.view.templateRootPath}
+        partialRootPath = {$plugin.tx_armgallery.view.partialRootPath}
+        layoutRootPath = {$plugin.tx_armgallery.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_armgallery.persistence.storagePid}
+    }
+}
+

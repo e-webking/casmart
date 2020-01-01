@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-12-26T23:46:34Z" product-name="armgallery">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_armgallery_domain_model_album">
+				<source>Album</source>
+			</trans-unit>
+			<trans-unit id="tx_armgallery_domain_model_album.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_armgallery_domain_model_album.items">
+				<source>Items</source>
+			</trans-unit>
+
+			<trans-unit id="tx_armgallery_domain_model_item">
+				<source>Item</source>
+			</trans-unit>
+			<trans-unit id="tx_armgallery_domain_model_item.album">
+				<source>Album</source>
+			</trans-unit>
+			<trans-unit id="tx_armgallery_domain_model_item.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_armgallery_domain_model_item.image">
+				<source>Image</source>
+			</trans-unit>
+                        <trans-unit id="tx_armgallery_domain_model_item.flink">
+				<source>Link</source>
+			</trans-unit>
+			 <trans-unit id="tx_armgallery_domain_model_item.linktext">
+				<source>Link Label</source>
+			</trans-unit>
+                        
+                        <trans-unit id="tx_armgallery_flexform.album">
+				<source>Album</source>
+			</trans-unit>
+                        <trans-unit id="tx_armgallery_flexform.width">
+				<source>Width</source>
+			</trans-unit>
+                        <trans-unit id="tx_armgallery_flexform.height">
+				<source>Height</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

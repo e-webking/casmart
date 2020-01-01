@@ -65,6 +65,7 @@ editor:
         - specialchar
         - showblocks
         - codesnippet
+        - autolink
         
       externalPlugins:
         typo3image:
