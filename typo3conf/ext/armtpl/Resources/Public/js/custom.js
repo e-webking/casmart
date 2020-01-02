@@ -79,7 +79,17 @@ document.addEventListener(
          });
       }
    );
+   
+function closeModal()
+{
+    $("#modalimg").hide();
+}
 
+function openModal(src) {
+    $('#lightimg').attr('src', src);
+    $("#modalimg").show();
+}
+    
 (function($){
     $('.listtoggle').on('click', function(){
        $('.armulist').toggle(); 
@@ -128,6 +138,8 @@ document.addEventListener(
        $(this).hide(); 
        $('.arminfo').css("background-image", "url(" + nicon + ")");
     });
+    
+    
 })(jQuery);
 
 

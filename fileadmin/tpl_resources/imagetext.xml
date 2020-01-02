@@ -48,26 +48,26 @@
         </TCEforms>
       </field_link>
       <field_align type="array">
-            <TCEforms type="array">
-              <label>Image alignment</label>
-              <config type="array">
-                <type>select</type>
-                <items type="array">
-                  <numIndex index="0" type="array">
-                    <numIndex index="0">Left</numIndex>
-                     <numIndex index="1">ce-left</numIndex>
-                  </numIndex>
-                  <numIndex index="1" type="array">
-                    <numIndex index="0">Center</numIndex>
-                    <numIndex index="1">ce-center</numIndex>
-                  </numIndex>
-                  <numIndex index="2" type="array">
-                    <numIndex index="0">Right</numIndex>
-                    <numIndex index="1">ce-right</numIndex>
-                  </numIndex>
-                </items>
-              </config>
-            </TCEforms>
+        <TCEforms type="array">
+          <label>Image alignment</label>
+          <config type="array">
+            <type>select</type>
+            <items type="array">
+              <numIndex index="0" type="array">
+                <numIndex index="0">Left</numIndex>
+                 <numIndex index="1">ce-left</numIndex>
+              </numIndex>
+              <numIndex index="1" type="array">
+                <numIndex index="0">Center</numIndex>
+                <numIndex index="1">ce-center</numIndex>
+              </numIndex>
+              <numIndex index="2" type="array">
+                <numIndex index="0">Right</numIndex>
+                <numIndex index="1">ce-right</numIndex>
+              </numIndex>
+            </items>
+          </config>
+        </TCEforms>
       </field_align>
       <field_imgalt type="array">
         <TCEforms type="array">
@@ -86,7 +86,10 @@
             <type>text</type>
             <rows>3</rows>
             <cols>60</cols>
-            <enableRichtext>1</enableRichtext>
+            <enableRichtext>true</enableRichtext>
+            <richtextConfiguration>
+                <aConfig>option</aConfig>
+            </richtextConfiguration>
           </config>
         </TCEforms>
       </field_text>

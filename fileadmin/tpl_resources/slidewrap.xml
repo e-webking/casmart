@@ -14,6 +14,14 @@
           </config>
         </TCEforms>
       </field_nopage>
+      <field_nobreadcrumb type="array">
+        <TCEforms type="array">
+          <label>No breadcrumb</label>
+          <config type="array">
+            <type>check</type>
+          </config>
+        </TCEforms>
+      </field_nobreadcrumb>
     </el>
   </ROOT>
 </T3DataStructure>

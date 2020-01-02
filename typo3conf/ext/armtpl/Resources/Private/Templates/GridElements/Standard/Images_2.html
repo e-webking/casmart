@@ -1,7 +1,8 @@
 <f:if condition="{data.header_link}">
     <f:then>
         <f:link.typolink parameter="{data.header_link}">
-            <picture class="slide-image">
+            
+            <picture class="slide-image" <f:if condition="{data.flexform_field_lightbox}">onclick="openModal('uploads/tx_armtpl/{data.flexform_field_imagelarge}')"</f:if>>
             <source media="(min-width: 1920px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagelarge}">
             <f:if condition="{data.flexform_field_imagemid}">
             <source media="(min-width: 1440px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagemid}">
@@ -20,7 +21,7 @@
         </f:link.typolink>
     </f:then>
     <f:else>
-        <picture class="slide-image">
+        <picture class="slide-image" <f:if condition="{data.flexform_field_lightbox}">onclick="openModal('uploads/tx_armtpl/{data.flexform_field_imagelarge}')"</f:if>>
             <source media="(min-width: 1920px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagelarge}">
             <f:if condition="{data.flexform_field_imagemid}">
             <source media="(min-width: 1440px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagemid}">

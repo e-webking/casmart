@@ -96,6 +96,14 @@
           </config>
         </TCEforms>
       </field_imgalt>
+      <field_lightbox type="array">
+       <TCEforms type="array">
+          <label>Click Enlarge</label>
+          <config type="array">
+            <type>check</type>
+          </config>
+        </TCEforms>
+      </field_lightbox>
     </el>
   </ROOT>
 </T3DataStructure>
