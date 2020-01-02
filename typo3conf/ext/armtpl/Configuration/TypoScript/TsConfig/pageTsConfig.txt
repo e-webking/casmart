@@ -28,7 +28,7 @@ TCEFORM {
     }
 }
 
-RTE.default.preset = armtpl_preset
+RTE.default.preset = default
 RTE.default.buttons.image.options.magic.maxWidth = 2560
 RTE.default.buttons.image.options.magic.maxHeight = 1920
 RTE.tt_content.types.text.bodytext.preset = armtpl_preset

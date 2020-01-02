@@ -65,7 +65,6 @@ editor:
         - specialchar
         - showblocks
         - codesnippet
-        - autolink
         
       externalPlugins:
         typo3image:
@@ -103,11 +102,6 @@ processing:
             unset : true
 
       i:
-       allowedAttribs: class
-       fixAttrib:
-          style:
-            unset : true
-      a:
        allowedAttribs: class
        fixAttrib:
           style:

@@ -23,8 +23,8 @@ ul.tx-indexedsearch-browsebox li {padding: 5px 10px 5px 0px; float: left;}
 /* The Close Button */
 .close {color: #fff;position: absolute;top: 10px;right: 25px;font-size: 35px;font-weight: bold; opacity: 0.8}
 .close:hover,.close:focus {color: #ccc;text-decoration: none;cursor: pointer; opacity: 1.0}
-#lightimg {width: 100%; height: auto}
-
+#lightimg {max-width: 100%; height: auto; margin: auto}
+.hovermod {cursor: pointer;}
 @media (min-width: 1100px) {
     .logo {width:150px;float:left}
     .desktop-nav {width: calc(100% - 200px);float:left;}
