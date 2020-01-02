@@ -83,6 +83,7 @@ document.addEventListener(
 function closeModal()
 {
     $("#modalimg").hide();
+    $('#lightimg').attr('src', '');
 }
 
 function openModal(src) {
