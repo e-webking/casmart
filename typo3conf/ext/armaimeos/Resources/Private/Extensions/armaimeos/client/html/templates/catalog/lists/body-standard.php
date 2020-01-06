@@ -104,7 +104,7 @@ if( $this->get( 'listProductTotal', 0 ) > 1 && $this->config( 'client/html/catal
 			'prev' => $this->get( 'listPagePrev', 1 ),
 			'next' => $this->get( 'listPageNext', 1 ),
 			'last' => $this->get( 'listPageLast', 1 ),
-                        'category' => (is_object($catItem))?$catItem->getName():'',
+                        'category' => $catItem->getName(),
                         'showbottom' => 0
 		)
 	);

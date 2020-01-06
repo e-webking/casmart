@@ -72,8 +72,8 @@ foreach( $this->get( 'stockProductCodes', [] ) as $prodCode )
 	{
 		$stockType = 'stocktype:' . $item->getType();
 
-		if( !isset( $typeText[$stockType] ) ) {
-			$typeText[$stockType] = $this->translate( 'client/code', $stockType );
+		if( !isset( $typeText["$stockType"] ) ) {
+			$typeText["$stockType"] = $this->translate( 'client/code', $stockType );
 		}
 
 		$stocklevel = $item->getStockLevel();
@@ -91,7 +91,7 @@ foreach( $this->get( 'stockProductCodes', [] ) as $prodCode )
 		if( $stocklevel <= 0 && ( $date = $item->getDateBack() ) != '' )
 		{
 			$text = sprintf( $textStockOut,
-				$typeText[$stockType],
+				$typeText["$stockType"],
 				$textStock[$level],
 				date_create( $date )->format( $dateFormat )
 			);
@@ -99,7 +99,7 @@ foreach( $this->get( 'stockProductCodes', [] ) as $prodCode )
 		else
 		{
 			$text = sprintf( $textStockIn,
-				$typeText[$stockType],
+				$typeText["$stockType"],
 				$textStock[$level]
 			);
 		}
@@ -118,7 +118,7 @@ foreach( $this->get( 'stockProductCodes', [] ) as $prodCode )
 
 
 ?>
-// <!--
+<!--
 var aimeosStockHtml = <?= json_encode( $result, JSON_FORCE_OBJECT ); ?>;
 
 $(".aimeos .product .stock-list .articleitem").each(function() {
