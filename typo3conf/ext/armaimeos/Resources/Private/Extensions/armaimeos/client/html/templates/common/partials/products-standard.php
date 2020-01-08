@@ -150,42 +150,49 @@ $formPid = 8;
 			itemtype="http://schema.org/Product"
 			itemscope="" >
 
-                        <div class="media-list">
-                                <?php if( ( $mediaItem = current( $productItem->getRefItems( 'media', 'default', 'default' ) ) ) !== false ) : ?>
-                                        <noscript>
-                                                <div class="media-item oooo" itemscope="" itemtype="http://schema.org/ImageObject">
-                                                        <img src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
-                                                        <meta itemprop="contentUrl" content="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" />
-                                                </div>
+                   
 
-                                        </noscript>
-                                        <?php $ik=1; ?>
-                                        <?php foreach( $productItem->getRefItems( 'media', 'default', 'default' ) as $mediaItem ) : ?>
-                                                <?php
-                                                        $srcset = [];
-                                                        foreach( $mediaItem->getPreviews() as $type => $path ) {
-                                                                //echo $type;
-                                                                 if($type==720){
-                                                                        $npath = $path;
+				<div class="media-list">
+					<?php if( ( $mediaItem = current( $productItem->getRefItems( 'media', 'default', 'default' ) ) ) !== false ) : ?>
+						<noscript>
+							<div class="media-item oooo" itemscope="" itemtype="http://schema.org/ImageObject">
+								<img src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
+								<meta itemprop="contentUrl" content="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" />
+							</div>
+							
+						</noscript>
+						<?php $ik=1; ?>
+						<?php foreach( $productItem->getRefItems( 'media', 'default', 'default' ) as $mediaItem ) : ?>
+							<?php
+								$srcset = [];
+								foreach( $mediaItem->getPreviews() as $type => $path ) {
+									//echo $type;
+									 if($type==720){
+										$npath = $path;
+										
+									} 
+									$srcset[] = $this->content( $path ) . ' ' . $type . 'w';
+								}
+							?>
+							<!--<div class="media-item yyyy">-->
+							<?php if($ik==1) { ?>
+								<div class="media-item yyyy">
+										<?php /* echo"<pre>";
+	print_r($mediaItem);
+	die; */ ?>									
+									<!--<img src="<?= $enc->attr( $this->content( $npath ) ); ?>" data-src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" data-srcset="<?= $enc->attr( join( ', ', $srcset ) ) ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />-->
+									<img src="<?= $enc->attr( $this->content( $npath ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
+																	
+								</div>
+							<?php } ?>
+							<?php $ik++; ?>
+						<?php endforeach; ?>
+					<?php endif; ?>
+                                    <div class="armoverlay"></div>
+                                    <div class="cta"><a href="<?= $enc->attr('/index.php?id='.$formPid.'&tx_shop[product]=' . $productItem->getId().'|' . $productItem->getCode() .'|'.strip_tags($productItem->getName())); ?>">unverbindlich anfragen !</a></div>
+				</div>
+			<!-- /a -->
 
-                                                                } 
-                                                                $srcset[] = $this->content( $path ) . ' ' . $type . 'w';
-                                                        }
-                                                ?>
-                                                <?php if($ik==1) { ?>
-                                                        <div class="media-item yyyy">
-
-                                                                <!--<img src="<?= $enc->attr( $this->content( $npath ) ); ?>" data-src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" data-srcset="<?= $enc->attr( join( ', ', $srcset ) ) ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />-->
-                                                                <img src="<?= $enc->attr( $this->content( $npath ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
-
-                                                        </div>
-                                                <?php } ?>
-                                                <?php $ik++; ?>
-                                        <?php endforeach; ?>
-                                <?php endif; ?>
-                            <div class="armoverlay"></div>
-                            <div class="cta"><a href="<?= $enc->attr('/index.php?id='.$formPid.'&tx_shop[product]=' . $productItem->getId().'|' . $productItem->getCode() .'|'.strip_tags($productItem->getName())); ?>">unverbindlich anfragen !</a></div>
-                        </div>
 
 			<div class="offer" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                             

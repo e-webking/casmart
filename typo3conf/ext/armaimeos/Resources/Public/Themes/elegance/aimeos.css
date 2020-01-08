@@ -195,3 +195,6 @@
 .checkout-standard-process{
 	display:none;
 }
+.aimeos .product .stock-list{
+	text-transform: inherit;
+}

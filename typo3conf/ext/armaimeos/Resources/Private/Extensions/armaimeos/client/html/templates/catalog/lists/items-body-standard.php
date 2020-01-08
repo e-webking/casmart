@@ -31,7 +31,7 @@ $enc = $this->encoder();
 
 ?>
 <?php $this->block()->start( 'catalog/lists/items' ); ?>
-<div class="catalog-list-items ggggg">
+<div class="catalog-list-items">
 	<?= $this->partial(
 		$this->config( 'client/html/common/partials/products', 'common/partials/products-standard' ),
 		array(

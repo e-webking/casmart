@@ -60,6 +60,7 @@ $reqstock = (int) $this->config( 'client/html/basket/require-stock', true );
 
 $prodItems = $this->get( 'detailProductItems', [] );
 
+
 $propMap = $subPropDeps = $propItems = [];
 $attrMap = $subAttrDeps = $mediaItems = [];
 
@@ -148,10 +149,11 @@ if( isset( $this->detailProductItem ) )
 			<div class="col-sm-6">
 
 				<div class="catalog-detail-basic">
-				<?php  /* echo "<pre>";
+				<?php   /* echo "<pre>";
 				print_r($this->detailProductItem); 
 				echo"ssd";
-				print_r($propItems); 
+				die; */
+				/*print_r($propItems); 
 				echo"ss"; die; */  ?>
 					<h1 class="name" itemprop="name"><?= $enc->html( $this->detailProductItem->getName(), $enc::TRUST ); ?></h1>
 					<p class="code">
