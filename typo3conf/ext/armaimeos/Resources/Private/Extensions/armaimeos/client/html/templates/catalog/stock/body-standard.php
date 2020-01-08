@@ -70,7 +70,7 @@ foreach( $this->get( 'stockProductCodes', [] ) as $prodCode )
 
 	foreach( (array) $stockItemsByProducts[$prodCode] as $item )
 	{
-		$stockType = 'stocktype:' . $item->getType();
+		$stockType = 'Produkt: ' . $item->getType();
 
 		if( !isset( $typeText["$stockType"] ) ) {
 			$typeText["$stockType"] = $this->translate( 'client/code', $stockType );
@@ -87,7 +87,9 @@ foreach( $this->get( 'stockProductCodes', [] ) as $prodCode )
 		} else {
 			$level = 'stock-high'; $link = 'http://schema.org/InStock';
 		}
-
+                
+                // Overwrite stock to delivery
+                $textStock[$level] = 'Lieferzeit für dieses';
 		if( $stocklevel <= 0 && ( $date = $item->getDateBack() ) != '' )
 		{
 			$text = sprintf( $textStockOut,
