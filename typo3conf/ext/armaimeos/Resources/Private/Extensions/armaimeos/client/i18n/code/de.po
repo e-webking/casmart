@@ -79,14 +79,6 @@ msgstr "Farbe"
 msgid "option"
 msgstr "Option"
 
-#. Product property package-length
-msgid "package-length"
-msgstr "Paketlänge"
-
-#. Product property package-width
-msgid "package-width"
-msgstr "Paketbreite"
-
 #. Product property package-height
 msgid "package-height"
 msgstr "Pakethöhe"
@@ -153,3 +145,9 @@ msgstr "Abholort"
 
 msgid "Properties"
 msgstr "Masse"
+
+msgid "package-width"
+msgstr "Tiefe in cm"
+
+msgid "package-length"
+msgstr "Breite in cm"

@@ -6,7 +6,7 @@
 .aimeos a:link:not(.btn), .aimeos a:visited:not(.btn) {color: #444; font-size: 14px}
 .aimeos .sort a.active {font-weight: normal;}
 .aimeos .cta:hover{
-	color:#fff !important;
+    color:#fff !important;
 }
 .aimeos a:hover {color: #666 !important; text-decoration: none !important;}
 .catalog-list .product {width: 267px; border-bottom: 0px; margin: 4em 1%;}
@@ -33,7 +33,14 @@
 .arminfo {display: inline-block; width: 28px; height: 28px; background-image: url(../../Icons/info-button-black.png); cursor: pointer;}
 .arminfo:hover {background-image: url(../../Icons/info-button-white.png);}
 .arm-aimeos-info {border: 1px solid #ddd; background: #fff; padding: 20px; position: absolute; z-index: 100; left:0; width: 100%; display: none; font-size: 11px; top: 70px}
+.catalog-detail-image .image-single {background-image: url('../../../typo3conf/ext/aimeos/Resources/Public/Themes/elegance/media/aimeos.png');background-repeat: no-repeat;background-position: center;background-size: contain;background-color: #FFFFFF;display: inline-block;position: relative;overflow: hidden;height: 250px;width: 100%;}
+.catalog-detail-image .image-single .media-item {position: relative;height: 250px;width: 100%;}
+.catalog-detail-image .image-single .media-item .item {/*transform: translate(-50%,-50%);position: relative;max-height: 100%;max-width: 100%;top: 50%;left: 50%;*/ cursor: pointer;}
 
+@media (min-width: 600px) {
+    .catalog-detail-image .image-single {height:350px}
+    .catalog-detail-image .image-single .media-item {height: 350px;}
+}
 @media (min-width: 1280px) {
     .catalog-list .product {width: 320px;}
     .price-list .value {font-size: 18px;}
@@ -46,36 +53,18 @@
     .media-list .cta {width: 276px; left: 23px; bottom:13px;}
     .catalog-detail-basic {margin-top: 40px;}
     .arm-aimeos-info {font-size: 12px; max-width: 400px; top: 100px;}
-	.catalog-detail-basket{
-		width:84%;
-	}
+    .catalog-detail-basket{width:84%;}
+    .catalog-detail-image .image-single {height:533px}
+    .catalog-detail-image .image-single .media-item {height: 533px;}
 	/*.aimeos.checkout-standard{
 		margin-left:200px;
 		padding-top: 40px;
 	}*/
-	.aimeos.basket-standard{
-		margin: 0 auto;
-		width: 80%;
-		
-	}
-	.aimeos.checkout-standard{
-		margin: 0 auto;
-		width: 80%;
-		padding-top: 40px; 
-	}
-	.aimeos.basket-standard h1{
-		margin: 0 auto;
-		width: 80%;
-		text-align: center;
-		padding-top: 20px;
-	}
-	.common-summary-detail .header h2{
-		padding-top:100px;
-		text-align: center;
-	}
-	.catalog-detail-additional .content.description{
-		width: 86%;
-	}
+    .aimeos.basket-standard{margin: 0 auto;width: 80%;}
+    .aimeos.checkout-standard{margin: 0 auto;width: 80%;padding-top: 40px;}
+    .aimeos.basket-standard h1{margin: 0 auto;width: 80%;text-align: center;padding-top: 20px;}
+    .common-summary-detail .header h2{padding-top:100px;text-align: center;}
+    .catalog-detail-additional .content.description{width: 86%;}
 }
 
 @media (max-width: 1024px) {

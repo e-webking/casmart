@@ -3,7 +3,7 @@
 .logo {width:100px;}
 .logo img {max-width: 100%; height: auto}
 
-.fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width{width: 60%;}
+.fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width{width: 90%; margin: 0 auto;}
 
 .search-wrap {display: none; position: absolute; top: 18px; right: 55px;}
 .top-search {width: 250px; position: relative; float: right; margin: 60px -40px 0 0;}
@@ -25,6 +25,11 @@ ul.tx-indexedsearch-browsebox li {padding: 5px 10px 5px 0px; float: left;}
 .close:hover,.close:focus {color: #ccc;text-decoration: none;cursor: pointer; opacity: 1.0}
 #lightimg {max-width: 100%; height: auto; margin: auto}
 .hovermod {cursor: pointer;}
+
+@media (min-width: 768px) {
+    .fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width{width: 60%;}
+    .text-left .limited-width, .text-right .limited-width {margin: initial;}
+}
 @media (min-width: 1100px) {
     .logo {width:150px;float:left}
     .desktop-nav {width: calc(100% - 200px);float:left;}
@@ -79,6 +84,7 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
 .justified-gallery > a > .caption {font-size: 18px; color: rgba(34, 29, 25, 0.7)!important; display: block!important; background: none!important; padding: 5px 10px; top: 20px; left: 20px;}
 .ce-gridgallery .cta {position: absolute; top: 100px; left: 20px; background: #fcaf4d;}
 
+iframe {max-width: 100%; height: 275px}
 .videoWrapper { position: relative; height: 0; padding-bottom: 56.25%;}
 .videoWrapper iframe {position: absolute;top: 0;left: 0;width: 100%; height: 100%;}
 
@@ -86,7 +92,7 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
 .roundimg img {width: 100%; height: 100%; border-radius: 75px;}
 .testimonial .text {margin-bottom: 20px;}
 .testimonial .title {color: #666; font-weight: 600; padding-bottom: 10px}
-.banner-float { padding-top:25px; padding-left: 40px; width: 80%}
+.banner-float { padding-top:25px; padding-left: 40px; width: 80%; position: absolute; z-index: 1; bottom: 15px}
 .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {color: #fff; background-color: rgba(0,0,0,0.6); margin-bottom: 8px; padding: 5px 10px;}
 .banner-float .btext {font-size: 15px;}
 .banner-float .text-left h1, .banner-float .text-left h2, .banner-float .text-left h3, .banner-float .text-left .btext, .banner-float .text-left .cta {display: block; float: left; clear: both}
@@ -95,12 +101,18 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
 .mason-text.inverse h2, .mason-text.inverse h3, .mason-text.inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
 .banner-float .inverse h1, .banner-float .inverse h2, .banner-float .inverse h3, .banner-float .inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
 
+.banner .swiper-container .swiper-wrapper .swiper-slide .banner-float h1 {font-size: 25px;}
+.banner .swiper-container .swiper-wrapper .swiper-slide .banner-float .btext {display: none;}
+
 @media (min-width: 600px) {
     .top-search.mob-search {width: 300px;}
+    .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float .btext {display: block;}
+    iframe {height: 375px}
 }
 @media (min-width: 768px) {
     .justified-gallery > a > .caption {font-size: 24px;}
-    .banner-float {padding-top:50px; padding-left: 80px;}
+    .banner-float {padding-top:50px; padding-left: 80px; position: relative;}
+    iframe {height: 425px}
 }
 @media (min-width: 992px) {
     .top-search {width: 215px; margin: 0 -40px 0 0; color: #000; font-size: 12px}
@@ -111,6 +123,7 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
     .top-search .form-control {padding: 10px 40px 10px 5px;}
     .top-search .form-control ~ label {padding-left: 5px;}
     .top-search .form-group button{ padding: 7px 12px 8px;} 
+    iframe {height: 540px}
 }
 @media (min-width: 1280px) {
     .justified-gallery > a > .caption {font-size: 36px;}
@@ -133,6 +146,8 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
     .top-search {width: 300px; font-size: 14px;}
     .top-search .form-control:focus ~ label{font-size: 14px !important; color: #fff;}
     .tx-indexedsearch-res {margin-top: 40px}
+    iframe {height: 625px}
+    .videoWrapper { width: 70%; margin: 0 auto; height: auto; }
 }
 
 @media (min-width: 1440px) {
@@ -174,11 +189,14 @@ ul.footerlink li a:before {font-family:'FontAwesome'; position: absolute;left: 0
 .armbullet {width: 100%; display: flex; position: relative; clear: both; margin-bottom: 10px}
 .armbullet .bicon {width: 20%; float: left;}
 .armbullet .bicon img {max-width: 85%;}
-.armbullet .bultext {width: 80%; float: left;}
+.armbullet .bultext {width: 80%; float: left; font-size: 14px;}
 .armbullet .bultext h3 {margin-bottom: 10px;}
+.armbullet h4 {font-size: 15px; font-weight: bold;}
 
 @media (min-width: 1280px) {
+    
     .armbullet {margin-bottom: 20px}
+    .armbullet .bultext {font-size: 16px;}
     .armbullet .bultext h3 {margin-bottom: 20px;}
 }
 @media (min-width: 1440px) {

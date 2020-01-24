@@ -1,24 +1,3 @@
-/**
- * Aimeos related Javascript code
- *
- * @license LGPLv3, http://opensource.org/licenses/LGPL-3.0
- * @copyright Metaways Infosystems GmbH, 2012
- * @copyright Aimeos (aimeos.org), 2014-2018
- */
-
-
-/**
- * Aimeos common actions
- */
- console.log("ccxcxcx");
- jQuery(".checkout-standard-process .btn-action").click();
- function autocomplete(){
-	 
- } 
-jQuery(document).ready(function($) {
-	 
-	
-});
  
 Aimeos = {
 

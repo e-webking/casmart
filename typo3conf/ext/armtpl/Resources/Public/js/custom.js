@@ -140,7 +140,59 @@ function openModal(src) {
        $('.arminfo').css("background-image", "url(" + nicon + ")");
     });
     
+    if ($(window).width() < 767) {
+        var animspeed = 500; // animation speed in milliseconds
+        var $blockquote = $('.bigtext');
+        var height = $blockquote.height();
+        var mini = $('.bigtext p').eq(0).height() + $('.bigtext p').eq(1).height();
+
+        $blockquote.attr('data-fullheight',height+'px');
+        $blockquote.attr('data-miniheight',mini+'px');
+        $blockquote.css('height',mini+'px');
+
+        $('.expand').on('click', function(e){
+          $text = $(this).prev();
+          $text.animate({
+            'height': $text.attr('data-fullheight')
+          }, animspeed);
+          $(this).next('.contract').removeClass('hide');
+          $(this).addClass('hide');
+        });
+
+        $('.contract').on('click', function(e){
+          $text = $(this).prev().prev();
+
+          $text.animate({
+            'height': $text.attr('data-miniheight')
+          }, animspeed);
+          $(this).prev('.expand').removeClass('hide');
+          $(this).addClass('hide');
+        });
+    }
+    
+     $('#galleryarm').lightGallery({download:false,counter:false});
+    
+    if ($(window).width() <= 768) {
+        $('.lg-thumb-outer').height(75);
+        $('.lg-thumb-item').height(75);
+    }
+    
+    window.addEventListener("resize", function(){
+        if ($(window).width() <= 768) {
+            $('.lg-thumb-outer').height(75);
+            $('.lg-thumb-item').width(75);
+            $('.lg-thumb-item').height(75);
+        } else {
+            $('.lg-thumb-outer').height(100);
+            $('.lg-thumb-item').width(100);
+            $('.lg-thumb-item').height(100);
+        }
+    });
+    
+    $(".checkout-standard-process .btn-action").click();
     
 })(jQuery);
 
-
+ function autocomplete(){
+	 
+ }

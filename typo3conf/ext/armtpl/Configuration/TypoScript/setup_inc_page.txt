@@ -145,6 +145,10 @@ page.10 {
         2 = TEXT
         2.value = {$templatePath}Resources/Private/Templates/shop2col.html
 
+        # Shop details
+        3 = TEXT
+        3.value = {$templatePath}Resources/Private/Templates/shopdetail.html
+
     }
 
     variables {

@@ -74,16 +74,19 @@ h4, .h4 {
     font-family:'Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;
     font-weight: 400; line-height: 1.2; color: #000;padding:0px; margin: 0px; position: relative;  
 }
-.banner h1, .banner h2, .banner h3, .banner h4 {font-family:'Montserrat Thin','Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif; font-weight: 100; max-width: 100%;}
+.banner h1, .banner h2, .banner h3, .banner h4 {font-family:'Montserrat Light','Montserrat Extra-Light','Montserrat Thin','Montserrat', helvetica, arial, sans-serif; font-weight: 100; max-width: 100%;}
 h1 {
-    font-size: 40px;
+    font-size: 36px;
+    word-wrap: break-word;
 }
 h2 {
-    font-size: 30px;
+    font-size: 28px;
     margin-bottom: 10px;
+    word-wrap: break-word;
 }
 h3 {
     font-size: 16px;
+    word-wrap: break-word;
 }
 h4 {
     font-size: 14px;
@@ -140,22 +143,51 @@ p a:hover {color: #fcaf4d;}
     width:100%; 
     position:relative;
 }
-.arm-horizontal-grid {display: flex; flex-direction: row}
-.arm-horizontal-grid .frame, .arm-horizontal-grid .swiper-slide {flex-grow:1;flex-basis: 0; margin: 2px; text-align: left;}
+.arm-horizontal-grid {display:grid; grid-template-columns: repeat(auto-fill,minmax(230px, 1fr));}
+.arm-horizontal-grid .frame, .arm-horizontal-grid .swiper-slide {margin: 2px; text-align: left; width: 99%}
 .arm-horizontal-grid h1 {font-size: 28px;}
 .arm-horizontal-grid h2 {font-size: 21px;}
 
 .armmasonary {width: 100%; height: auto; position: relative;}
+.armmasonary .mason-one, .armmasonary .mason-two, .armmasonary .mason-three, .armmasonary .mason-four, .armmasonary .mason-five {position: relative;}
 .armmasonary .image img {height: auto; width: 100%;}
 .armmasonary .mason-text {position: absolute; top: 20px; left: 20px; max-width: 80%; z-index: 1;}
 .align-right {text-align: right;}
 .align-center {text-align: center;}
 .tx-indexedsearch-rules {margin-top: 20px;}
 
+/* Text expand close */
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+.bigtext {display: block; overflow: hidden;}
+.expand, .contract {cursor: pointer;font-weight: bold; padding: 15px 0; text-align: center;color: #555;}
+.expand:hover, .contract:hover {color: #121212;}
+.hide {display: none;}
+
+.frame-type-menu_sitemap {padding-top: 80px;}
+.frame-type-menu_sitemap ul {display: flex; flex-wrap: wrap;}
+.frame-type-menu_sitemap ul li {-ms-flex: 1 0 100%; flex: 1 0 100%;max-width: 100%; margin-top: 5px;}
+
+
 @media (min-width: 610px) {
     .container {
         max-width:600px; 
     }
+    .frame-type-menu_sitemap ul li {-ms-flex: 1 0 50%; flex: 1 0 50%; max-width: 50%;}
+    .frame-type-menu_sitemap ul li ul {display: flex; flex-direction: column;}
+    .frame-type-menu_sitemap ul li ul li {-ms-flex: 0 0 100%; flex: 0 0 100%; max-width: 100%;}
+    
+    .lpadsmall {padding-left: 10px}
+    .lpadmid {padding-left: 15px}
+    .lpadnormal {padding-left: 20px}
+    .lpadlarge {padding-left: 30px}
+    .lpadxl {padding-left: 40px}
+    .rpadsmall {padding-right: 10px}
+    .rpadmid {padding-right: 15px}
+    .rpadnormal {padding-right: 20px}
+    .rpadlarge {padding-right: 30px}
+    .rpadxl {padding-right: 40px}
+
 }
 @media (min-width: 768px) {
     .container {
@@ -185,6 +217,8 @@ p a:hover {color: #fcaf4d;}
     h3.bushelsans, h3.bushelscript {
         font-size: 14px;
     }
+    .arm-horizontal-grid {display: flex; flex-direction: row}
+    .arm-horizontal-grid .frame, .arm-horizontal-grid .swiper-slide {flex-grow:1;flex-basis: 0; margin: 2px; text-align: left; width: 100%}
     .arm-horizontal-grid .banner-float h1 {font-size: 20px; padding: 0}
     .arm-horizontal-grid .banner-float h2 {font-size: 15px; padding: 0}
     .arm-horizontal-grid .banner-float h3 {font-size: 12px; padding: 0}
@@ -197,11 +231,23 @@ p a:hover {color: #fcaf4d;}
     .armmasonary .mason-three{width: 24.5%; overflow-x: hidden; float: right; height: 100%; position: relative;}
     .armmasonary .mason-four{width: 49%; overflow-x: hidden; margin-right: 1%; margin-top: 1%; float: left; height: 50%; position: relative;}
     .armmasonary .mason-five{width: 24.5%; overflow-x: hidden; margin-right: 1%; margin-top: 1%; float: left; height: 50%; position: relative;}
+    .expand {display: none}
 }
 @media (min-width: 992px) {
     .container {
         max-width:980px; 
     }
+    .frame-type-menu_sitemap ul li {-ms-flex: 1 0 33%; flex: 1 0 33%; max-width: 33%; margin-top: 10px}
+    .frame-type-menu_sitemap ul li ul li {margin-top: 5px}
+    
+    .lpadmid {padding-left: 20px}
+    .lpadnormal {padding-left: 30px}
+    .lpadlarge {padding-left: 40px}
+    .lpadxl {padding-left: 50px}
+    .rpadmid {padding-right: 20px}
+    .rpadnormal {padding-right: 30px}
+    .rpadlarge {padding-right: 40px}
+    .rpadxl {padding-right: 50px}
 }
 @media (min-width: 1024px) {
     .container {
@@ -213,10 +259,12 @@ p a:hover {color: #fcaf4d;}
     h2 {
         font-weight: 300;
     }
+    .banner h1, .banner h2, .banner h3, .banner h4 {font-family:'Montserrat Thin','Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;}
 }
 @media (min-width: 1280px) {
     header {position: fixed; width: 100%; top: 0px; z-index: 100; height: 100px;}
     header + .frame {margin-top: 100px;}
+    .shopdetail {margin-top: 120px;}
     .container {
         max-width:1200px; 
     }
@@ -247,6 +295,13 @@ p a:hover {color: #fcaf4d;}
     .arm-horizontal-grid .banner-float h3 {font-size: 13px; padding: 0}
     .armmasonary .mason-text h2,.armmasonary .mason-text h3, .armmasonary .mason-text h4 {margin-bottom: 20px;}
     .tx-indexedsearch-rules {margin-top: 40px;}
+    
+    .lpadnormal {padding-left: 40px}
+    .lpadlarge {padding-left: 50px}
+    .lpadxl {padding-left: 60px}
+    .rpadnormal {padding-right: 40px}
+    .rpadlarge {padding-right: 50px}
+    .rpadxl {padding-right: 60px}
 }
 @media (min-width: 1350px) {
     .container {
@@ -258,6 +313,7 @@ p a:hover {color: #fcaf4d;}
         max-width:1400px; 
     }
     .armmasonary .mason-text {left: 35px; top: 35px;}
+    .frame-type-menu_sitemap ul li {-ms-flex: 1 0 25%; flex: 1 0 25%; max-width: 25%; margin-top: 20px}
 }
 @media (min-width: 1600px) {
     .container {
@@ -292,6 +348,13 @@ p a:hover {color: #fcaf4d;}
     .arm-horizontal-grid .banner-float h3 {font-size: 18px; padding: 0}
     .armmasonary .mason-text {left: 40px; top: 40px;}
     .armmasonary .mason-text h2,.armmasonary .mason-text h3, .armmasonary .mason-text h4 {margin-bottom: 40px;}
+    
+    .lpadnormal {padding-left: 50px}
+    .lpadlarge {padding-left: 80px}
+    .lpadxl {padding-left: 100px}
+    .rpadnormal {padding-right: 50px}
+    .rpadlarge {padding-right: 80px}
+    .rpadxl {padding-right: 100px}
 }
 
 @media (min-width: 1900px) {
@@ -312,10 +375,18 @@ p a:hover {color: #fcaf4d;}
 .cta:hover {color:#fff;}
 .btn-primary {background-color: #fcaf4d; color: #211d1b;}
 .btn-primary:hover {color:#fff; background-color: #fcaf4d;}
-.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0px;
+}
+.swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: 20px;
 }
 .testimonial .swiper-container-horizontal > .swiper-pagination-bullets {bottom: 0px;}
+
+@media (min-width: 768px) {
+    .swiper-container-horizontal > .swiper-pagination-bullets { bottom: 20px;}
+}
+
 @media (min-width: 1280px) {
     .swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
         bottom: 30px;
@@ -519,6 +590,6 @@ footer p{font-size: 12px; color: #a89e8c}
 .white {color: #fff;}
 hr.white {border-top: 1px solid #fff; margin-bottom: 0px;}
 .uparrow {width:36px; height:36px; border: 1px solid #fff; border-radius: 18px; text-align:center; padding-top: 5px;}
-.image img {max-width: 100%;}
+.image img {max-width: 100%; height: auto}
 .ce-center .image {text-align: center}
 .ce-right .image {text-align: right}

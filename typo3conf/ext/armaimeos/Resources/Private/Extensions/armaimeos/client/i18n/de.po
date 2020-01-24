@@ -1088,3 +1088,21 @@ msgstr "◀"
 
 msgid "◀◀"
 msgstr "◀◀"
+
+msgid "Width"
+msgstr "Tiefe"
+
+msgid "Height"
+msgstr "Höhe"
+
+msgid "Length"
+msgstr "Breite"
+
+msgid "package-width"
+msgstr "Tiefe in cm"
+
+msgid "package-length"
+msgstr "Breite in cm"
+
+msgid "package-height"
+msgstr "Höhe in cm"

@@ -88,5 +88,6 @@ tt_content.stdWrap.innerWrap.cObject {
   109.value = <div class="text-center">|</div>
   110 = TEXT
   110.value = <div class="negate-above-gbl">|</div>
-  
+  115 = TEXT
+  115.value = <blockquote class="bigtext">|</blockquote><p class="expand"><i class="fa fa-arrow-down"></i> mehr <i class="fa fa-arrow-down"></i></p><p class="contract hide"><i class="fa fa-arrow-up"></i> weniger <i class="fa fa-arrow-up"></i></p>
 }

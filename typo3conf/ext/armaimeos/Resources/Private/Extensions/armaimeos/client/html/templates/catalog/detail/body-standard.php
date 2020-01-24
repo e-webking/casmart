@@ -94,10 +94,9 @@ if( isset( $this->detailProductItem ) )
 	}
 }
 
-
 ?>
 <section class="aimeos catalog-detail" itemscope="" itemtype="http://schema.org/Product" data-jsonurl="<?= $enc->attr( $this->url( $optTarget, $optCntl, $optAction, [], [], $optConfig ) ); ?>">
-
+    <div class="container">
 	<?php if( isset( $this->detailErrorList ) ) : ?>
 		<ul class="error-list">
 			<?php foreach( (array) $this->detailErrorList as $errmsg ) : ?>
@@ -468,7 +467,7 @@ if( isset( $this->detailProductItem ) )
 													}
 												?>
 												<tr class="item<?= $classes; ?>">
-													<td class="name"><?= $enc->html( $this->translate( 'client/code', $propertyItem->getType() ), $enc::TRUST ); ?></td>
+													<td class="name"><?= $enc->html( $this->translate( 'client', $propertyItem->getType() ), $enc::TRUST ); ?></td>
 													<td class="value"><?= $enc->html( $propertyItem->getValue() ); ?></td>
 												</tr>
 											<?php endforeach; ?>
@@ -532,5 +531,5 @@ if( isset( $this->detailProductItem ) )
 
 		</article>
 	<?php endif; ?>
-
+    </div>
 </section>
