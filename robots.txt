@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /fileadmin/
+Allow: /fileadmin/_processed_/
+Disallow: /typo3conf/
+Allow: /typo3conf/ext/armtpl/Resources/Public/
+Allow: /typo3conf/ext/aimeos/Resources/Public/
+Allow: /typo3conf/ext/armaimeos/Resources/Public/
+Disallow: /uploads/
+Disallow: /typo3/
+Disallow: /huelsta/huelsta-preislisten
