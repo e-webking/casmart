@@ -113,6 +113,10 @@ iframe {max-width: 100%; height: 275px}
     .justified-gallery > a > .caption {font-size: 24px;}
     .banner-float {padding-left: 80px; bottom:40px;}
     iframe {height: 425px}
+    
+    .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float h1 {font-size: 36px;}
+    .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float h2 {font-size: 28px;}
+    .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float h3 {font-size: 20px;}
 }
 @media (min-width: 992px) {
     .top-search {width: 215px; margin: 0 -40px 0 0; color: #000; font-size: 12px}
@@ -135,6 +139,10 @@ iframe {max-width: 100%; height: 275px}
     .arm-horizontal-grid .banner-float {top:10px; left: 10px; width: calc(100% - 20px)}
     .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {margin-bottom: 15px; padding: 8px 15px;}
     .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3 {margin-bottom: 5px;}
+    .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float h1 {font-size: 50px;}
+    .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float h2 {font-size: 40px;}
+    .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float h3 {font-size: 26px;}
+
     .banner-float .btext {font-size: 14px;}
     .text-left .btext {width: 70%;}
     .text-right .limited-width {float: right;}
@@ -219,16 +227,28 @@ iframe {max-width: 100%; height: 275px}
 
 @media (min-width: 768px) {
     .armimagetext {flex-direction: row;}
-    .armimagetext .half {width: 50%; padding: 0px; position: relative;}
-    .armimagetext .half .image {width: calc(100% - 150px);}
+    .armimagetext .half {max-width: 50%; padding: 0px; flex: 0 0 50%;}
+    .armimagetext .half .image {width: calc(100% - 20px);}
     .armimagetext .half.ce-right .image {float: right;}
     .armimagetext .half.ce-center .image {margin: 0 auto;}
     
-    .armimagetext .half:nth-child(1) .textblock {margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); left: 50px;}
-    .armimagetext .half:nth-child(2) .textblock {margin: 0; position: relative; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); right: 50px;}
+    .armimagetext .half:nth-child(1) .textblock {margin: 0; padding: 10px}
+    .armimagetext .half:nth-child(2) .textblock {margin: 0; padding: 10px}
+}
+
+@media (min-width: 992px) {
+    
+    .armimagetext .half .image {width: calc(100% - 60px);}
+    .armimagetext .half:nth-child(1) .textblock {left: 50px; padding: 20px}
+    .armimagetext .half:nth-child(2) .textblock {right: 50px; padding: 20px}
 }
 
 @media (min-width: 1280px) {
+    
+    .armimagetext .half {width: 50%; padding: 0px; display: block; position: relative}
+    .armimagetext .half .image {width: calc(100% - 120px);}
+    .armimagetext .half:nth-child(1) .textblock {margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); left: 50px;}
+    .armimagetext .half:nth-child(2) .textblock {margin: 0; position: relative; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); right: 50px;}
     .armimagetext .half:nth-child(1) .textblock {left: 100px;}
     .armimagetext .half:nth-child(2) .textblock {right: 100px;}
 }

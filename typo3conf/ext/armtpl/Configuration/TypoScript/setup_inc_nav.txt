@@ -21,13 +21,13 @@ lib.mainMenu {
 
         NO {
             wrapItemAndSub = <li class="l0">|</li>
-            ATagTitle.field = description // title
+            ATagTitle.field = subtitle // title
         }
         
         IFSUB = 1
         IFSUB {
             wrapItemAndSub = <li class="l0">|</li>
-            ATagTitle.field = description // title
+            ATagTitle.field = subtitle // title
         }
     }
     2 = TMENU
@@ -37,12 +37,12 @@ lib.mainMenu {
         stdWrap.dataWrap = <ul class="childMenu">|</ul>
         NO {
             wrapItemAndSub = <li>|</li>
-            ATagTitle.field = description // title
+            ATagTitle.field = subtitle // title
         }
         IFSUB = 1
         IFSUB {
             wrapItemAndSub = <li>|</li>
-            ATagTitle.field = description // title
+            ATagTitle.field = subtitle // title
         }
     }
 
@@ -54,13 +54,13 @@ lib.mainMenu {
         NO = 1
         NO {
             wrapItemAndSub = <li>|</li>
-            ATagTitle.field = description // title
+            ATagTitle.field = subtitle // title
             stdWrap.htmlSpecialChars = 1
         }
         IFSUB = 1
         IFSUB {
             wrapItemAndSub = <li>|</li>
-            ATagTitle.field = description // title
+            ATagTitle.field = subtitle // title
         }
     }
     4 = TMENU
@@ -71,7 +71,7 @@ lib.mainMenu {
         NO = 1
         NO {
             wrapItemAndSub = <li>|</li>
-            ATagTitle.field = description // title
+            ATagTitle.field = subtitle // title
             stdWrap.htmlSpecialChars = 1
         }
     }
@@ -90,7 +90,7 @@ lib.breadcrumb {
     1 {
   
         NO.allWrap = <li>|</li>
-        NO.ATagTitle.field = description // title
+        NO.ATagTitle.field = subtitle // title
     }
 }
 
@@ -103,7 +103,7 @@ lib.footerMenu {
     1 {
   
         NO.allWrap = <li>|</li>
-        NO.ATagTitle.field = description // title
+        NO.ATagTitle.field = subtitle // title
     }
 }
 
@@ -116,14 +116,14 @@ lib.mobMenu {
 		expAll = 1
 		noBlur=1
 		NO {
- 			ATagTitle.field = description // title
+ 			ATagTitle.field = subtitle // title
  			stdWrap.htmlSpecialChars = 1
    			wrapItemAndSub = <li>|</li>
 		}
 		ACT= 1
 		ACT {
 			stdWrap.innerWrap= |
- 			ATagTitle.field = title // description
+ 			ATagTitle.field = subtitle // title
  			stdWrap.htmlSpecialChars = 1
    			wrapItemAndSub = <li class="active">|</li>
 		}
@@ -137,7 +137,7 @@ lib.mobMenu {
 		NO = 1
 		NO {
   			wrapItemAndSub = <li>|</li>
-   			ATagTitle.field = description // title
+   			ATagTitle.field = subtitle // title
    			stdWrap.htmlSpecialChars = 1
  		}
  		ACT= 1
@@ -152,7 +152,7 @@ lib.mobMenu {
 		NO = 1
 		NO {
    			wrapItemAndSub = <li>|</li>
-   			ATagTitle.field = description // title
+   			ATagTitle.field = subtitle // title
    			stdWrap.htmlSpecialChars = 1
  		}
 		ACT= 1
@@ -167,7 +167,7 @@ lib.mobMenu {
             NO = 1
             NO {
                     wrapItemAndSub = <li>|</li>
-                    ATagTitle.field = description // title
+                    ATagTitle.field = subtitle // title
                     stdWrap.htmlSpecialChars = 1
             }
             ACT= 1
