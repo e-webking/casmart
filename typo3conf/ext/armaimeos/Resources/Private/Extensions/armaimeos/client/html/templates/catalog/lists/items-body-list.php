@@ -47,7 +47,6 @@ $basketParams = ( $basketSite ? ['site' => $basketSite] : [] );
 						<noscript>
 							<div class="media-item" itemscope="" itemtype="http://schema.org/ImageObject">
 								<img src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
-								<meta itemprop="contentUrl" content="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" />
 							</div>
 						</noscript>
 
@@ -60,14 +59,10 @@ $basketParams = ( $basketSite ? ['site' => $basketSite] : [] );
 							?>
 							<div class="media-item">
 								<img src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" data-src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" data-srcset="<?= $enc->attr( join( ', ', $srcset ) ) ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
-								<meta itemprop="contentUrl" content="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" />
 							</div>
 						<?php endforeach; ?>
 					<?php endif; ?>
-				</a><!--
-
-
-				--><a class="text-list" href="<?= $url; ?>">
+				</a><a class="text-list" href="<?= $url; ?>">
 					<h2 itemprop="name"><?= $enc->html( $productItem->getName(), $enc::TRUST ); ?></h2>
 					<?php foreach( $productItem->getRefItems( 'text', 'short', 'default' ) as $textItem ) : ?>
 						<div class="text-item" itemprop="description">

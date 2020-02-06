@@ -157,7 +157,6 @@ $formPid = 8;
 						<noscript>
 							<div class="media-item oooo" itemscope="" itemtype="http://schema.org/ImageObject">
 								<img src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
-								<meta itemprop="contentUrl" content="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" />
 							</div>
 							
 						</noscript>
@@ -174,21 +173,15 @@ $formPid = 8;
 									$srcset[] = $this->content( $path ) . ' ' . $type . 'w';
 								}
 							?>
-							<!--<div class="media-item yyyy">-->
 							<?php if($ik==1) { ?>
 								<div class="media-item yyyy">
-										<?php /* echo"<pre>";
-	print_r($mediaItem);
-	die; */ ?>									
-									<!--<img src="<?= $enc->attr( $this->content( $npath ) ); ?>" data-src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" data-srcset="<?= $enc->attr( join( ', ', $srcset ) ) ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />-->
-                                                                    <img src="<?= $enc->attr( $this->content( $npath ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
-																	
+                                                                    <img src="<?= $enc->attr( $this->content( $npath ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />									
 								</div>
 							<?php } ?>
 							<?php $ik++; ?>
 						<?php endforeach; ?>
 					<?php endif; ?>
-                                                        <a href="<?= $enc->attr( $this->url( ( $productItem->getTarget() ?: $detailTarget ), $detailController, $detailAction, $params, [], $detailConfig ) ); ?>"><div class="armoverlay"></div></a>
+                                     <a href="<?= $enc->attr( $this->url( ( $productItem->getTarget() ?: $detailTarget ), $detailController, $detailAction, $params, [], $detailConfig ) ); ?>"><div class="armoverlay"></div></a>
                                     <div class="cta"><a href="<?= $enc->attr('/index.php?id='.$formPid.'&tx_shop[product]=' . $productItem->getId().'|' . $productItem->getCode() .'|'.strip_tags($productItem->getName())); ?>">unverbindlich anfragen !</a></div>
 				</div>
 			<!-- /a -->
@@ -217,9 +210,6 @@ $formPid = 8;
 							 * of the core or the extensions. The configured path to the partial file must
 							 * be relative to the templates/ folder, e.g. "partials/price-standard.php".
 							 *
-							 * @param string Relative path to the template file
-							 * @since 2015.04
-							 * @category Developer
 							 */
 							$this->config( 'client/html/common/partials/price', 'common/partials/price-standard' ),
 							array( 'prices' => reset( $priceItems ) ?: [] )
@@ -295,8 +285,7 @@ $formPid = 8;
 							<input type="number" class="form-control" value="1"
 								 min="1" max="2147483647" maxlength="10" step="1" required="required" <?= $disabled ?>
 								name="<?= $enc->attr( $this->formparam( array( 'b_prod', 0, 'quantity' ) ) ); ?>"
-							/><!--
-							--><button class="btn btn-primary" type="submit" value="" <?= $disabled ?> >
+							/><button class="btn btn-primary" type="submit" value="" <?= $disabled ?> >
 								<?= $enc->html( $this->translate( 'client', 'Add to basket' ), $enc::TRUST ); ?>
 							</button>
 						</div>
