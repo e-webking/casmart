@@ -181,14 +181,14 @@ $formPid = 8;
 	print_r($mediaItem);
 	die; */ ?>									
 									<!--<img src="<?= $enc->attr( $this->content( $npath ) ); ?>" data-src="<?= $enc->attr( $this->content( $mediaItem->getPreview() ) ); ?>" data-srcset="<?= $enc->attr( join( ', ', $srcset ) ) ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />-->
-									<img src="<?= $enc->attr( $this->content( $npath ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
+                                                                    <img src="<?= $enc->attr( $this->content( $npath ) ); ?>" alt="<?= $enc->attr( $mediaItem->getName() ); ?>" />
 																	
 								</div>
 							<?php } ?>
 							<?php $ik++; ?>
 						<?php endforeach; ?>
 					<?php endif; ?>
-                                    <div class="armoverlay"></div>
+                                                        <a href="<?= $enc->attr( $this->url( ( $productItem->getTarget() ?: $detailTarget ), $detailController, $detailAction, $params, [], $detailConfig ) ); ?>"><div class="armoverlay"></div></a>
                                     <div class="cta"><a href="<?= $enc->attr('/index.php?id='.$formPid.'&tx_shop[product]=' . $productItem->getId().'|' . $productItem->getCode() .'|'.strip_tags($productItem->getName())); ?>">unverbindlich anfragen !</a></div>
 				</div>
 			<!-- /a -->

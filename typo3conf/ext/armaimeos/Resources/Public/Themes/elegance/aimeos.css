@@ -18,7 +18,7 @@
 .price-list .value {font-size: 16px;}
 .marketprice {color: #fcaf4d; font-size: 16px; text-decoration-line: line-through; vertical-align: super}
 .aimeos .browser {display: block; width: 80%; margin: 10px auto; border-top: 1px #ddd solid; border-bottom: 1px #ddd solid; text-align: center; padding: 10px;}
-.armoverlay {width: 100%; height: 100%; background: rgba(255,255,255, 0); transition: background 0.5s ease; position: absolute; top: 0px; z-index: 9}
+.armoverlay {width: 100%; height: 100%; background: rgba(255,255,255, 0); transition: background 0.5s ease; position: absolute; top: 0px; left: 0px; z-index: 9}
 .media-list .cta {position: absolute; bottom: 15px; z-index: 10; width: 267px; left: 0; opacity: 0; transition: opacity .35s ease;}
 .media-list:hover .armoverlay{display: block; background: rgba(255,255,255, 0);}
 .media-list:hover .cta {opacity: 1.0}
