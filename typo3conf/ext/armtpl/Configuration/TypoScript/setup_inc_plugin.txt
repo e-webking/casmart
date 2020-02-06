@@ -15,9 +15,8 @@ plugin.tx_powermail.settings.setup {
     }
 }
 
-plugin.tx_indexedsearch{
-    _DEFAULT_PI_VARS.type = 1
-    _DEFAULT_PI_VARS.ext = 1
+plugin.tx_indexedsearch {
+
     view {
         templateRootPaths {
             0 = EXT:indexed_search/Resources/Private/Templates/
@@ -28,7 +27,7 @@ plugin.tx_indexedsearch{
         partialRootPaths {
             0 = EXT:indexed_search/Resources/Private/Partials/
             10 = {$plugin.tx_indexedsearch.view.partialRootPath}
-            20 = EXT:armtpl/Resources/Private/Partials/Search/
+           20 = EXT:armtpl/Resources/Private/Partials/Search/
         }
     }
     settings {

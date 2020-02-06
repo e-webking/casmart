@@ -2,19 +2,18 @@
     <f:form action="search" method="post" id="tx_indexedsearch" pageUid="{settings.targetPid}">
 		<div class="tx-indexedsearch-hidden-fields">
 			<f:form.hidden name="search[_sections]" value="0" />
-			<f:form.hidden name="search[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="_" />
+                        <!-- freeIndexUid must be set to -1 -->
+			<f:form.hidden name="search[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="-1" />
 			<f:form.hidden name="search[pointer]" id="tx_indexedsearch_pointer" value="0" />
-			<f:form.hidden name="search[ext]" value="{searchParams.ext}" />
 			<f:form.hidden name="search[searchType]" value="{searchParams.searchType}" />
 			<f:form.hidden name="search[defaultOperand]" value="{searchParams.defaultOperand}" />
 			<f:form.hidden name="search[mediaType]" value="{searchParams.mediaType}" />
 			<f:form.hidden name="search[sortOrder]" value="{searchParams.sortOrder}" />
 			<f:form.hidden name="search[group]" value="{searchParams.group}" />
 			<f:form.hidden name="search[languageUid]" value="{searchParams.languageUid}" />
-			<f:form.hidden name="search[desc]" value="{searchParams.desc}" />
 			<f:form.hidden name="search[numberOfResults]" value="{searchParams.numberOfResults}" />
-			<f:form.hidden name="search[extendedSearch]" value="{searchParams.extendedSearch}" />
-                        <f:form.hidden name="search[sword]" value="{searchWord.sword}" />
+                        <f:form.hidden name="search[sword]" id="tx-indexedsearch-searchbox-sword" value="{searchParams.sword}" />
+
 		</div>
     </f:form>
 <f:for each="{resultsets}" as="result">

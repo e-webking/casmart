@@ -92,10 +92,10 @@ iframe {max-width: 100%; height: 275px}
 .roundimg img {width: 100%; height: 100%; border-radius: 75px;}
 .testimonial .text {margin-bottom: 20px;}
 .testimonial .title {color: #666; font-weight: 600; padding-bottom: 10px}
-.banner-float { padding-top:25px; padding-left: 40px; width: 80%; position: absolute; z-index: 1; bottom: 15px}
+.banner-float { padding-left: 20px; width: 80%; position: absolute; z-index: 1; top: 20px}
 .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {color: #fff; background-color: rgba(0,0,0,0.6); margin-bottom: 8px; padding: 5px 10px;}
 .banner-float .btext {font-size: 15px;}
-.banner-float .text-left h1, .banner-float .text-left h2, .banner-float .text-left h3, .banner-float .text-left .btext, .banner-float .text-left .cta {display: block; float: left; clear: both}
+.banner-float .text-left h1, .banner-float .text-left h2, .banner-float .text-left h3, .banner-float .text-left .btext {display: block; float: left; clear: both}
 .banner-float .text-center h1, .banner-float .text-center h2, .banner-float .text-center h3 {float: none; width: max-content; margin-left: auto; margin-right: auto}
 .arm-horizontal-grid .banner-float h1, .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3, .arm-horizontal-grid .banner-float .btext {background-color:initial; color:#000;}
 .mason-text.inverse h2, .mason-text.inverse h3, .mason-text.inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
@@ -103,10 +103,15 @@ iframe {max-width: 100%; height: 275px}
 
 .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float h1 {font-size: 25px;}
 .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float .btext {display: none;}
+.banner .banner-float .text-left .cta, .swiper-button-prev, .swiper-button-next {display: none;}
+.banner-float .text-left .cta {float: left; clear: both;}
 
 @media (min-width: 600px) {
     .top-search.mob-search {width: 300px;}
+    .banner-float { padding-left: 40px; padding-top:25px; bottom: 15px; top: inherit;}
     .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float .btext {display: block;}
+    .swiper-button-prev, .swiper-button-next {display: initial;}
+    .banner .banner-float .text-left .cta {display: initial; float: left; clear: both;}
     iframe {height: 375px}
 }
 @media (min-width: 768px) {
@@ -134,7 +139,7 @@ iframe {max-width: 100%; height: 275px}
     .roundimg {margin: 20px auto;}
     .testimonial .text {margin-bottom: 40px;}
     .testimonial .title {padding-bottom: 20px;}
-    .banner-float {position: absolute; padding-left: 0px; padding-top: 0px; top:50px; left: 35px; width: calc(100% - 70px)}
+    .banner-float {position: absolute; padding-left: 0px; padding-top: 0px; top:50px; left: 54px; width: calc(100% - 89px)}
     .banner-float.mbottom {bottom:50px; top: initial}
     .arm-horizontal-grid .banner-float {top:10px; left: 10px; width: calc(100% - 20px)}
     .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {margin-bottom: 15px; padding: 8px 15px;}
@@ -160,7 +165,7 @@ iframe {max-width: 100%; height: 275px}
 
 @media (min-width: 1440px) {
     .justified-gallery > a > .caption {font-size: 40px;}
-    .banner-float {top:60px; left: 80px; width: calc(100% - 160px)}
+    .banner-float {top:60px; left: 95px; width: calc(100% - 175px)}
     .banner-float.mbottom {bottom:60px; top: initial}
     .arm-horizontal-grid .banner-float {top:15px; left: 15px; width: calc(100% - 30px)}
     .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {margin-bottom: 15px; padding: 10px 20px;}
@@ -174,22 +179,22 @@ iframe {max-width: 100%; height: 275px}
 @media (min-width: 1560px) {
     .justified-gallery > a > .caption {font-size: 50px;}
     .testimonial .text {margin-bottom: 60px;}
-    .banner-float {top: 75px; left: 125px; width: calc(100% - 250px)}
+    .banner-float {top: 75px; left: 135px; width: calc(100% - 260px)}
     .banner-float.mbottom {bottom:75px; top: initial}
     .text-left .btext {width: 50%;}
     .top-search {width: 310px; font-size: 18px;}
 }
 @media (min-width: 1760px) {
-    .banner-float { left: 175px; width: calc(100% - 350px)}
+    .banner-float { left: 194px; width: calc(100% - 350px)}
     .arm-horizontal-grid .banner-float {top:25px; left: 25px; width: calc(100% - 50px)}
 }
 @media (min-width: 1920px) {
-    .banner-float { left: 115px; width: calc(100% - 230px)}
+    .banner-float { left: 125px; width: calc(100% - 240px)}
     .arm-horizontal-grid .banner-float {top:30px; left: 30px; width: calc(100% - 60px)}
 }
 
 @media (min-width: 2500px) {
-    .banner-float {left: 445px; width: calc(100% - 890px)}
+    .banner-float {left: 470px; width: calc(100% - 900px)}
     .arm-horizontal-grid .banner-float {top:40px; left: 40px; width: calc(100% - 80px)}
     .top-search {width: 320px;}
 }
