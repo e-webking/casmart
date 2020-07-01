@@ -1,0 +1,197 @@
+lib.logo = IMAGE
+lib.logo {
+    file = {$logoFile}
+    file.width = 300
+    file.height = 351
+    stdWrap {
+        typolink.parameter = {$rootPID}
+        wrap = |
+    }
+}
+
+lib.mainMenu = HMENU
+lib.mainMenu {
+
+    wrap = |
+    
+    1 = TMENU
+    1 {
+        expAll = 1
+        noBlur=1
+
+        NO {
+            wrapItemAndSub = <li class="l0">|</li>
+            ATagTitle.field = subtitle // title
+        }
+        
+        IFSUB = 1
+        IFSUB {
+            wrapItemAndSub = <li class="l0">|</li>
+            ATagTitle.field = subtitle // title
+        }
+    }
+    2 = TMENU
+    2 {
+        noBlur=1
+        expAll = 1
+        stdWrap.dataWrap = <ul class="childMenu">|</ul>
+        NO {
+            wrapItemAndSub = <li>|</li>
+            ATagTitle.field = subtitle // title
+        }
+        IFSUB = 1
+        IFSUB {
+            wrapItemAndSub = <li>|</li>
+            ATagTitle.field = subtitle // title
+        }
+    }
+
+    3 = TMENU
+    3 {
+        wrap = <ul class="sub-childMenu">|</ul>
+        noBlur=1
+        expAll = 1
+        NO = 1
+        NO {
+            wrapItemAndSub = <li>|</li>
+            ATagTitle.field = subtitle // title
+            stdWrap.htmlSpecialChars = 1
+        }
+        IFSUB = 1
+        IFSUB {
+            wrapItemAndSub = <li>|</li>
+            ATagTitle.field = subtitle // title
+        }
+    }
+    4 = TMENU
+    4 {
+        wrap = <ul class="sub-child-subMenu">|</ul>
+        noBlur=1
+        expAll = 1
+        NO = 1
+        NO {
+            wrapItemAndSub = <li>|</li>
+            ATagTitle.field = subtitle // title
+            stdWrap.htmlSpecialChars = 1
+        }
+    }
+}
+
+ ## Main Menu - End
+
+
+# Breadcrumb Navigation
+lib.breadcrumb = HMENU
+lib.breadcrumb {
+    wrap = <ul class="breadcrumbs">|</ul>
+    special = rootline
+    special.range = 0|
+    1 = TMENU
+    1 {
+  
+        NO.allWrap = <li>|</li>
+        NO.ATagTitle.field = subtitle // title
+    }
+}
+
+lib.footerMenu = HMENU
+lib.footerMenu {
+    wrap = <ul class="footer-link">|</ul>
+    special = directory
+    special.value = {$footerMenu}
+    1 = TMENU
+    1 {
+  
+        NO.allWrap = <li>|</li>
+        NO.ATagTitle.field = subtitle // title
+    }
+}
+
+lib.mobMenu = HMENU
+lib.mobMenu {
+ 	entryLevel = 0
+ 	wrap = | 	
+ 	1 = TMENU
+	1 {
+		expAll = 1
+		noBlur=1
+		NO {
+ 			ATagTitle.field = subtitle // title
+ 			stdWrap.htmlSpecialChars = 1
+   			wrapItemAndSub = <li>|</li>
+		}
+		ACT= 1
+		ACT {
+			stdWrap.innerWrap= |
+ 			ATagTitle.field = subtitle // title
+ 			stdWrap.htmlSpecialChars = 1
+   			wrapItemAndSub = <li class="active">|</li>
+		}
+	}
+	
+	2 = TMENU
+	2 {
+		wrap = <ul>|</ul>
+		noBlur=1
+		expAll = 1
+		NO = 1
+		NO {
+  			wrapItemAndSub = <li>|</li>
+   			ATagTitle.field = subtitle // title
+   			stdWrap.htmlSpecialChars = 1
+ 		}
+ 		ACT= 1
+		ACT.wrapItemAndSub = <li class="active">|</li>
+	}
+	
+	3 = TMENU
+	3 {
+		wrap = <ul>|</ul>
+		noBlur=1
+                expAll = 1
+		NO = 1
+		NO {
+   			wrapItemAndSub = <li>|</li>
+   			ATagTitle.field = subtitle // title
+   			stdWrap.htmlSpecialChars = 1
+ 		}
+		ACT= 1
+		ACT.wrapItemAndSub = <li class="active">|</li>
+	}
+	
+	4 = TMENU
+        4 {
+            wrap = <ul>|</ul>
+            noBlur=1
+            expAll = 1
+            NO = 1
+            NO {
+                    wrapItemAndSub = <li>|</li>
+                    ATagTitle.field = subtitle // title
+                    stdWrap.htmlSpecialChars = 1
+            }
+            ACT= 1
+            ACT.wrapItemAndSub = <li class="active">|</li>
+        
+        }
+ }
+
+lib.navEmail = TEXT
+lib.navEmail.value = admin@moebelpesce.ch
+lib.navEmail.typolink.parameter = mailto:admin@moebelpesce.ch - nocap
+
+lib.navTel = TEXT
+lib.navTel.value = Tel. 052 233 48 49
+lib.navTel.typolink.parameter = tel:+522334849 - nocap
+
+#all share links
+lib.navShare = COA
+lib.navShare {
+   5 = TEXT
+   5.value = <a target="_blank" href="{$twitter_url}"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+   5.if.isTrue = {$show_twitter}
+
+   10 = TEXT
+   10.value = <a target="_blank" href="{$facebook_url}"><i class="fa fa-facebook"></i></a>
+   10.if.isTrue = {$show_facebook}
+}

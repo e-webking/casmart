@@ -1,0 +1,87 @@
+.desktop-nav {float: left; font-weight: 300; margin-top: 68px; font-family: 'Montserrat Extra-Light','Montserrat',Helvetica,Arial,sans-serif}
+.desktop-nav a {text-decoration: none; display: inline-block;}
+.desktop-nav ul {width: auto; margin: 0px; padding: 0px;}
+.desktop-nav li {list-style: none; margin: 0; display: block; position: relative; float: left; height: auto;}
+.desktop-nav ul li a {color: #fff; position: relative; font-size: 12px; cursor: pointer; font-weight: 400; padding: 10px 5px; text-transform: uppercase;}
+.desktop-nav ul li:hover > a {color: #999;}
+.desktop-nav ul li.active a, 
+.desktop-nav ul li a:hover {color: #999;}
+.desktop-nav li:last-child {margin-right: 0px;}
+.desktop-nav ul li:first-child a {padding-left: 0px;}
+.desktop-nav ul li:last-child a {padding-right: 0px;}
+
+.desktop-nav ul li:hover .childMenu { visibility: visible; opacity: 1; transform: translateY(0); -webkit-transform: translateY(0); -ms-transform: translateY(0); } 
+.desktop-nav ul li a.nocap {text-transform: none;}
+
+.childMenu {
+    position: absolute; left:0; top: 100%; z-index:1001; width: 100%;
+    margin: 0px; padding: 10px 0; visibility: hidden; opacity: 0;
+    background: rgba(255, 255, 255, 1); min-width: 230px; transform: translateY(-20px);   
+    -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    box-shadow:0 6px 30px -10px rgb(0, 0, 0, 0.4);	
+}
+.childMenu:after {
+    content: "\f0de"; font-family: 'FontAwesome'; top: -10px; left: 20px; 
+    font-size: 28px; line-height: 26px; position: absolute; color: #fff; 
+}
+.childMenu li {width: 100%; border-right: 0px !important;}
+.childMenu li a {
+    font-family: 'Montserrat Extra-Light','Montserrat',Helvetica,Arial,sans-serif;
+    padding: 5px 15px !important; display: block !important; color: #000 !important;
+    height: auto !important; font-size: 16px !important; font-weight: 300 !important; text-transform: inherit !important;
+}
+.childMenu li a:after{display: none;}
+.childMenu li a:hover {color: #999 !important;}
+.childMenu li:hover .sub-childMenu {visibility: visible; opacity: 1;}
+.childMenu li:hover .sub-childMenu li .sub-child-subMenu {visibility: hidden; opacity: 0;}
+.childMenu li:hover .sub-childMenu li:hover .sub-child-subMenu {visibility: visible; opacity: 1;}
+
+.childMenu .sub-childMenu {
+    left: 100%; top: 0px; position: absolute; z-index: 9;
+    width: 100%; margin: 0px; padding: 10px 0;
+    box-shadow: 0 6px 30px -10px rgba(0, 0, 0, 0.4);
+    visibility: hidden; opacity: 0; background: #fff;
+}
+.childMenu .sub-childMenu .sub-child-subMenu {
+    left: 100%; top: 5px; position: absolute; z-index: 10;
+    width: 100%; margin: 0px; padding: 10px 0;
+    box-shadow: 0 6px 30px -10px rgba(0, 0, 0, 0.4);
+    visibility: hidden; opacity: 0; background: #fff;
+}
+
+.footer-link {width: auto; margin: 0px; padding: 0px;}
+.footer-link li {list-style: none; margin: 0; display: block; position: relative; float: left; height: auto; padding-right: 40px;}
+.footer-link li a {color: #fff; position: relative; font-size: 12px; line-height: 20px; cursor: pointer; font-weight: 400; padding: 10px 5px;}
+
+@media screen and (min-width: 1100px) {
+    .siteHeader .toggle {
+        display: none;
+   }
+}
+
+@media screen and (max-width: 1100px) {
+    .childMenu{
+        top: 0px; background: transparent; opacity: 1;    
+        position: relative; visibility: visible;  
+    }    
+    .childMenu li{ border-bottom: inherit;}
+    .childMenu li a{color: #000 !important;}
+    .childMenu li .fa-angle-right{ display: none; }
+
+    .desktop-nav{
+        display: none;
+    }
+
+    .siteHeader nav#mainNav {
+        display: none;
+    }
+}
+@media (min-width: 1280px) {
+    .desktop-nav ul li a {padding: 10px; font-size: 16px;}
+    .footer-link li a {font-size: 14px; line-height: 28px;}
+}
+@media (min-width: 1600px) {
+    .desktop-nav ul li a {padding: 10px 15px}
+    .footer-link li a {font-size: 16px; line-height: 32px;}
+}

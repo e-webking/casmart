@@ -1,0 +1,67 @@
+
+plugin.tx_form {
+    settings {
+        yamlConfigurations {
+            100 = EXT:armpescetpl/Configuration/Yaml/forms.yaml
+        }
+    }
+}
+
+plugin.tx_powermail.settings.setup {
+    prefill {
+        produkte = TEXT
+        produkte.data = GP:tx_shop|product
+        produkte.htmlSpecialChars = 1
+    }
+}
+
+plugin.tx_indexedsearch {
+
+    view {
+        templateRootPaths {
+            0 = EXT:indexed_search/Resources/Private/Templates/
+            10 = {$plugin.tx_indexedsearch.view.templateRootPath}
+            20 = EXT:armpescetpl/Resources/Private/Templates/
+        }
+
+        partialRootPaths {
+            0 = EXT:indexed_search/Resources/Private/Partials/
+            10 = {$plugin.tx_indexedsearch.view.partialRootPath}
+           20 = EXT:armpescetpl/Resources/Private/Partials/Search/
+        }
+    }
+    settings {
+        displayAdvancedSearchLink = 0
+    }
+    _LOCAL_LANG {
+        default {
+            form.legend = Suche
+            form.searchFor = Suchen nach
+            form.submit = Suche
+            displayResults.previous = < bisherige
+            displayResults.page = Seite
+            displayResults.next = nächste >
+            result.noResult = Keine Ergebnisse gefunden.
+            searchFor = Suchen nach
+            displayResults = Zeige Ergebnis <strong>%1$s bis %2$s</strong> von <strong>%3$s</strong>
+            rules.headline = Bitte beachten Sie:
+            rules.text (
+Nur Wörter mit mindestens 2 Zeichen werden angenommen<br />
+Maximum 200 Zeichen<br />
+Leerzeichen wird genutzt um Wörter zu trennen<br />
+UND, ODER und NICHT sind Füllwörter, die nicht berücksichtigt werden<br />
++/|/- entsprechen UND, ODER und NICHT<br />
+Alle Suchbegriffe werden in Kleinbuchstaben konvertiert.
+            )
+        }
+    }
+}
+
+
+
+plugin.tx_aimeos.settings.mshop.customer.manager.typo3.pid-default = 32
+# plugin.tx_aimeos.settings.client.html.common.template.baseurl
+
+lib.contentElement {
+	partialRootPaths.1549449507 = EXT:armpescetpl/Resources/Private/Partials/
+}

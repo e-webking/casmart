@@ -1,0 +1,51 @@
+<a name="pagetop"></a>
+<header class="header">
+    <div class="siteHeader">
+        <div class="container">
+            <a href="#menu" class="toggle">                    
+                <div class="hamburger-menu">
+                    <div class="bar"></div>                            
+                </div>
+            </a>
+            
+            <div class="logo"><f:cObject typoscriptObjectPath="lib.logo" /></div>
+            <div class="desktop-nav" id="mainNav">
+                <ul>
+                    <f:cObject typoscriptObjectPath="lib.mainMenu" />
+                </ul>
+                <ul class="pull-right">
+                    <li><f:cObject typoscriptObjectPath="lib.navEmail" /></li>
+                    <li><f:cObject typoscriptObjectPath="lib.navTel" /></li>
+                </ul>
+                <div class="search-wrap">
+                    <f:form pageUid="{searchPid}" action="search" controller="Search" extensionName="IndexedSearch" class="top-search">
+                        <f:form.hidden name="tx_indexedsearch_pi2[search][submitButton]" value="Search" />
+                        <div class="form-group">
+                            <input type="text" name="tx_indexedsearch_pi2[search][sword]" class="form-control" id="tx-indexedsearch-searchbox-sword" placeholder="">
+                            <label for="product-search" id="top-search-lbl"><f:translate key="LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:search" extensionName="armpescetpl" /></label>
+                            <f:form.button type="submit"><i class="fa fa-search" aria-hidden="true"></i></f:form.button>
+                        </div>                        
+                    </f:form>
+                </div>
+            </div>
+            <nav id="menu">
+                <ul>
+                    <f:cObject typoscriptObjectPath="lib.mobMenu" /> 
+                    <li><f:cObject typoscriptObjectPath="lib.navEmail" /></li>
+                    <li><f:cObject typoscriptObjectPath="lib.navTel" /></li>
+                    <li>
+                        <f:form  pageUid="{searchPid}" action="search" controller="Search" extensionName="IndexedSearch" class="top-search mob-search">
+                            <f:form.hidden name="tx_indexedsearch_pi2[search][submitButton]" value="Search" />
+                            <div class="form-group">
+                                <input type="text" name="tx_indexedsearch_pi2[search][sword]" class="form-control" id="tx-indexedsearch-searchbox-sword-mob" placeholder="">
+                                <label for="product-search"><f:translate key="search" extensionName="armpescetpl" /></label>
+                                <f:form.button type="submit"><i class="fa fa-search" aria-hidden="true"></i></f:form.button>
+                                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>                        
+                        </f:form> 
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

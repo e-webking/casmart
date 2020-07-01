@@ -1,0 +1,193 @@
+lib.gridelements.defaultGridSetup {
+  columns {
+    default {
+      renderObj = COA
+      renderObj {
+        20 =< tt_content
+      }
+    }
+  }
+  cObject =< lib.contentElement
+  # Fluid Styled Content provides Default only
+  # Must be Generic, since there is no Default template
+  cObject.templateName = Generic
+}
+
+plugin.tx_gridelements_pi1 >
+tt_content.gridelements_pi1 >
+tt_content.gridelements_pi1 =< lib.contentElement
+tt_content.gridelements_pi1 {
+    # Fluid Styled Content provides Default only
+    # Must be Generic, since there is no Default template
+    templateName = Generic
+    variables {
+        content = COA
+        content {
+            10 = USER
+            10 {
+                userFunc = GridElementsTeam\Gridelements\Plugin\Gridelements->main
+                setup {
+                    default < lib.gridelements.defaultGridSetup
+                    1 < lib.gridelements.defaultGridSetup
+                    1 {
+                        cObject {
+                            templateName = Sliders_1
+                            templateRootPaths {
+                                20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+tt_content.gridelements_pi1.variables.content.10.setup.2 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.2 {
+    cObject {
+        templateName = Images_2
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.3 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.3 {
+    cObject {
+        templateName = SlideGrp_3
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.4 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.4 {
+    cObject {
+        templateName = Fullwidth_4
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.5 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.5 {
+    cObject {
+        templateName = 5050_5
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.6 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.6 {
+    cObject {
+        templateName = Bullet_6
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.7 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.7 {
+    cObject {
+        templateName = Imagetext_7
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.8 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.8 {
+    cObject {
+        templateName = TestSlider_8
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.9 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.9 {
+    cObject {
+        templateName = SlideImagetext_9
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.10 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.10 {
+    cObject {
+        templateName = Bannertext_10
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.11 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.11 {
+    cObject {
+        templateName = Limitwidth_11
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.12 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.12 {
+    cObject {
+        templateName = HorizontalGrid_12
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.13 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.13 {
+    cObject {
+        templateName = MasonaryGrid_13
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.14 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.14 {
+    cObject {
+        templateName = Reference_14
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.15 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.15 {
+    cObject {
+        templateName = ReferenceItem_15
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}
+
+tt_content.gridelements_pi1.variables.content.10.setup.16 < lib.gridelements.defaultGridSetup
+tt_content.gridelements_pi1.variables.content.10.setup.16 {
+    cObject {
+        templateName = Imagetext_16
+        templateRootPaths {
+            20 = EXT:armpescetpl/Resources/Private/Templates/GridElements/
+        }
+    }
+}

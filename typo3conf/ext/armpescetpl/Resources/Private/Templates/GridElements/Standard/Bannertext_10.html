@@ -1,0 +1,13 @@
+<div class="banner-float {f:if(condition:data.flexform_field_bottom, then: 'mbottom', else: '')}">
+    <div class="{data.flexform_field_align} {f:if(condition:data.flexform_field_inv, then: 'inverse', else: '')}">
+        <{data.flexform_field_htype}>{data.flexform_field_heading}</{data.flexform_field_htype}>
+        <f:if condition="{data.flexform_field_text}">
+            <div class="btext">
+                <f:format.raw><f:format.nl2br>{data.flexform_field_text}</f:format.nl2br></f:format.raw>
+            </div>
+        </f:if>
+        <f:if condition="{data.flexform_field_link}">
+            <f:link.typolink parameter="{data.flexform_field_link}" class="cta">{data.flexform_field_label}</f:link.typolink>
+        </f:if>
+    </div>
+</div>

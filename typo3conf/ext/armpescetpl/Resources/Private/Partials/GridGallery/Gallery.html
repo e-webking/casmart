@@ -1,0 +1,60 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:lo="http://typo3.org/ns/Lavitto/Gridgallery/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:if condition="{settings.lightbox.cssClass}">
+	<f:then>
+		<f:variable name="lightboxCssClass" value="{settings.lightbox.cssClass}"/>
+	</f:then>
+	<f:else>
+		<f:variable name="lightboxCssClass" value="fancybox"/>
+	</f:else>
+</f:if>
+<f:if condition="{settings.lightbox.prefix}">
+	<f:then>
+		<f:variable name="lightboxPrefix" value="{settings.lightbox.prefix}"/>
+	</f:then>
+	<f:else>
+		<f:variable name="lightboxPrefix" value="fancybox"/>
+	</f:else>
+</f:if>
+
+<f:if condition="{files}">
+	<f:for each="{files}" as="file">
+		<f:if condition="{file.link}">
+			<f:then>
+				<f:link.typolink parameter="{file.link}" title="{file.title}">
+					<f:render partial="GridGallery/Gallery/Image"
+							  arguments="{file: file, dimensions: {height: rowHeight, margins: margins}, settings: settings}"/>
+                                        <div class="cta">ERKUNDEN</div>
+				</f:link.typolink>
+			</f:then>
+			<f:else>
+				<f:if condition="{data.image_zoom}">
+					<f:then>
+						<a href="{f:uri.image(src: file.publicUrl, width: settings.media.popup.width, height: settings.media.popup.height)}"
+						   class="{lightboxCssClass}"
+						   data-fancybox="{lightboxPrefix}-{data.uid}"
+						   data-caption="{file.properties.description}"
+						   data-lightbox-caption="{file.properties.description}"
+						   data-lightbox-height="{lo:lastImageInfo(property: 'height')}"
+						   data-lightbox-width="{lo:lastImageInfo(property: 'width')}"
+						   rel="{lightboxPrefix}-{data.uid}"
+						   title="{file.title}">
+							<f:render partial="GridGallery/Gallery/Image"
+									  arguments="{file: file, dimensions: {height: rowHeight, margins: margins}, settings: settings}"/>
+						</a>
+					</f:then>
+					<f:else>
+						<div>
+							<f:render partial="GridGallery/Gallery/Image"
+									  arguments="{file: file, dimensions: {height: rowHeight, margins: margins}, settings: settings}"/>
+						</div>
+					</f:else>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:for>
+</f:if>
+
+</html>

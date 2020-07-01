@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-11-15T23:46:34Z" product-name="armtpl19">
+		<header/>
+		<body>
+                    <trans-unit id="header.101">
+                            <source>Heading 1 (BushelAndPeck Sans)</source>
+                            <target>Überschrift 1 (BushelAndPeck Sans)</target>
+                    </trans-unit>
+                     <trans-unit id="header.102">
+                            <source>Heading 2 (BushelAndPeck Sans)</source>
+                            <target>Überschrift 2 (BushelAndPeck Sans)</target>
+                    </trans-unit>
+                    <trans-unit id="header.103">
+                            <source>Heading 3 (BushelAndPeck Sans)</source>
+                            <target>Überschrift 3 (BushelAndPeck Sans)</target>
+                    </trans-unit>
+                    <trans-unit id="header.104">
+                            <source>Heading 1 (BushelAndPeck Script)</source>
+                            <target>Überschrift 1 (BushelAndPeck Script)</target>
+                    </trans-unit>
+                    <trans-unit id="header.105">
+                            <source>Heading 2 (BushelAndPeck Script)</source>
+                            <target>Überschrift 2 (BushelAndPeck Script)</target>
+                    </trans-unit>
+                    <trans-unit id="header.106">
+                            <source>Heading 3 (BushelAndPeck Script)</source>
+                            <target>Überschrift 3 (BushelAndPeck Script)</target>
+                    </trans-unit>
+                    <trans-unit id="search" resname="search">
+                            <source>Search</source>
+                            <target>SUCHE</target>
+                    </trans-unit>
+		</body>
+	</file>
+</xliff>

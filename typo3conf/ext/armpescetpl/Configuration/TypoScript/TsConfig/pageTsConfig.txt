@@ -1,0 +1,38 @@
+TCEFORM {
+    tt_content {
+        frame_class {
+            removeItems = 1,5,6,10,11,12,20,21,66
+            addItems {
+                101 = Banner wrapper [class="banner gbl"]
+                102 = Fullwidth wrapper
+                103 = Slider wrap
+                104 = Image wrap [class="img-block"]
+                105 = Floating White block [over image]
+                106 = Text center [top block]
+                107 = Text center [bottom 80px]
+                108 = Gray BG [class="gray"]
+                109 = Align Center [class="text-center"]
+                110 = Nullify above gbl gap [class="negate-above-gbl"]
+                115 = Mobile Collapse/Expand
+            }
+        }
+        header_layout {
+            addItems {
+                101 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.101
+		102 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.102
+                103 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.103
+                104 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.104
+                105 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.105
+                106 = LLL:EXT:armtpl/Resources/Private/Language/locallang.xlf:header.106
+            }
+        }
+    }
+}
+
+RTE.default.preset = armtpl_preset
+RTE.default.buttons.image.options.magic.maxWidth = 2560
+RTE.default.buttons.image.options.magic.maxHeight = 1920
+RTE.tt_content.types.text.bodytext.preset = armtpl_preset
+RTE.tt_content.types.textmedia.bodytext.preset = armtpl_preset
+RTE.tt_content.types.textimage.bodytext.preset = armtpl_preset
+RTE.config.tt_content.bodytext.preset = armtpl_preset

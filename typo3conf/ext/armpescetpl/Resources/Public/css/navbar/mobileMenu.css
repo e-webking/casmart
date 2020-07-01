@@ -1,0 +1,53 @@
+
+nav:not(.mm-menu) {display: none;}
+.mm-panel {background-color: #fff;}
+.mm-navbar{background-color: #000; color: #fff;}
+.mm-navbar__title{color: #fff !important;}
+.mm-listitem__text{padding-left: 15px;}
+.mm-listitem__btn{padding-right: 44px;}
+.mm-btn_next:after{right: 18px;}
+.mm-listitem:after{left: 0px;}
+.mm-listitem:last-child::after {border-bottom-width: 0px;}
+.mm-btn_prev::before {border-color: #fff;}
+.mm-menu a, .mm-menu a:active, .mm-menu a:hover, .mm-menu a:link, .mm-menu a:visited{color: #000;}
+
+
+
+/*.mobile-nav .mm-panels .mm-panel {width: 100%;}*/
+.siteHeader .toggle {
+    width: auto; padding: 10px 5px 0px 10px; color: #fff;
+    cursor: pointer; text-transform: uppercase; font-weight: 400;
+    font-size: 20px; position: relative; float:right;}
+.hamburger-menu {
+    margin: auto; width: 32px; height: 10px;
+    float: right; margin-top: 10px; cursor: pointer;
+}
+.hamburger-menu .bar, 
+.hamburger-menu .bar:after, 
+.hamburger-menu .bar:before {
+    width: 32px;
+    height: 3px;
+}
+.hamburger-menu .bar {
+    position: relative; transform: translateY(8px);
+    background: #fff; transition: all 0ms 300ms;
+}
+.hamburger-menu .bar::before {
+    content: ""; position: absolute; left: 0;
+    bottom: 9px; background: #fff;
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hamburger-menu .bar::after {
+    content: ""; position: absolute; left: 0;
+    top: 9px; background: #fff;
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mm-wrapper_opening .hamburger-menu .bar {background: rgba(255, 255, 255, 0);}
+.mm-wrapper_opening .hamburger-menu .bar::after {
+    top: 0; transform: rotate(45deg);
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mm-wrapper_opening .hamburger-menu .bar::before {
+    bottom: 0; transform: rotate(-45deg);
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}

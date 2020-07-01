@@ -1,0 +1,20 @@
+baseUrl = http://dev-pesce.ch/
+rootPID = 1
+searchPid = 4
+templatePath = typo3conf/ext/armpescetpl/
+logoFile = typo3conf/ext/armpescetpl/Resources/Public/images/logo.jpg
+kontaktPid = 2
+
+footerMenu = 5
+cmsFooterUid = 2
+
+facebook_url = 
+twitter_url =
+
+show_facebook=1
+show_twitter=1
+
+plugin.tx_aimeos.theme.baseurl = EXT:armpescetpl/Resources/Public/Themes/elegance
+[request.getNormalizedParams().isHttps()]
+baseUrl = https://dev-pesce.ch/
+[end]

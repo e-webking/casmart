@@ -1,0 +1,42 @@
+<f:if condition="{data.header_link}">
+    <f:then>
+        <f:link.typolink parameter="{data.header_link}">
+            
+            <picture class="slide-image<f:if condition="{data.flexform_field_lightbox}"> hovermod" onclick="openModal('uploads/tx_armtpl/{data.flexform_field_imagelarge}')</f:if>">
+            <source media="(min-width: 1920px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagelarge}">
+            <f:if condition="{data.flexform_field_imagemid}">
+            <source media="(min-width: 1440px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagemid}">
+            </f:if>
+            <f:if condition="{data.flexform_field_imagedesk}">
+              <source media="(min-width: 1280px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagedesk}">
+            </f:if>
+            <f:if condition="{data.flexform_field_imagetab}">
+            <source media="(min-width: 768px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagetab}">
+            </f:if>
+            <f:if condition="{data.flexform_field_imagemob}">
+              <source media="(max-width: 768px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagemob}">
+            </f:if>
+            <img src="uploads/tx_armtpl/{data.flexform_field_imagelarge}" alt="{data.flexform_field_imgalt}">
+          </picture>
+        </f:link.typolink>
+    </f:then>
+    <f:else>
+        <picture class="slide-image<f:if condition="{data.flexform_field_lightbox}"> hovermod" onclick="openModal('uploads/tx_armtpl/{data.flexform_field_imagelarge}')</f:if>">
+            <source media="(min-width: 1920px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagelarge}">
+            <f:if condition="{data.flexform_field_imagemid}">
+            <source media="(min-width: 1440px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagemid}">
+            </f:if>
+            <f:if condition="{data.flexform_field_imagedesk}">
+              <source media="(min-width: 1280px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagedesk}">
+            </f:if>
+            <f:if condition="{data.flexform_field_imagetab}">
+            <source media="(min-width: 768px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagetab}">
+            </f:if>
+            <f:if condition="{data.flexform_field_imagemob}">
+              <source media="(max-width: 768px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagemob}">
+            </f:if>
+            <img src="uploads/tx_armtpl/{data.flexform_field_imagelarge}" alt="{data.flexform_field_imgalt}">
+          </picture>
+    </f:else>
+</f:if>
+

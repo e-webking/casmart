@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:lo="http://typo3.org/ns/Lavitto/Gridgallery/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:comment>
+	<!----------------------------------------
+		Dimensions
+	----------------------------------------->
+</f:comment>
+
+<f:variable name="highResHeight" value="{lo:product(a: dimensions.height, b: '2')}"/>
+
+<f:comment>
+	<!----------------------------------------
+		Images
+	----------------------------------------->
+</f:comment>
+<f:variable name="thumbnailLowRes" value="{f:uri.image(
+	image: file,
+	cropVariant: 'thumbnail',
+	maxHeight: 10
+)}"/>
+<f:variable name="thumbnail" value="{f:uri.image(
+	image: file,
+	cropVariant: 'thumbnail',
+	maxHeight: dimensions.height
+)}"/>
+<f:variable name="thumbnailHighRes" value="{f:uri.image(
+	image: file,
+	cropVariant: 'thumbnail',
+	maxHeight: highResHeight
+)}"/>
+
+<f:comment>
+	<!----------------------------------------
+		Get thumbnail-path without leading slash (required for v:media.image.width)
+	----------------------------------------->
+</f:comment>
+<f:variable name="thumbnailRelativeToTypo3" value="{lo:relativePath(path: thumbnail)}"/>
+
+<img src="{thumbnailLowRes}"
+	 data-src="{thumbnail}"
+	 data-srcset="{thumbnailHighRes} 2x"
+	 class="figure-img img-fluid unloaded"
+	 alt="{file.alternative}"
+	 title="{file.title}"
+	 style="margin-right:{dimensions.margins}px;margin-bottom:{dimensions.margins}px"
+	 width="{lo:imageSize(src: thumbnailRelativeToTypo3, type: 'width')}"
+	 height="{lo:imageSize(src: thumbnailRelativeToTypo3, type: 'height')}"
+/>
+
+</html>
