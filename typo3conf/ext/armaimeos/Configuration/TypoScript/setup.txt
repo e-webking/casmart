@@ -1,38 +1,18 @@
-page.includeCSS.tx_aimeos = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.css
-page.includeJSFooter.aimeos-custom = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.js
+## CONFIG
+@import 'EXT:armaimeos/Configuration/TypoScript/config.typoscript'
 
-plugin.tx_aimeos.settings.mshop.locale.currency = CHF
-plugin.tx_aimeos.settings.typo3.param.name.currency = cur
+## CONTENT
+@import 'EXT:armaimeos/Configuration/TypoScript/Content/'
 
-plugin.tx_aimeos.settings.i18n.de {
-    0 {
-      domain = currency
-      string = CHF
-      trans = CHF
-    }
-    1 {
-      domain = client/code
-      string = price:default
-      trans = %2$s %1$s
-    }
-    2 {
-      domain = client
-      string = package-width
-      trans = Tiefe in cm:
-    }
-    3 {
-      domain = client
-      string = package-length
-      trans = Breite in cm:
-    }
-    4 {
-      domain = client
-      string = package-height
-      trans = Höhe in cm:
-    }
-}
+@import 'EXT:armaimeos/Configuration/TypoScript/plugin/*.typoscript'
 
-controller.common.media.standard.options.image {
-  name = Imagick
-  quality = 80
+page {
+    includeCSS {
+        tx_aimeos = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.css
+        loginuser = EXT:armaimeos/Resources/Public/css/loginuser.css
+    }
+
+    includeJSFooter {
+        aimeos-custom = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.js
+    }
 }

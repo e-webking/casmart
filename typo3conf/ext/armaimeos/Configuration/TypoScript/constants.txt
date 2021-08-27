@@ -1,2 +1,17 @@
-plugin.tx_aimeos.theme.js.aimeos-custom = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.js
-plugin.tx_aimeos.theme.css.custom = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.css
+@import 'EXT:armaimeos/Configuration/TypoScript/constants/*.typoscript'
+
+## STYLES
+styles {
+    content {
+        allowTags := addToList(iframe,button)
+        loginform {
+            templateFile = EXT:armaimeos/Resources/Private/EXT/felogin/Templates/FrontendLogin.html
+        }
+    }
+}
+
+## SYSTEM
+system {
+    noCache = 0
+    realurl = 0
+}

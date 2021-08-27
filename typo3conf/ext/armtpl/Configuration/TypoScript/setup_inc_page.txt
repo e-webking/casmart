@@ -53,15 +53,15 @@ page.meta {
   abstract.field = abstract
   description.field = description
   keywords.field = keywords
-  og:title.field = title
+  og:title.field = seo_title // title
   og:description.field = description
   og:url = https://www.casmart.ch/
   og:site_name = Casmart
   og:type = website
 }
 page.headerData.5 = TEXT
-page.headerData.5.field = nav_title // title
-page.headerData.5.noTrimWrap = |<title>|: Casmart</title>|
+page.headerData.5.field = seo_title // title
+page.headerData.5.noTrimWrap = |<title>|</title>|
 
 page.headerData.15 = TEXT
 page.headerData.15.value (
@@ -173,3 +173,12 @@ page.10 {
         searchPid.value = {$searchPid}
     }
 }
+
+[siteLanguage("languageId") == "1"]
+config.sys_language_uid = 1
+config.sys_language_content = 1
+config.language = en
+config.htmlTag_langKey = en-US
+config.locale_all = en_US.UTF-8
+config.htmlTag_setParams = lang="en" dir="ltr" class="no-js"
+[global]

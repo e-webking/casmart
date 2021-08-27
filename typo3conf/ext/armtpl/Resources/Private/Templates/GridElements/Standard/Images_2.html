@@ -1,7 +1,6 @@
 <f:if condition="{data.header_link}">
     <f:then>
         <f:link.typolink parameter="{data.header_link}">
-            
             <picture class="slide-image<f:if condition="{data.flexform_field_lightbox}"> hovermod" onclick="openModal('uploads/tx_armtpl/{data.flexform_field_imagelarge}')</f:if>">
             <source media="(min-width: 1920px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagelarge}">
             <f:if condition="{data.flexform_field_imagemid}">
@@ -17,6 +16,9 @@
               <source media="(max-width: 768px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagemob}">
             </f:if>
             <img src="uploads/tx_armtpl/{data.flexform_field_imagelarge}" alt="{data.flexform_field_imgalt}">
+            <f:if condition="{data.flexform_field_caption}">
+                <figcaption class="mscaption">{data.flexform_field_caption}</figcaption>
+            </f:if>
           </picture>
         </f:link.typolink>
     </f:then>
@@ -36,6 +38,9 @@
               <source media="(max-width: 768px)" srcset="uploads/tx_armtpl/{data.flexform_field_imagemob}">
             </f:if>
             <img src="uploads/tx_armtpl/{data.flexform_field_imagelarge}" alt="{data.flexform_field_imgalt}">
+            <f:if condition="{data.flexform_field_caption}">
+                <figcaption class="mscaption">{data.flexform_field_caption}</figcaption>
+            </f:if>
           </picture>
     </f:else>
 </f:if>

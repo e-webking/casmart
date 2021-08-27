@@ -3,8 +3,8 @@
 .logo {width:100px;}
 .logo img {max-width: 100%; height: auto}
 
-.fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width{width: 90%; margin: 0 auto;}
-
+.fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width, .ninetyp .limited-width{width: 90%; margin: 0 auto;}
+.ninetyp.text-center,.eightyp.text-center,.seventyp.text-center,.sixtyp.text-center,.fiftyp.text-center {margin: 0 auto;}
 .search-wrap {display: none; position: absolute; top: 18px; right: 55px;}
 .top-search {width: 250px; position: relative; float: right; margin: 60px -40px 0 0;}
 .top-search .fa {color: #fff;}
@@ -25,15 +25,20 @@ ul.tx-indexedsearch-browsebox li {padding: 5px 10px 5px 0px; float: left;}
 .close:hover,.close:focus {color: #ccc;text-decoration: none;cursor: pointer; opacity: 1.0}
 #lightimg {max-width: 100%; height: auto; margin: auto}
 .hovermod {cursor: pointer;}
-
+.powermail_captchaimage {margin-top: 10px;}
+.frame-type-gridelements_pi1.frame-layout-0 {overflow: hidden}
+.mscaption {position: absolute; z-index: -10; top: 20px; left: 20px}
+.half .mscaption {left: 20%}
+.text-center figcaption {text-align: center}
 @media (min-width: 768px) {
-    .fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width{width: 85%;}
+    .fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width {width: 85%;}
     .text-left .limited-width, .text-right .limited-width {margin: initial;}
 }
 @media (min-width: 1100px) {
     .logo {width:150px;float:left}
     .desktop-nav {width: calc(100% - 200px);float:left;}
     .modal {padding-top: 60px;}
+    .powermail_captchaimage {margin-top: 20px;}
 }
 @media (min-width: 1300px) {
     .desktop-nav {margin-left: 50px;}
@@ -98,6 +103,7 @@ iframe {max-width: 100%; height: 275px}
 .banner-float .text-left h1, .banner-float .text-left h2, .banner-float .text-left h3, .banner-float .text-left .btext {display: block; float: left; clear: both}
 .banner-float .text-center h1, .banner-float .text-center h2, .banner-float .text-center h3 {float: none; width: max-content; margin-left: auto; margin-right: auto}
 .arm-horizontal-grid .banner-float h1, .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3, .arm-horizontal-grid .banner-float .btext {background-color:initial; color:#000;}
+.arm-horizontal-grid li {list-style: none}
 .mason-text.inverse h2, .mason-text.inverse h3, .mason-text.inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
 .banner-float .inverse h1, .banner-float .inverse h2, .banner-float .inverse h3, .banner-float .inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
 
@@ -272,6 +278,8 @@ iframe {max-width: 100%; height: 275px}
     .armimagetext .half::nth-child(2) .textblock {right: 500px;}
 }
 @media (min-width: 768px) {
+    .powermail_fieldwrap_type_recaptcha .control-label,
+    .powermail_fieldwrap_type_captcha .control-label,
     .powermail_fieldwrap_type_input .control-label, 
     .powermail_fieldwrap_type_textarea .control-label {float: left; text-align: left;}
     .powermail_fieldwrap_type_radio .control-label {max-width: 100%; text-align: left;}

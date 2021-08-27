@@ -1,0 +1,11 @@
+####################################
+# EXT:felogin SETUP                #
+####################################
+
+plugin.tx_felogin_pi1 {
+
+    storagePid = 31
+
+    _CSS_DEFAULT_STYLE =
+    _CSS_DEFAULT_STYLE >
+}

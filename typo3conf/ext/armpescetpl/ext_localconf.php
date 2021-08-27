@@ -20,5 +20,5 @@ call_user_func(function () {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/TypoScript/TsConfig/pageTsConfig.txt">');
 
 
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['armtpl_preset'] = 'EXT:armpescetpl/Configuration/RTE/Default.yaml';
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['armpescetpl_preset'] = 'EXT:armpescetpl/Configuration/RTE/Default.yaml';
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem'][$_EXTKEY] = \ARM\Armpescetpl\Hooks\PageLayoutView::class;

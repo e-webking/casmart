@@ -1,0 +1,13 @@
+<f:if condition="{settings.lightbox}">
+    <f:then>
+        <div class="_df_thumb" 
+            id="df_manual_thumb"
+            source="/uploads/tx_armdflip/{pdf}" 
+            thumb="/uploads/tx_armdflip/{settings.image}">{settings.title}</div>
+    </f:then>
+    <f:else>
+        <div class="_df_book" 
+            id="df_manual_book" height="{settings.height}" 
+            source="/uploads/tx_armdflip/{pdf}">{settings.title}</div>
+    </f:else>
+</f:if>

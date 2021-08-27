@@ -6,13 +6,16 @@ logoFile = typo3conf/ext/armpescetpl/Resources/Public/images/logo.jpg
 kontaktPid = 2
 
 footerMenu = 5
-cmsFooterUid = 2
+cmsFooterUid = 12003
 
 facebook_url = 
 twitter_url =
-
 show_facebook=1
 show_twitter=1
+
+plugin.tx_powermail.settings.styles.bootstrap.labelClasses = control-label col-sm-6
+plugin.tx_powermailrecaptcha.sitekey = 6LdHIq4ZAAAAALlPj2f_vHo9z9nt-YXFSA1iWZdd
+plugin.tx_powermailrecaptcha.secretkey = 6LdHIq4ZAAAAANADCMITRvi4rtiHTtixPizksMXj
 
 plugin.tx_aimeos.theme.baseurl = EXT:armpescetpl/Resources/Public/Themes/elegance
 [request.getNormalizedParams().isHttps()]

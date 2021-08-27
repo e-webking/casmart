@@ -1,0 +1,26 @@
+[loginUser = *]
+lib.user_first_name = COA_INT
+lib.user_first_name {
+  10 = TEXT
+  10.stdWrap.data = TSFE:fe_user|user|first_name
+}
+
+lib.user_last_name = COA_INT
+lib.user_last_name {
+  10 = TEXT
+  10.stdWrap.data = TSFE:fe_user|user|last_name
+}
+[global]
+
+lib.logOut = COA
+lib.logOut {
+    10 = TEXT
+    10 {
+            value = Login
+            typolink.parameter = 434
+    }
+    [loginUser = *]
+    10.value = Abmelden
+    10.typolink.additionalParams = &logintype=logout
+    [end]
+}

@@ -1,41 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400&display=swap');
 
 @font-face {
-    font-family: 'BushelAndPeck';
-    src: url('../fonts/BushelAndPeck-Italic.eot');
-    src: url('../fonts/BushelAndPeck-Italic.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/BushelAndPeck-Italic.ttf') format('truetype'),
-        url('../fonts/BushelAndPeck-Italic.woff2') format('woff2'),
-        url('../fonts/BushelAndPeck-Italic.woff') format('woff'),
-        url('../fonts/BushelAndPeck-Italic.svg#BushelAndPeck-Italic') format('svg');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'BushelAndPeck Sans Serif';
-    src: url('../fonts/BushelAndPeck-SansSerif.eot');
-    src: url('../fonts/BushelAndPeck-SansSerif.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/BushelAndPeck-SansSerif.ttf') format('truetype'),
-        url('../fonts/BushelAndPeck-SansSerif.woff2') format('woff2'),
-        url('../fonts/BushelAndPeck-SansSerif.woff') format('woff'),
-        url('../fonts/BushelAndPeck-SansSerif.svg#BushelAndPeck-SansSerif') format('svg');
+    font-family: 'Shimes Two';
+    src: url('../fonts/ShimesTwoPERSONALUSE.eot');
+    src: url('../fonts/ShimesTwoPERSONALUSE.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ShimesTwoPERSONALUSE.woff2') format('woff2'),
+        url('../fonts/ShimesTwoPERSONALUSE.woff') format('woff'),
+        url('../fonts/ShimesTwoPERSONALUSE.ttf') format('truetype'),
+        url('../fonts/ShimesTwoPERSONALUSE.svg#ShimesTwoPERSONALUSE') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
-
-@font-face {
-    font-family: 'BushelAndPeck';
-    src: url('../fonts/BushelAndPeck-Script.eot');
-    src: url('../fonts/BushelAndPeck-Script.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/BushelAndPeck-Script.ttf') format('truetype'),
-        url('../fonts/BushelAndPeck-Script.woff2') format('woff2'),
-        url('../fonts/BushelAndPeck-Script.woff') format('woff'),
-        url('../fonts/BushelAndPeck-Script.svg#BushelAndPeck-Script') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 *, *::before, *::after{
     -webkit-box-sizing: border-box; 
 	-moz-box-sizing: border-box; 
@@ -59,11 +35,11 @@ body {
 }
 
 h1, .h1 {
-    font-family:'Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;
-    font-weight: 200; line-height: 1.2; color: #000;text-transform: uppercase; padding:0px; margin: 0px; position: relative;  
+    font-family: 'Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;
+    font-weight: 200; line-height: 1.2; color: #000; padding:0px; margin: 0px; position: relative;  
 }
 h2, .h2 {
-    font-family:'Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;
+    font-family: 'Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;
     font-weight: 200; line-height: 1.2; color: #000;padding:0px; margin: 0px; position: relative;  
 }
 h3, .h3 {
@@ -74,13 +50,16 @@ h4, .h4 {
     font-family:'Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;
     font-weight: 400; line-height: 1.2; color: #000;padding:0px; margin: 0px; position: relative;  
 }
-.banner h1, .banner h2, .banner h3, .banner h4 {font-family:'Montserrat Light','Montserrat Extra-Light','Montserrat Thin','Montserrat', helvetica, arial, sans-serif; font-weight: 100; max-width: 100%;}
+.banner h1, .banner h2 {font-family:'Montserrat', helvetica, arial, sans-serif; font-weight: 100; max-width: 100%;}
+.banner h3, .banner h4 {font-family:'Montserrat Light','Montserrat Extra-Light','Montserrat Thin','Montserrat', helvetica, arial, sans-serif; font-weight: 100; max-width: 100%;}
 h1 {
-    font-size: 36px;
+    font-family:'Montserrat', helvetica, arial, sans-serif;
+    font-size: 32px;
     word-wrap: break-word;
 }
 h2 {
-    font-size: 28px;
+    font-family:'Montserrat', helvetica, arial, sans-serif;
+    font-size: 32px;
     margin-bottom: 10px;
     word-wrap: break-word;
 }
@@ -92,17 +71,15 @@ h4 {
     font-size: 14px;
 }
 
-h1.bushelsans, h2.bushelsans, h3.bushelsans {font-family:'BushelAndPeck Sans Serif', helvetica, arial, sans-serif;}
-h1.bushelscript, h2.bushelscript, h3.bushelscript {font-family:'BushelAndPeck', helvetica, arial, sans-serif;}
-h1.bushelsans, h1.bushelscript {
-    font-size: 24px;
+h1.shimetwo, h2.shimetwo {font-family:'Shimes Two','Montserrat', helvetica, arial, sans-serif;}
+h1.bushelscript, h2.bushelscript {font-family:'Shimes Two','Montserrat', helvetica, arial, sans-serif;}
+h1.shimetwo, h1.bushelscript {
+    font-size: 3.2em;
 }
-h2.bushelsans, h2.bushelscript {
-    font-size: 18px;
+h2.shimetwo, h2.bushelscript {
+    font-size: 3.2em;
 }
-h3.bushelsans, h3.bushelscript {
-    font-size: 12px;
-}
+
 ::-webkit-input-placeholder {color:#000; opacity: 1;}
 ::-moz-placeholder {color:#000; opacity: 1;}
 :-ms-input-placeholder {color:#000; opacity: 1;}
@@ -124,8 +101,9 @@ a:hover {
     -webkit-transition: ease-out 0s; -moz-transition: ease-out 0s;
     -o-transition: ease-out 0s; transition: ease-out 0s;
     }
-p a {color: #a2845b;}
+p a {color: #fcaf4d;}
 p a:hover {color: #fcaf4d;}
+.lg-sub-html a:hover {color: #fff;}
 
 .bootstrap-tagsinput {margin-bottom:0px;}
 
@@ -147,13 +125,15 @@ p a:hover {color: #fcaf4d;}
 .arm-horizontal-grid .frame, .arm-horizontal-grid .swiper-slide {margin: 2px; text-align: left; width: 99%}
 .arm-horizontal-grid h1 {font-size: 28px;}
 .arm-horizontal-grid h2 {font-size: 21px;}
-
+.masonary-wrap {display: flex}
 .armmasonary {width: 100%; height: auto; position: relative;}
 .armmasonary .mason-one, .armmasonary .mason-two, .armmasonary .mason-three, .armmasonary .mason-four, .armmasonary .mason-five {position: relative;}
 .armmasonary .image img {height: auto; width: 100%;}
 .armmasonary .mason-text {position: absolute; top: 20px; left: 20px; max-width: 80%; z-index: 1;}
+.armmasonary .mason-text .cta {float: left;}
 .align-right {text-align: right;}
-.align-center {text-align: center;}
+.align-center {text-align: center; margin: 0 auto}
+.align-left {text-align: left}
 .tx-indexedsearch-rules {margin-top: 20px;}
 
 /* Text expand close */
@@ -167,7 +147,7 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 .frame-type-menu_sitemap {padding-top: 80px;}
 .frame-type-menu_sitemap ul {display: flex; flex-wrap: wrap;}
 .frame-type-menu_sitemap ul li {-ms-flex: 1 0 100%; flex: 1 0 100%;max-width: 100%; margin-top: 5px;}
-
+.ce-image.ce-center {margin: 0 auto}
 
 @media (min-width: 610px) {
     .container {
@@ -198,10 +178,10 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
         max-width:750px; 
     }
     h1 {
-        font-size: 40px;
+        font-size: 36px;
     }
     h2 {
-        font-size: 30px;
+        font-size: 36px;
         margin-bottom: 15px;
     }
     h3 {
@@ -212,14 +192,14 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
     h4 {
         font-size: 16px;
     }
-    h1.bushelsans, h1.bushelscript {
-        font-size: 28px;
+    h1.shimetwo, h1.bushelscript {
+        font-size: 40px;
     }
-    h2.bushelsans, h2.bushelscript {
-        font-size: 20px;
+    h2.shimetwo, h2.bushelscript {
+        font-size: 40px;
     }
-    h3.bushelsans, h3.bushelscript {
-        font-size: 14px;
+    h3.shimetwo, h3.bushelscript {
+        font-size: 18px;
     }
 
     .arm-horizontal-grid .banner-float {padding-left: 30px; bottom: 30px}
@@ -258,13 +238,8 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
     .container {
         max-width:1000px; 
     }
-    h1 {
-        font-weight: 300;
-    }
-    h2 {
-        font-weight: 300;
-    }
-    .banner h1, .banner h2, .banner h3, .banner h4 {font-family:'Montserrat Thin','Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;}
+
+    .banner h3, .banner h4 {font-family:'Montserrat Thin','Montserrat Extra-Light','Montserrat', helvetica, arial, sans-serif;}
 }
 @media (min-width: 1280px) {
     header {position: fixed; width: 100%; top: 0px; z-index: 100; height: 177px;}
@@ -274,10 +249,10 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
         max-width:1200px; 
     }
     h1 {
-        font-size: 55px;
+        font-size: 3.6em;
     }
     h2 {
-        font-size: 40px;
+        font-size: 3.6em;
         margin-bottom: 20px;
     }
     h3 {
@@ -286,20 +261,17 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
     h4 {
         font-size: 20px;
     }
-    h1.bushelsans, h1.bushelscript {
-        font-size: 32px;
+    h1.shimetwo {
+        font-size: 4.5em;
     }
-    h2.bushelsans, h2.bushelscript {
-        font-size: 24px;
-    }
-    h3.bushelsans, h3.bushelscript {
-        font-size: 18px;
+    h2.shimetwo {
+        font-size: 4.5em;
     }
     
     .arm-horizontal-grid .banner-float h1 {font-size: 26px; padding: 0}
     .arm-horizontal-grid .banner-float h2 {font-size: 20px; padding: 0}
     .arm-horizontal-grid .banner-float h3 {font-size: 13px; padding: 0}
-    .armmasonary .mason-text h2,.armmasonary .mason-text h3, .armmasonary .mason-text h4 {margin-bottom: 20px;}
+    .armmasonary .mason-text h2,.armmasonary .mason-text h3, .armmasonary .mason-text h4 {margin-bottom: 5px;}
     .tx-indexedsearch-rules {margin-top: 40px;}
     
     .lpadnormal {padding-left: 40px}
@@ -326,10 +298,10 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
         max-width:1500px; 
     }
     h1 {
-        font-size: 60px;
+        font-size: 4.0em;
     }
     h2 {
-        font-size: 50px;
+        font-size: 4.0em;
         margin-bottom: 30px;
     }
     h3 {
@@ -339,13 +311,13 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
         font-size: 24px;
     }
     
-    h1.bushelsans, h1.bushelscript {
-        font-size: 40px;
+    h1.shimetwo, h1.bushelscript {
+        font-size: 5.4em;
     }
-    h2.bushelsans, h2.bushelscript {
-        font-size: 32px;
+    h2.shimetwo, h2.bushelscript {
+        font-size: 5.4em;
     }
-    h3.bushelsans, h3.bushelscript {
+    h3.shimetwo, h3.bushelscript {
         font-size: 24px;
     }
 
@@ -364,6 +336,28 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 }
 
 @media (min-width: 1900px) {
+    
+    h1 {
+        font-size: 5.4em;
+    }
+    h2 {
+        font-size: 5.4em;
+        margin-bottom: 30px;
+    }
+    h3 {
+        font-size: 42px;
+    }
+    h4 {
+        font-size: 30px;
+    }
+    
+    h1.shimetwo, h1.bushelscript {
+        font-size: 6.0em;
+    }
+    h2.shimetwo, h2.bushelscript {
+        font-size: 6.0em;
+    }
+    
     .container {
         max-width:1860px; 
     }
@@ -434,20 +428,19 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 .frame-space-before-extra-large, .frame-space-after-extra-large {min-height: 30px;}
 */
 
-.frame-space-before-extra-small {margin-top: 8px;}
-.frame-space-before-small {margin-top: 12px;}
-.frame-space-before-medium {margin-top: 20px;}
-.frame-space-before-large {margin-top: 30px;}
-.frame-space-before-extra-large {margin-top: 40px;}
+.frame-space-before-extra-small {margin-top: 8px; display: flex;}
+.frame-space-before-small {margin-top: 12px; display: flex;}
+.frame-space-before-medium {margin-top: 20px; display: flex;}
+.frame-space-before-large {margin-top: 30px; display: flex;}
+.frame-space-before-extra-large {margin-top: 40px; display: flex;}
 
-.frame-space-after-extra-small {margin-bottom: 8px;}
-.frame-space-after-small {margin-bottom: 12px;}
-.frame-space-after-medium {margin-bottom: 20px;}
-.frame-space-after-large {margin-bottom: 30px;}
-.frame-space-after-extra-large {margin-bottom: 40px;}
+.frame-space-after-extra-small {margin-bottom: 8px; display: flex;}
+.frame-space-after-small {margin-bottom: 12px; display: flex;}
+.frame-space-after-medium {margin-bottom: 20px; display: flex;}
+.frame-space-after-large {margin-bottom: 30px; display: flex;}
+.frame-space-after-extra-large {margin-bottom: 40px; display: flex;}
 
 .padleft {padding-left: 20px}
-.align-center {text-align: center}
 
 @media (min-width: 600px) {
     .gbl{margin-bottom: 60px;}

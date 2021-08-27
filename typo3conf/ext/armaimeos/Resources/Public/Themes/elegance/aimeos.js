@@ -1915,7 +1915,7 @@ jQuery(document).ready(function($) {
 		return $(this).text().replace("Paketbreite", "Breite in cm"); 
 	});
 	$(".catalog-detail-service .service-intro").text(function () {
-		return $(this).text().replace("zzgl. Versandkosten", "Lieferung und Montage durch ein professionelles Team in der ganzen Schweiz inklusive. "); 
+		return $(this).text().replace("zzgl. Versandkosten", "Lieferung und Montage ab Warenwert von CHF 2000..-- in der ganzen Schweiz inklusive."); 
 	});
 	$(".common-summary-service.row .item.delivery .header h3").text(function () {
 		return $(this).text().replace("Versand", "Lieferung und Montage inklusive"); 

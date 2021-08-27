@@ -12,6 +12,10 @@ plugin.tx_powermail.settings.setup {
         produkte = TEXT
         produkte.data = GP:tx_shop|product
         produkte.htmlSpecialChars = 1
+
+        meinlieblingsmoebel = TEXT
+        meinlieblingsmoebel.data = GP:tx_powermail|title
+        meinlieblingsmoebel.htmlSpecialChars = 1
     }
 }
 

@@ -1,0 +1,130 @@
+####################################
+# EXT:aimeos SETUP                 #
+####################################
+plugin.tx_aimeos {
+
+    theme {
+        js.aimeos-custom = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.js
+        css.custom = EXT:armaimeos/Resources/Public/Themes/elegance/aimeos.css
+    }
+
+    settings {
+        controller {
+            common {
+                subscription {
+                    process {
+                        processor {
+                            cgroup {
+                                groupids {
+                                    0 = 3
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            frontend {
+                customer {
+                    groupids {
+                        0 = 3
+                    }
+                }
+            }
+        }
+
+        mshop {
+            customer {
+                manager {
+                    group {
+                        typo3 {
+                            pid-default = 31
+                        }
+                    }
+
+                    typo3 {
+                        pid-default = 31
+                    }
+                }
+            }
+        }
+
+        client {
+            arm = lota
+
+            jsonapi.url.target = 344
+
+            html {
+                basket {
+                    cache.enable = 0
+                    standard.url.target = 25
+                }
+
+                checkout {
+                    standard {
+                        order {
+                            account {
+                                standard {
+                                    groupids = 31
+                                }
+                            }
+                        }
+                    }
+                }
+
+                account {
+                    history {
+                        order {
+                            coupon.enable = 0
+                            button {
+                                basket.enable = 0
+                            }
+                        }
+                    }
+                    profile {
+                        address {
+                            header.enable = 0
+                            edit.enable = 0
+                        }
+                    }
+                }
+
+                common {
+                    address {
+                        billing {
+                            disable-new = 0
+                        }
+                    }
+                }
+
+                email {
+                    payment {
+                        ## E-Mail address used when sending payment e-mails
+                        from-email = info@casmart.ch
+                        ## Name used when sending payment e-mails
+                        from-name = casmart.ch
+                        ## E-Mail address used by the customer when replying to payment e-mails
+                        reply-email = info@casmart.ch
+                        ## Recipient name displayed when the customer replies to payment e-mails
+                        reply-name = casmart.ch
+                        ## E-Mail address all payment e-mails should be also sent to / can be used as notification for the shop owner/
+                        bcc-email = info@casmart.ch
+                    }
+
+                    ##Path to the logo image displayed in HTML e-mails
+                    ##E-Mail address used when sending e-mails
+                    from-email = info@casmart.ch
+                    ##Name used when sending e-mails
+                    from-name = casmart.ch
+                    ##E-Mail address used by the customer when replying to e-mails
+                    reply-email = info@casmart.ch
+                    ##Recipient name displayed when the customer replies to e-mails
+                    reply-name = casmart.ch
+                    ##E-Mail address all e-mails should be also sent to (can be used as notification of the shop owner)
+                    bcc-email = info@casmart.ch
+                }
+
+            }
+        }
+    }
+}

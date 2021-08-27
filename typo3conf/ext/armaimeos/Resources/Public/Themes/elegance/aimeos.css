@@ -9,6 +9,7 @@
     color:#fff !important;
 }
 .aimeos a:hover {color: #666 !important; text-decoration: none !important;}
+.aimeos.checkout-confirm {display: none;}
 .catalog-list .product {width: 267px; border-bottom: 0px; margin: 4em 1%;}
 .catalog-list .offer {max-width: 90%;}
 .catalog-list .media-list {width: 267px; height: 200px;}
@@ -62,6 +63,8 @@
 	}*/
     .aimeos.basket-standard{margin: 0 auto;width: 80%;}
     .aimeos.checkout-standard{margin: 0 auto;width: 80%;padding-top: 40px;}
+    .aimeos.account-profile{margin: 0 auto;width: 80%;padding-top: 40px;}
+    .aimeos.account-history{margin: 0 auto;width: 80%;padding-top: 40px;}
     .aimeos.basket-standard h1{margin: 0 auto;width: 80%;text-align: center;padding-top: 20px;}
     .common-summary-detail .header h2{padding-top:100px;text-align: center;}
     .catalog-detail-additional .content.description{width: 86%;}
@@ -160,7 +163,7 @@
 .basket-standard-coupon{
 	display:none;
 }
-.checkout-standard-summary .item.coupon{
+.checkout-standard-summary .item.coupon {
 	display:none;
 }
 #c_payment-6 .col-sm-6 .description{

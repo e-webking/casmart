@@ -1,0 +1,6 @@
+config {
+    simulateStaticDocuments = 0
+    prefixLocalAnchors = all
+    #absRefPrefix = /
+    absRefPrefix = auto
+}

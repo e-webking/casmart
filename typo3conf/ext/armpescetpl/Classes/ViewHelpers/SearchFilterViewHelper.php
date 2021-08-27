@@ -31,7 +31,7 @@ namespace ARM\Armpescetpl\ViewHelpers;
  *
  */
 
-class SearchFilterViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper {
+class SearchFilterViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper {
     
     public function initializeArguments()
     {

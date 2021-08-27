@@ -151,7 +151,7 @@ p a:hover {color: #fcaf4d;}
 .armmasonary {width: 100%; height: auto; position: relative;}
 .armmasonary .mason-one, .armmasonary .mason-two, .armmasonary .mason-three, .armmasonary .mason-four, .armmasonary .mason-five {position: relative;}
 .armmasonary .image img {height: auto; width: 100%;}
-.armmasonary .mason-text {position: absolute; top: 20px; left: 20px; max-width: 80%; z-index: 1;}
+.armmasonary .mason-text {position: absolute; top: 20px; left: 20px; max-width: 80%; z-index: 1; text-align: left;}
 .align-right {text-align: right;}
 .align-center {text-align: center;}
 .tx-indexedsearch-rules {margin-top: 20px;}

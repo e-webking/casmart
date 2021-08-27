@@ -3,15 +3,15 @@
 .logo {width:100px;}
 .logo img {max-width: 100%; height: auto}
 
-.fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width{width: 90%; margin: 0 auto;}
-
-.search-wrap {display: none; position: absolute; top: 18px; right: 55px;}
+.fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width, .ninetyp .limited-width{width: 90%; margin: 0 auto;}
+.ninetyp.text-center,.eightyp.text-center,.seventyp.text-center,.sixtyp.text-center,.fiftyp.text-center {margin: 0 auto;}
+.search-wrap {display: none; position: absolute; top: 18px; right: 75px;}
 .top-search {width: 250px; position: relative; float: right; margin: 60px -40px 0 0;}
 .top-search .fa {color: #fff;}
 .top-search.mob-search {display: block; margin: 16px 0 0 16px; }
-.top-search .form-control {font-size: 13px; color: #fff; border: 1px solid #ede9e6; padding: 10px 40px 10px 15px; position: relative;  background:#f5f5f5f; border-radius: 0px; z-index: 2; box-shadow: none;}
-.top-search .form-control ~ label{color: #fff; padding-left:15px; position: absolute;left: 0; z-index: 2; top: 7px;-webkit-transition: all .3s; -o-transition: all .3s; transition: all .3s;}
-.top-search .form-control:focus ~ label{font-size: 12px !important; top: -20px !important; color: #666; border: 0px!important;}
+.top-search .form-control {font-size: 13px; color: #3d3733; border: 1px solid #ede9e6; padding: 10px 40px 10px 15px; position: relative;  background:#f5f5f5f; border-radius: 0px; z-index: 2; box-shadow: none;}
+.top-search .form-control ~ label{color: #3d3733; opacity: 0; padding-left:15px; position: absolute;left: 0; z-index: 2; top: 7px;-webkit-transition: all .3s; -o-transition: all .3s; transition: all .3s;}
+.top-search .form-control:focus ~ label{font-size: 12px !important; top: -20px !important; color: #666; border: 0px!important; opacity: 1.0}
 .top-search .form-group {margin-bottom: 0px;}
 .top-search .form-group button{position: absolute; right: 0px; top: 0px; padding: 7px 15px 10px; z-index: 9;border: 0px; outline: none; background-color: transparent; cursor: pointer;}
 ul.tx-indexedsearch-browsebox {padding: 0px; margin: 0px; list-style: none; height: 30px}
@@ -26,33 +26,50 @@ ul.tx-indexedsearch-browsebox li {padding: 5px 10px 5px 0px; float: left;}
 #lightimg {max-width: 100%; height: auto; margin: auto}
 .hovermod {cursor: pointer;}
 .powermail_captchaimage {margin-top: 10px;}
+.powermail_fieldwrap_type_recaptcha {margin-bottom: 30px;}
 
 @media (min-width: 768px) {
     .fiftyp .limited-width,.sixtyp .limited-width,.seventyp .limited-width,.eightyp .limited-width{width: 85%;}
     .text-left .limited-width, .text-right .limited-width {margin: initial;}
+    .powermail_fieldwrap_senden_01 {position: absolute; max-width: 100%; margin-top: -70px; margin-left: 77px}
+    ._df_book-cover {min-height: 400px; min-width: 275px}
+}
+@media (min-width: 992px) {
+    ._df_book-cover {min-height: 500px; min-width: 345px}
 }
 @media (min-width: 1100px) {
-    .siteHeader {height: 177px;}
-    .logo {width:150px; float:left; position: absolute; top: 73px}
-    .desktop-nav {width: calc(100% - 200px);float:left;}
+    .siteHeader {height: 105px;}
+    .logo {width:150px; float:left; position: absolute; z-index: 10}
+    .desktop-nav {margin-left: 180px; width: calc(100% - 200px);float:left;}
     .modal {padding-top: 60px;}
     .powermail_captchaimage {margin-top: 20px;}
+    .powermail_fieldwrap_type_recaptcha {margin-bottom: 40px;}
+    .powermail_fieldwrap_senden_01 {margin-left: 82px}
+    ._df_book-cover {min-height: 600px; min-width: 413px}
+    
 }
 @media (min-width: 1300px) {
     .desktop-nav {margin-left: 180px;}
-    header + .frame {margin-top: 176px;}
+    header + .frame {margin-top: 105px;}
     .modal {padding-top: 80px;}
+    .powermail_fieldwrap_type_recaptcha {margin-bottom: 50px;}
+    .powermail_fieldwrap_senden_01 {margin-left: -86px}
+    ._df_book-cover {min-height: 800px; min-width: 551px}
 }
 
 .module-content {position: absolute; top: 20px; left: 100px; width: 80%; z-index: 100; height: inherit; padding: 30px 0 0; display: inline-block; text-align: left; color: #fff;}
 @media (min-width: 1440px) {
     .module-content {width: 60%; left: 150px; top: 80px}
+    .powermail_fieldwrap_type_recaptcha {margin-bottom: 60px;}
+    .powermail_fieldwrap_senden_01 {margin-left: -105px}
 }
 @media (min-width: 1560px) {
     .desktop-nav {margin-left: 200px;}
+    .powermail_fieldwrap_senden_01 {margin-left: -125px}
 }
 @media (min-width: 1920px) {
     .desktop-nav {margin-left: 240px;}
+    .powermail_fieldwrap_senden_01 {margin-left: -165px}
 }
 
 
@@ -102,8 +119,8 @@ iframe {max-width: 100%; height: 275px}
 .banner-float .text-left h1, .banner-float .text-left h2, .banner-float .text-left h3, .banner-float .text-left .btext {display: block; float: left; clear: both}
 .banner-float .text-center h1, .banner-float .text-center h2, .banner-float .text-center h3 {float: none; width: max-content; margin-left: auto; margin-right: auto}
 .arm-horizontal-grid .banner-float h1, .arm-horizontal-grid .banner-float h2, .arm-horizontal-grid .banner-float h3, .arm-horizontal-grid .banner-float .btext {background-color:initial; color:#000;}
-.mason-text.inverse h2, .mason-text.inverse h3, .mason-text.inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
-.banner-float .inverse h1, .banner-float .inverse h2, .banner-float .inverse h3, .banner-float .inverse h4 {background-color: rgba(0,0,0,0.5); padding: 0 10px; color: #fff;}
+.mason-text.inverse h2, .mason-text.inverse h3, .mason-text.inverse h4 {background-color: rgba(0,0,0,0.65); padding: 0 10px; color: #fff;}
+.banner-float .inverse h1, .banner-float .inverse h2, .banner-float .inverse h3, .banner-float .inverse h4,.banner-float .btext {background-color: rgba(255,255,255,0.65); padding: 0 10px; color: #000;}
 
 .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float h1 {font-size: 25px;}
 .banner .swiper-container .swiper-wrapper .swiper-slide .banner-float .btext {display: none;}
@@ -130,7 +147,7 @@ iframe {max-width: 100%; height: 275px}
 @media (min-width: 992px) {
     .top-search {width: 215px; margin: 0 -40px 0 0; color: #000; font-size: 12px}
     .slide-image img {max-width: 100%; width: inherit;}
-    .banner-float {position: absolute; padding-left: 0px; padding-top: 0px; top:40px; left: 40px; width: 80%}
+    .banner-float {position: absolute; padding-left: 0px; padding-top: 0px; top:100px; left: 40px; width: 80%}
     .mob-search{display: none;}
     .search-wrap {display: block;}
     .top-search .form-control {padding: 10px 40px 10px 5px;}
@@ -143,7 +160,7 @@ iframe {max-width: 100%; height: 275px}
     .roundimg {margin: 20px auto;}
     .testimonial .text {margin-bottom: 40px;}
     .testimonial .title {padding-bottom: 20px;}
-    .banner-float {position: absolute; padding-left: 0px; padding-top: 0px; top:50px; left: 54px; width: calc(100% - 89px)}
+    .banner-float {position: absolute; padding-left: 0px; padding-top: 0px; top:100px; left: 40px; width: calc(100% - 80px)}
     .banner-float.mbottom {bottom:50px; top: initial}
     .arm-horizontal-grid .banner-float {top:10px; left: 10px; width: calc(100% - 20px)}
     .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {margin-bottom: 15px; padding: 8px 15px;}
@@ -160,7 +177,8 @@ iframe {max-width: 100%; height: 275px}
     .sixtyp .limited-width {width: 60%;}
     .seventyp .limited-width {width: 70%;}
     .eightyp .limited-width {width: 80%;}
-    .top-search {width: 300px; font-size: 14px;}
+    
+    .top-search {width: 280px; font-size: 14px;}
     .top-search .form-control:focus ~ label{font-size: 14px !important; color: #fff;}
     .tx-indexedsearch-res {margin-top: 40px}
     iframe {height: 625px}
@@ -170,7 +188,7 @@ iframe {max-width: 100%; height: 275px}
 
 @media (min-width: 1440px) {
     .justified-gallery > a > .caption {font-size: 40px;}
-    .banner-float {top:60px; left: 95px; width: calc(100% - 175px)}
+    .banner-float {top:125px; left: 130px; width: calc(100% - 205px)}
     .banner-float.mbottom {bottom:60px; top: initial}
     .arm-horizontal-grid .banner-float {top:15px; left: 15px; width: calc(100% - 30px)}
     .banner-float h1, .banner-float h2, .banner-float h3, .banner-float .btext {margin-bottom: 15px; padding: 10px 20px;}
@@ -184,17 +202,17 @@ iframe {max-width: 100%; height: 275px}
 @media (min-width: 1560px) {
     .justified-gallery > a > .caption {font-size: 50px;}
     .testimonial .text {margin-bottom: 60px;}
-    .banner-float {top: 75px; left: 135px; width: calc(100% - 260px)}
+    .banner-float {top: 125px; left: 170px; width: calc(100% - 295px)}
     .banner-float.mbottom {bottom:75px; top: initial}
     .text-left .btext {width: 50%;}
-    .top-search {width: 310px; font-size: 18px;}
+    .search-wrap {right: 55px;}
+    .top-search {width: 300px; font-size: 18px;}
 }
 @media (min-width: 1760px) {
-    .banner-float { left: 194px; width: calc(100% - 350px)}
+    .search-wrap {right: 16px;}
     .arm-horizontal-grid .banner-float {top:25px; left: 25px; width: calc(100% - 50px)}
 }
 @media (min-width: 1920px) {
-    .banner-float { left: 125px; width: calc(100% - 240px)}
     .arm-horizontal-grid .banner-float {top:30px; left: 30px; width: calc(100% - 60px)}
 }
 
@@ -280,6 +298,7 @@ iframe {max-width: 100%; height: 275px}
     .powermail_fieldwrap_type_recaptcha .control-label,
     .powermail_fieldwrap_type_captcha .control-label,
     .powermail_fieldwrap_type_input .control-label, 
+    .powermail_fieldwrap_type_select .control-label,
     .powermail_fieldwrap_type_textarea .control-label {float: left; text-align: left;}
     .powermail_fieldwrap_type_radio .control-label {max-width: 100%; text-align: left;}
     .powermail_fieldwrap_type_radio .radio { text-align: left!important;}

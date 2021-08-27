@@ -1,7 +1,10 @@
 <div class="armmasonary">
     <div class="mason-one">
         <figure class="image">
-            <f:image src="uploads/tx_armtpl/{data.flexform_field_imageone}" width="630" height="580c" alt="{data.flexform_field_headingone}" />
+            <f:image src="uploads/tx_armtpl/{data.flexform_field_imageone}" width="630" height="580c" title="{data.flexform_field_headingone}" alt="{data.flexform_field_altone}" />
+            <f:if condition="{data.flexform_field_captionone}">
+                <figcaption class="mscaption">{data.flexform_field_captionone}</figcaption>
+            </f:if>
         </figure>
         <div class="mason-text {f:if(condition:data.flexform_field_invone, then: 'inverse', else: '')}">
             <f:if condition="{data.flexform_field_headingone}">
@@ -14,7 +17,10 @@
     </div>
     <div class="mason-two">
         <figure class="image">
-            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagetwo}" width="1260" height="580c" alt="{data.flexform_field_headingtwo}" />
+            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagetwo}" width="1260" height="580c" title="{data.flexform_field_headingtwo}" alt="{data.flexform_field_alttwo}" />
+            <f:if condition="{data.flexform_field_captiontwo}">
+                <figcaption class="mscaption">{data.flexform_field_captiontwo}</figcaption>
+            </f:if>
         </figure>
         <div class="mason-text {f:if(condition:data.flexform_field_invtwo, then: 'inverse', else: '')}">
             <f:if condition="{data.flexform_field_headingtwo}">
@@ -27,7 +33,10 @@
     </div>
     <div class="mason-three">
         <figure class="image">
-            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagethree}" width="630c" height="1180" alt="{data.flexform_field_headingthree}" />
+            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagethree}" width="630c" height="1180" title="{data.flexform_field_headingthree}" alt="{data.flexform_field_altthree}" />
+            <f:if condition="{data.flexform_field_captionthree}">
+                <figcaption class="mscaption">{data.flexform_field_captionthree}</figcaption>
+            </f:if>
         </figure>
         <div class="mason-text {f:if(condition:data.flexform_field_invthree, then: 'inverse', else: '')}">
             <f:if condition="{data.flexform_field_headingthree}">
@@ -40,7 +49,10 @@
     </div>
     <div class="mason-four">
         <figure class="image">
-            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagefour}" width="1260" height="580c" alt="{data.flexform_field_headingfour}" />  
+            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagefour}" width="1260" height="580c" title="{data.flexform_field_headingfour}" alt="{data.flexform_field_altfour}" />
+            <f:if condition="{data.flexform_field_captionfour}">
+                <figcaption class="mscaption">{data.flexform_field_captionfour}</figcaption>
+            </f:if>
         </figure>
         <div class="mason-text {f:if(condition:data.flexform_field_invfour, then: 'inverse', else: '')}">
             <f:if condition="{data.flexform_field_headingfour}">
@@ -53,7 +65,10 @@
     </div>
     <div class="mason-five">
         <figure class="image">
-            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagefive}" width="630" height="580c" alt="{data.flexform_field_headingfive}" />
+            <f:image src="uploads/tx_armtpl/{data.flexform_field_imagefive}" width="630" height="580c" title="{data.flexform_field_headingfive}" alt="{data.flexform_field_altfive}" />
+            <f:if condition="{data.flexform_field_captionfive}">
+                <figcaption class="mscaption">{data.flexform_field_captionfive}</figcaption>
+            </f:if>
         </figure>
         <div class="mason-text {f:if(condition:data.flexform_field_invfive, then: 'inverse', else: '')}">
             <f:if condition="{data.flexform_field_headingfive}">

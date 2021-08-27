@@ -21,3 +21,4 @@ call_user_func(function () {
 
 
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['armtpl_preset'] = 'EXT:armtpl/Configuration/RTE/Default.yaml';
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem'][$_EXTKEY] = \ARM\Armtpl\Hooks\PageLayoutView::class;
